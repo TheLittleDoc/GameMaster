@@ -129,3 +129,27 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+build.bat
+experiments (gitnore)/gamemaster.py
+experiments (gitnore)/test.py
+experiments (gitnore)/main.py
+experiments (gitnore)/test1.py
+experiments (gitnore)/test2.py
+gamemaster.iit
+installer.iss
+installer/GameMaster-cache/cacheIndex.txt
+installer/GameMaster-cache/part1/output-info.ini
+installer/GameMaster-SetupFiles/GameMaster.exe
+installer/GameMaster-SetupFiles/GameMaster.msi
+installer/GameMaster-SetupFiles/GameMaster1.cab
+installer/GameMaster.aip
+installers (gitnore)/gamemaster1.0.0.exe
+installers (gitnore)/gamemaster1.0.1.exe
+installers (gitnore)/gamemaster1.0.2.exe
+output/And one more, even.txt
+output/Another value.txt
+output/Down.txt
+output/gamemaster1.0.1alternate.exe
+output/Silly  Number.txt
+output/Silly Number.txt
+output/To Go.txt
