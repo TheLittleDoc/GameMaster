@@ -1,0 +1,2008 @@
+build\
+*.exe
+build.bat
+__pycache__/gamemaster.cpython-39.pyc
+build/gamemaster/Analysis-00.toc
+build/gamemaster/base_library.zip
+build/gamemaster/EXE-00.toc
+build/gamemaster/gamemaster.exe.manifest
+build/gamemaster/PKG-00.pkg
+build/gamemaster/PKG-00.toc
+build/gamemaster/PYZ-00.pyz
+build/gamemaster/PYZ-00.toc
+build/gamemaster/Tree-00.toc
+build/gamemaster/Tree-01.toc
+build/gamemaster/Tree-02.toc
+build/gamemaster/warn-gamemaster.txt
+build/gamemaster/xref-gamemaster.html
+dist/before.txt
+dist/gamemaster.json
+dist/gamemaster/_asyncio.pyd
+dist/gamemaster/_bz2.pyd
+dist/gamemaster/_ctypes.pyd
+dist/gamemaster/_decimal.pyd
+dist/gamemaster/_hashlib.pyd
+dist/gamemaster/_lzma.pyd
+dist/gamemaster/_multiprocessing.pyd
+dist/gamemaster/_overlapped.pyd
+dist/gamemaster/_queue.pyd
+dist/gamemaster/_socket.pyd
+dist/gamemaster/_ssl.pyd
+dist/gamemaster/_tkinter.pyd
+dist/gamemaster/api-ms-win-core-console-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-datetime-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-debug-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-errorhandling-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-file-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-file-l1-2-0.dll
+dist/gamemaster/api-ms-win-core-file-l2-1-0.dll
+dist/gamemaster/api-ms-win-core-handle-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-heap-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-interlocked-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-libraryloader-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-localization-l1-2-0.dll
+dist/gamemaster/api-ms-win-core-memory-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-namedpipe-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-processenvironment-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-processthreads-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-processthreads-l1-1-1.dll
+dist/gamemaster/api-ms-win-core-profile-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-rtlsupport-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-string-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-synch-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-synch-l1-2-0.dll
+dist/gamemaster/api-ms-win-core-sysinfo-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-timezone-l1-1-0.dll
+dist/gamemaster/api-ms-win-core-util-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-conio-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-convert-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-environment-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-filesystem-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-heap-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-locale-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-math-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-process-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-runtime-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-stdio-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-string-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-time-l1-1-0.dll
+dist/gamemaster/api-ms-win-crt-utility-l1-1-0.dll
+dist/gamemaster/base_library.zip
+dist/gamemaster/gamemaster.exe.manifest
+dist/gamemaster/libcrypto-1_1.dll
+dist/gamemaster/libffi-7.dll
+dist/gamemaster/libssl-1_1.dll
+dist/gamemaster/pyexpat.pyd
+dist/gamemaster/python39.dll
+dist/gamemaster/select.pyd
+dist/gamemaster/tcl/auto.tcl
+dist/gamemaster/tcl/clock.tcl
+dist/gamemaster/tcl/encoding/ascii.enc
+dist/gamemaster/tcl/encoding/big5.enc
+dist/gamemaster/tcl/encoding/cp1250.enc
+dist/gamemaster/tcl/encoding/cp1251.enc
+dist/gamemaster/tcl/encoding/cp1252.enc
+dist/gamemaster/tcl/encoding/cp1253.enc
+dist/gamemaster/tcl/encoding/cp1254.enc
+dist/gamemaster/tcl/encoding/cp1255.enc
+dist/gamemaster/tcl/encoding/cp1256.enc
+dist/gamemaster/tcl/encoding/cp1257.enc
+dist/gamemaster/tcl/encoding/cp1258.enc
+dist/gamemaster/tcl/encoding/cp437.enc
+dist/gamemaster/tcl/encoding/cp737.enc
+dist/gamemaster/tcl/encoding/cp775.enc
+dist/gamemaster/tcl/encoding/cp850.enc
+dist/gamemaster/tcl/encoding/cp852.enc
+dist/gamemaster/tcl/encoding/cp855.enc
+dist/gamemaster/tcl/encoding/cp857.enc
+dist/gamemaster/tcl/encoding/cp860.enc
+dist/gamemaster/tcl/encoding/cp861.enc
+dist/gamemaster/tcl/encoding/cp862.enc
+dist/gamemaster/tcl/encoding/cp863.enc
+dist/gamemaster/tcl/encoding/cp864.enc
+dist/gamemaster/tcl/encoding/cp865.enc
+dist/gamemaster/tcl/encoding/cp866.enc
+dist/gamemaster/tcl/encoding/cp869.enc
+dist/gamemaster/tcl/encoding/cp874.enc
+dist/gamemaster/tcl/encoding/cp932.enc
+dist/gamemaster/tcl/encoding/cp936.enc
+dist/gamemaster/tcl/encoding/cp949.enc
+dist/gamemaster/tcl/encoding/cp950.enc
+dist/gamemaster/tcl/encoding/dingbats.enc
+dist/gamemaster/tcl/encoding/ebcdic.enc
+dist/gamemaster/tcl/encoding/euc-cn.enc
+dist/gamemaster/tcl/encoding/euc-jp.enc
+dist/gamemaster/tcl/encoding/euc-kr.enc
+dist/gamemaster/tcl/encoding/gb12345.enc
+dist/gamemaster/tcl/encoding/gb1988.enc
+dist/gamemaster/tcl/encoding/gb2312-raw.enc
+dist/gamemaster/tcl/encoding/gb2312.enc
+dist/gamemaster/tcl/encoding/iso2022-jp.enc
+dist/gamemaster/tcl/encoding/iso2022-kr.enc
+dist/gamemaster/tcl/encoding/iso2022.enc
+dist/gamemaster/tcl/encoding/iso8859-1.enc
+dist/gamemaster/tcl/encoding/iso8859-10.enc
+dist/gamemaster/tcl/encoding/iso8859-13.enc
+dist/gamemaster/tcl/encoding/iso8859-14.enc
+dist/gamemaster/tcl/encoding/iso8859-15.enc
+dist/gamemaster/tcl/encoding/iso8859-16.enc
+dist/gamemaster/tcl/encoding/iso8859-2.enc
+dist/gamemaster/tcl/encoding/iso8859-3.enc
+dist/gamemaster/tcl/encoding/iso8859-4.enc
+dist/gamemaster/tcl/encoding/iso8859-5.enc
+dist/gamemaster/tcl/encoding/iso8859-6.enc
+dist/gamemaster/tcl/encoding/iso8859-7.enc
+dist/gamemaster/tcl/encoding/iso8859-8.enc
+dist/gamemaster/tcl/encoding/iso8859-9.enc
+dist/gamemaster/tcl/encoding/jis0201.enc
+dist/gamemaster/tcl/encoding/jis0208.enc
+dist/gamemaster/tcl/encoding/jis0212.enc
+dist/gamemaster/tcl/encoding/koi8-r.enc
+dist/gamemaster/tcl/encoding/koi8-u.enc
+dist/gamemaster/tcl/encoding/ksc5601.enc
+dist/gamemaster/tcl/encoding/macCentEuro.enc
+dist/gamemaster/tcl/encoding/macCroatian.enc
+dist/gamemaster/tcl/encoding/macCyrillic.enc
+dist/gamemaster/tcl/encoding/macDingbats.enc
+dist/gamemaster/tcl/encoding/macGreek.enc
+dist/gamemaster/tcl/encoding/macIceland.enc
+dist/gamemaster/tcl/encoding/macJapan.enc
+dist/gamemaster/tcl/encoding/macRoman.enc
+dist/gamemaster/tcl/encoding/macRomania.enc
+dist/gamemaster/tcl/encoding/macThai.enc
+dist/gamemaster/tcl/encoding/macTurkish.enc
+dist/gamemaster/tcl/encoding/macUkraine.enc
+dist/gamemaster/tcl/encoding/shiftjis.enc
+dist/gamemaster/tcl/encoding/symbol.enc
+dist/gamemaster/tcl/encoding/tis-620.enc
+dist/gamemaster/tcl/history.tcl
+dist/gamemaster/tcl/http1.0/http.tcl
+dist/gamemaster/tcl/http1.0/pkgIndex.tcl
+dist/gamemaster/tcl/init.tcl
+dist/gamemaster/tcl/msgs/af.msg
+dist/gamemaster/tcl/msgs/af_za.msg
+dist/gamemaster/tcl/msgs/ar.msg
+dist/gamemaster/tcl/msgs/ar_in.msg
+dist/gamemaster/tcl/msgs/ar_jo.msg
+dist/gamemaster/tcl/msgs/ar_lb.msg
+dist/gamemaster/tcl/msgs/ar_sy.msg
+dist/gamemaster/tcl/msgs/be.msg
+dist/gamemaster/tcl/msgs/bg.msg
+dist/gamemaster/tcl/msgs/bn.msg
+dist/gamemaster/tcl/msgs/bn_in.msg
+dist/gamemaster/tcl/msgs/ca.msg
+dist/gamemaster/tcl/msgs/cs.msg
+dist/gamemaster/tcl/msgs/da.msg
+dist/gamemaster/tcl/msgs/de.msg
+dist/gamemaster/tcl/msgs/de_at.msg
+dist/gamemaster/tcl/msgs/de_be.msg
+dist/gamemaster/tcl/msgs/el.msg
+dist/gamemaster/tcl/msgs/en_au.msg
+dist/gamemaster/tcl/msgs/en_be.msg
+dist/gamemaster/tcl/msgs/en_bw.msg
+dist/gamemaster/tcl/msgs/en_ca.msg
+dist/gamemaster/tcl/msgs/en_gb.msg
+dist/gamemaster/tcl/msgs/en_hk.msg
+dist/gamemaster/tcl/msgs/en_ie.msg
+dist/gamemaster/tcl/msgs/en_in.msg
+dist/gamemaster/tcl/msgs/en_nz.msg
+dist/gamemaster/tcl/msgs/en_ph.msg
+dist/gamemaster/tcl/msgs/en_sg.msg
+dist/gamemaster/tcl/msgs/en_za.msg
+dist/gamemaster/tcl/msgs/en_zw.msg
+dist/gamemaster/tcl/msgs/eo.msg
+dist/gamemaster/tcl/msgs/es.msg
+dist/gamemaster/tcl/msgs/es_ar.msg
+dist/gamemaster/tcl/msgs/es_bo.msg
+dist/gamemaster/tcl/msgs/es_cl.msg
+dist/gamemaster/tcl/msgs/es_co.msg
+dist/gamemaster/tcl/msgs/es_cr.msg
+dist/gamemaster/tcl/msgs/es_do.msg
+dist/gamemaster/tcl/msgs/es_ec.msg
+dist/gamemaster/tcl/msgs/es_gt.msg
+dist/gamemaster/tcl/msgs/es_hn.msg
+dist/gamemaster/tcl/msgs/es_mx.msg
+dist/gamemaster/tcl/msgs/es_ni.msg
+dist/gamemaster/tcl/msgs/es_pa.msg
+dist/gamemaster/tcl/msgs/es_pe.msg
+dist/gamemaster/tcl/msgs/es_pr.msg
+dist/gamemaster/tcl/msgs/es_py.msg
+dist/gamemaster/tcl/msgs/es_sv.msg
+dist/gamemaster/tcl/msgs/es_uy.msg
+dist/gamemaster/tcl/msgs/es_ve.msg
+dist/gamemaster/tcl/msgs/et.msg
+dist/gamemaster/tcl/msgs/eu.msg
+dist/gamemaster/tcl/msgs/eu_es.msg
+dist/gamemaster/tcl/msgs/fa.msg
+dist/gamemaster/tcl/msgs/fa_in.msg
+dist/gamemaster/tcl/msgs/fa_ir.msg
+dist/gamemaster/tcl/msgs/fi.msg
+dist/gamemaster/tcl/msgs/fo.msg
+dist/gamemaster/tcl/msgs/fo_fo.msg
+dist/gamemaster/tcl/msgs/fr.msg
+dist/gamemaster/tcl/msgs/fr_be.msg
+dist/gamemaster/tcl/msgs/fr_ca.msg
+dist/gamemaster/tcl/msgs/fr_ch.msg
+dist/gamemaster/tcl/msgs/ga.msg
+dist/gamemaster/tcl/msgs/ga_ie.msg
+dist/gamemaster/tcl/msgs/gl.msg
+dist/gamemaster/tcl/msgs/gl_es.msg
+dist/gamemaster/tcl/msgs/gv.msg
+dist/gamemaster/tcl/msgs/gv_gb.msg
+dist/gamemaster/tcl/msgs/he.msg
+dist/gamemaster/tcl/msgs/hi.msg
+dist/gamemaster/tcl/msgs/hi_in.msg
+dist/gamemaster/tcl/msgs/hr.msg
+dist/gamemaster/tcl/msgs/hu.msg
+dist/gamemaster/tcl/msgs/id.msg
+dist/gamemaster/tcl/msgs/id_id.msg
+dist/gamemaster/tcl/msgs/is.msg
+dist/gamemaster/tcl/msgs/it.msg
+dist/gamemaster/tcl/msgs/it_ch.msg
+dist/gamemaster/tcl/msgs/ja.msg
+dist/gamemaster/tcl/msgs/kl.msg
+dist/gamemaster/tcl/msgs/kl_gl.msg
+dist/gamemaster/tcl/msgs/ko.msg
+dist/gamemaster/tcl/msgs/ko_kr.msg
+dist/gamemaster/tcl/msgs/kok.msg
+dist/gamemaster/tcl/msgs/kok_in.msg
+dist/gamemaster/tcl/msgs/kw.msg
+dist/gamemaster/tcl/msgs/kw_gb.msg
+dist/gamemaster/tcl/msgs/lt.msg
+dist/gamemaster/tcl/msgs/lv.msg
+dist/gamemaster/tcl/msgs/mk.msg
+dist/gamemaster/tcl/msgs/mr.msg
+dist/gamemaster/tcl/msgs/mr_in.msg
+dist/gamemaster/tcl/msgs/ms.msg
+dist/gamemaster/tcl/msgs/ms_my.msg
+dist/gamemaster/tcl/msgs/mt.msg
+dist/gamemaster/tcl/msgs/nb.msg
+dist/gamemaster/tcl/msgs/nl.msg
+dist/gamemaster/tcl/msgs/nl_be.msg
+dist/gamemaster/tcl/msgs/nn.msg
+dist/gamemaster/tcl/msgs/pl.msg
+dist/gamemaster/tcl/msgs/pt.msg
+dist/gamemaster/tcl/msgs/pt_br.msg
+dist/gamemaster/tcl/msgs/ro.msg
+dist/gamemaster/tcl/msgs/ru.msg
+dist/gamemaster/tcl/msgs/ru_ua.msg
+dist/gamemaster/tcl/msgs/sh.msg
+dist/gamemaster/tcl/msgs/sk.msg
+dist/gamemaster/tcl/msgs/sl.msg
+dist/gamemaster/tcl/msgs/sq.msg
+dist/gamemaster/tcl/msgs/sr.msg
+dist/gamemaster/tcl/msgs/sv.msg
+dist/gamemaster/tcl/msgs/sw.msg
+dist/gamemaster/tcl/msgs/ta.msg
+dist/gamemaster/tcl/msgs/ta_in.msg
+dist/gamemaster/tcl/msgs/te.msg
+dist/gamemaster/tcl/msgs/te_in.msg
+dist/gamemaster/tcl/msgs/th.msg
+dist/gamemaster/tcl/msgs/tr.msg
+dist/gamemaster/tcl/msgs/uk.msg
+dist/gamemaster/tcl/msgs/vi.msg
+dist/gamemaster/tcl/msgs/zh.msg
+dist/gamemaster/tcl/msgs/zh_cn.msg
+dist/gamemaster/tcl/msgs/zh_hk.msg
+dist/gamemaster/tcl/msgs/zh_sg.msg
+dist/gamemaster/tcl/msgs/zh_tw.msg
+dist/gamemaster/tcl/opt0.4/optparse.tcl
+dist/gamemaster/tcl/opt0.4/pkgIndex.tcl
+dist/gamemaster/tcl/package.tcl
+dist/gamemaster/tcl/parray.tcl
+dist/gamemaster/tcl/safe.tcl
+dist/gamemaster/tcl/tclIndex
+dist/gamemaster/tcl/tm.tcl
+dist/gamemaster/tcl/tzdata/Africa/Abidjan
+dist/gamemaster/tcl/tzdata/Africa/Accra
+dist/gamemaster/tcl/tzdata/Africa/Addis_Ababa
+dist/gamemaster/tcl/tzdata/Africa/Algiers
+dist/gamemaster/tcl/tzdata/Africa/Asmara
+dist/gamemaster/tcl/tzdata/Africa/Asmera
+dist/gamemaster/tcl/tzdata/Africa/Bamako
+dist/gamemaster/tcl/tzdata/Africa/Bangui
+dist/gamemaster/tcl/tzdata/Africa/Banjul
+dist/gamemaster/tcl/tzdata/Africa/Bissau
+dist/gamemaster/tcl/tzdata/Africa/Blantyre
+dist/gamemaster/tcl/tzdata/Africa/Brazzaville
+dist/gamemaster/tcl/tzdata/Africa/Bujumbura
+dist/gamemaster/tcl/tzdata/Africa/Cairo
+dist/gamemaster/tcl/tzdata/Africa/Casablanca
+dist/gamemaster/tcl/tzdata/Africa/Ceuta
+dist/gamemaster/tcl/tzdata/Africa/Conakry
+dist/gamemaster/tcl/tzdata/Africa/Dakar
+dist/gamemaster/tcl/tzdata/Africa/Dar_es_Salaam
+dist/gamemaster/tcl/tzdata/Africa/Djibouti
+dist/gamemaster/tcl/tzdata/Africa/Douala
+dist/gamemaster/tcl/tzdata/Africa/El_Aaiun
+dist/gamemaster/tcl/tzdata/Africa/Freetown
+dist/gamemaster/tcl/tzdata/Africa/Gaborone
+dist/gamemaster/tcl/tzdata/Africa/Harare
+dist/gamemaster/tcl/tzdata/Africa/Johannesburg
+dist/gamemaster/tcl/tzdata/Africa/Juba
+dist/gamemaster/tcl/tzdata/Africa/Kampala
+dist/gamemaster/tcl/tzdata/Africa/Khartoum
+dist/gamemaster/tcl/tzdata/Africa/Kigali
+dist/gamemaster/tcl/tzdata/Africa/Kinshasa
+dist/gamemaster/tcl/tzdata/Africa/Lagos
+dist/gamemaster/tcl/tzdata/Africa/Libreville
+dist/gamemaster/tcl/tzdata/Africa/Lome
+dist/gamemaster/tcl/tzdata/Africa/Luanda
+dist/gamemaster/tcl/tzdata/Africa/Lubumbashi
+dist/gamemaster/tcl/tzdata/Africa/Lusaka
+dist/gamemaster/tcl/tzdata/Africa/Malabo
+dist/gamemaster/tcl/tzdata/Africa/Maputo
+dist/gamemaster/tcl/tzdata/Africa/Maseru
+dist/gamemaster/tcl/tzdata/Africa/Mbabane
+dist/gamemaster/tcl/tzdata/Africa/Mogadishu
+dist/gamemaster/tcl/tzdata/Africa/Monrovia
+dist/gamemaster/tcl/tzdata/Africa/Nairobi
+dist/gamemaster/tcl/tzdata/Africa/Ndjamena
+dist/gamemaster/tcl/tzdata/Africa/Niamey
+dist/gamemaster/tcl/tzdata/Africa/Nouakchott
+dist/gamemaster/tcl/tzdata/Africa/Ouagadougou
+dist/gamemaster/tcl/tzdata/Africa/Porto-Novo
+dist/gamemaster/tcl/tzdata/Africa/Sao_Tome
+dist/gamemaster/tcl/tzdata/Africa/Timbuktu
+dist/gamemaster/tcl/tzdata/Africa/Tripoli
+dist/gamemaster/tcl/tzdata/Africa/Tunis
+dist/gamemaster/tcl/tzdata/Africa/Windhoek
+dist/gamemaster/tcl/tzdata/America/Adak
+dist/gamemaster/tcl/tzdata/America/Anchorage
+dist/gamemaster/tcl/tzdata/America/Anguilla
+dist/gamemaster/tcl/tzdata/America/Antigua
+dist/gamemaster/tcl/tzdata/America/Araguaina
+dist/gamemaster/tcl/tzdata/America/Argentina/Buenos_Aires
+dist/gamemaster/tcl/tzdata/America/Argentina/Catamarca
+dist/gamemaster/tcl/tzdata/America/Argentina/ComodRivadavia
+dist/gamemaster/tcl/tzdata/America/Argentina/Cordoba
+dist/gamemaster/tcl/tzdata/America/Argentina/Jujuy
+dist/gamemaster/tcl/tzdata/America/Argentina/La_Rioja
+dist/gamemaster/tcl/tzdata/America/Argentina/Mendoza
+dist/gamemaster/tcl/tzdata/America/Argentina/Rio_Gallegos
+dist/gamemaster/tcl/tzdata/America/Argentina/Salta
+dist/gamemaster/tcl/tzdata/America/Argentina/San_Juan
+dist/gamemaster/tcl/tzdata/America/Argentina/San_Luis
+dist/gamemaster/tcl/tzdata/America/Argentina/Tucuman
+dist/gamemaster/tcl/tzdata/America/Argentina/Ushuaia
+dist/gamemaster/tcl/tzdata/America/Aruba
+dist/gamemaster/tcl/tzdata/America/Asuncion
+dist/gamemaster/tcl/tzdata/America/Atikokan
+dist/gamemaster/tcl/tzdata/America/Atka
+dist/gamemaster/tcl/tzdata/America/Bahia
+dist/gamemaster/tcl/tzdata/America/Bahia_Banderas
+dist/gamemaster/tcl/tzdata/America/Barbados
+dist/gamemaster/tcl/tzdata/America/Belem
+dist/gamemaster/tcl/tzdata/America/Belize
+dist/gamemaster/tcl/tzdata/America/Blanc-Sablon
+dist/gamemaster/tcl/tzdata/America/Boa_Vista
+dist/gamemaster/tcl/tzdata/America/Bogota
+dist/gamemaster/tcl/tzdata/America/Boise
+dist/gamemaster/tcl/tzdata/America/Buenos_Aires
+dist/gamemaster/tcl/tzdata/America/Cambridge_Bay
+dist/gamemaster/tcl/tzdata/America/Campo_Grande
+dist/gamemaster/tcl/tzdata/America/Cancun
+dist/gamemaster/tcl/tzdata/America/Caracas
+dist/gamemaster/tcl/tzdata/America/Catamarca
+dist/gamemaster/tcl/tzdata/America/Cayenne
+dist/gamemaster/tcl/tzdata/America/Cayman
+dist/gamemaster/tcl/tzdata/America/Chicago
+dist/gamemaster/tcl/tzdata/America/Chihuahua
+dist/gamemaster/tcl/tzdata/America/Coral_Harbour
+dist/gamemaster/tcl/tzdata/America/Cordoba
+dist/gamemaster/tcl/tzdata/America/Costa_Rica
+dist/gamemaster/tcl/tzdata/America/Creston
+dist/gamemaster/tcl/tzdata/America/Cuiaba
+dist/gamemaster/tcl/tzdata/America/Curacao
+dist/gamemaster/tcl/tzdata/America/Danmarkshavn
+dist/gamemaster/tcl/tzdata/America/Dawson
+dist/gamemaster/tcl/tzdata/America/Dawson_Creek
+dist/gamemaster/tcl/tzdata/America/Denver
+dist/gamemaster/tcl/tzdata/America/Detroit
+dist/gamemaster/tcl/tzdata/America/Dominica
+dist/gamemaster/tcl/tzdata/America/Edmonton
+dist/gamemaster/tcl/tzdata/America/Eirunepe
+dist/gamemaster/tcl/tzdata/America/El_Salvador
+dist/gamemaster/tcl/tzdata/America/Ensenada
+dist/gamemaster/tcl/tzdata/America/Fort_Nelson
+dist/gamemaster/tcl/tzdata/America/Fort_Wayne
+dist/gamemaster/tcl/tzdata/America/Fortaleza
+dist/gamemaster/tcl/tzdata/America/Glace_Bay
+dist/gamemaster/tcl/tzdata/America/Godthab
+dist/gamemaster/tcl/tzdata/America/Goose_Bay
+dist/gamemaster/tcl/tzdata/America/Grand_Turk
+dist/gamemaster/tcl/tzdata/America/Grenada
+dist/gamemaster/tcl/tzdata/America/Guadeloupe
+dist/gamemaster/tcl/tzdata/America/Guatemala
+dist/gamemaster/tcl/tzdata/America/Guayaquil
+dist/gamemaster/tcl/tzdata/America/Guyana
+dist/gamemaster/tcl/tzdata/America/Halifax
+dist/gamemaster/tcl/tzdata/America/Havana
+dist/gamemaster/tcl/tzdata/America/Hermosillo
+dist/gamemaster/tcl/tzdata/America/Indiana/Indianapolis
+dist/gamemaster/tcl/tzdata/America/Indiana/Knox
+dist/gamemaster/tcl/tzdata/America/Indiana/Marengo
+dist/gamemaster/tcl/tzdata/America/Indiana/Petersburg
+dist/gamemaster/tcl/tzdata/America/Indiana/Tell_City
+dist/gamemaster/tcl/tzdata/America/Indiana/Vevay
+dist/gamemaster/tcl/tzdata/America/Indiana/Vincennes
+dist/gamemaster/tcl/tzdata/America/Indiana/Winamac
+dist/gamemaster/tcl/tzdata/America/Indianapolis
+dist/gamemaster/tcl/tzdata/America/Inuvik
+dist/gamemaster/tcl/tzdata/America/Iqaluit
+dist/gamemaster/tcl/tzdata/America/Jamaica
+dist/gamemaster/tcl/tzdata/America/Jujuy
+dist/gamemaster/tcl/tzdata/America/Juneau
+dist/gamemaster/tcl/tzdata/America/Kentucky/Louisville
+dist/gamemaster/tcl/tzdata/America/Kentucky/Monticello
+dist/gamemaster/tcl/tzdata/America/Knox_IN
+dist/gamemaster/tcl/tzdata/America/Kralendijk
+dist/gamemaster/tcl/tzdata/America/La_Paz
+dist/gamemaster/tcl/tzdata/America/Lima
+dist/gamemaster/tcl/tzdata/America/Los_Angeles
+dist/gamemaster/tcl/tzdata/America/Louisville
+dist/gamemaster/tcl/tzdata/America/Lower_Princes
+dist/gamemaster/tcl/tzdata/America/Maceio
+dist/gamemaster/tcl/tzdata/America/Managua
+dist/gamemaster/tcl/tzdata/America/Manaus
+dist/gamemaster/tcl/tzdata/America/Marigot
+dist/gamemaster/tcl/tzdata/America/Martinique
+dist/gamemaster/tcl/tzdata/America/Matamoros
+dist/gamemaster/tcl/tzdata/America/Mazatlan
+dist/gamemaster/tcl/tzdata/America/Mendoza
+dist/gamemaster/tcl/tzdata/America/Menominee
+dist/gamemaster/tcl/tzdata/America/Merida
+dist/gamemaster/tcl/tzdata/America/Metlakatla
+dist/gamemaster/tcl/tzdata/America/Mexico_City
+dist/gamemaster/tcl/tzdata/America/Miquelon
+dist/gamemaster/tcl/tzdata/America/Moncton
+dist/gamemaster/tcl/tzdata/America/Monterrey
+dist/gamemaster/tcl/tzdata/America/Montevideo
+dist/gamemaster/tcl/tzdata/America/Montreal
+dist/gamemaster/tcl/tzdata/America/Montserrat
+dist/gamemaster/tcl/tzdata/America/Nassau
+dist/gamemaster/tcl/tzdata/America/New_York
+dist/gamemaster/tcl/tzdata/America/Nipigon
+dist/gamemaster/tcl/tzdata/America/Nome
+dist/gamemaster/tcl/tzdata/America/Noronha
+dist/gamemaster/tcl/tzdata/America/North_Dakota/Beulah
+dist/gamemaster/tcl/tzdata/America/North_Dakota/Center
+dist/gamemaster/tcl/tzdata/America/North_Dakota/New_Salem
+dist/gamemaster/tcl/tzdata/America/Ojinaga
+dist/gamemaster/tcl/tzdata/America/Panama
+dist/gamemaster/tcl/tzdata/America/Pangnirtung
+dist/gamemaster/tcl/tzdata/America/Paramaribo
+dist/gamemaster/tcl/tzdata/America/Phoenix
+dist/gamemaster/tcl/tzdata/America/Port-au-Prince
+dist/gamemaster/tcl/tzdata/America/Port_of_Spain
+dist/gamemaster/tcl/tzdata/America/Porto_Acre
+dist/gamemaster/tcl/tzdata/America/Porto_Velho
+dist/gamemaster/tcl/tzdata/America/Puerto_Rico
+dist/gamemaster/tcl/tzdata/America/Punta_Arenas
+dist/gamemaster/tcl/tzdata/America/Rainy_River
+dist/gamemaster/tcl/tzdata/America/Rankin_Inlet
+dist/gamemaster/tcl/tzdata/America/Recife
+dist/gamemaster/tcl/tzdata/America/Regina
+dist/gamemaster/tcl/tzdata/America/Resolute
+dist/gamemaster/tcl/tzdata/America/Rio_Branco
+dist/gamemaster/tcl/tzdata/America/Rosario
+dist/gamemaster/tcl/tzdata/America/Santa_Isabel
+dist/gamemaster/tcl/tzdata/America/Santarem
+dist/gamemaster/tcl/tzdata/America/Santiago
+dist/gamemaster/tcl/tzdata/America/Santo_Domingo
+dist/gamemaster/tcl/tzdata/America/Sao_Paulo
+dist/gamemaster/tcl/tzdata/America/Scoresbysund
+dist/gamemaster/tcl/tzdata/America/Shiprock
+dist/gamemaster/tcl/tzdata/America/Sitka
+dist/gamemaster/tcl/tzdata/America/St_Barthelemy
+dist/gamemaster/tcl/tzdata/America/St_Johns
+dist/gamemaster/tcl/tzdata/America/St_Kitts
+dist/gamemaster/tcl/tzdata/America/St_Lucia
+dist/gamemaster/tcl/tzdata/America/St_Thomas
+dist/gamemaster/tcl/tzdata/America/St_Vincent
+dist/gamemaster/tcl/tzdata/America/Swift_Current
+dist/gamemaster/tcl/tzdata/America/Tegucigalpa
+dist/gamemaster/tcl/tzdata/America/Thule
+dist/gamemaster/tcl/tzdata/America/Thunder_Bay
+dist/gamemaster/tcl/tzdata/America/Tijuana
+dist/gamemaster/tcl/tzdata/America/Toronto
+dist/gamemaster/tcl/tzdata/America/Tortola
+dist/gamemaster/tcl/tzdata/America/Vancouver
+dist/gamemaster/tcl/tzdata/America/Virgin
+dist/gamemaster/tcl/tzdata/America/Whitehorse
+dist/gamemaster/tcl/tzdata/America/Winnipeg
+dist/gamemaster/tcl/tzdata/America/Yakutat
+dist/gamemaster/tcl/tzdata/America/Yellowknife
+dist/gamemaster/tcl/tzdata/Antarctica/Casey
+dist/gamemaster/tcl/tzdata/Antarctica/Davis
+dist/gamemaster/tcl/tzdata/Antarctica/DumontDUrville
+dist/gamemaster/tcl/tzdata/Antarctica/Macquarie
+dist/gamemaster/tcl/tzdata/Antarctica/Mawson
+dist/gamemaster/tcl/tzdata/Antarctica/McMurdo
+dist/gamemaster/tcl/tzdata/Antarctica/Palmer
+dist/gamemaster/tcl/tzdata/Antarctica/Rothera
+dist/gamemaster/tcl/tzdata/Antarctica/South_Pole
+dist/gamemaster/tcl/tzdata/Antarctica/Syowa
+dist/gamemaster/tcl/tzdata/Antarctica/Troll
+dist/gamemaster/tcl/tzdata/Antarctica/Vostok
+dist/gamemaster/tcl/tzdata/Arctic/Longyearbyen
+dist/gamemaster/tcl/tzdata/Asia/Aden
+dist/gamemaster/tcl/tzdata/Asia/Almaty
+dist/gamemaster/tcl/tzdata/Asia/Amman
+dist/gamemaster/tcl/tzdata/Asia/Anadyr
+dist/gamemaster/tcl/tzdata/Asia/Aqtau
+dist/gamemaster/tcl/tzdata/Asia/Aqtobe
+dist/gamemaster/tcl/tzdata/Asia/Ashgabat
+dist/gamemaster/tcl/tzdata/Asia/Ashkhabad
+dist/gamemaster/tcl/tzdata/Asia/Atyrau
+dist/gamemaster/tcl/tzdata/Asia/Baghdad
+dist/gamemaster/tcl/tzdata/Asia/Bahrain
+dist/gamemaster/tcl/tzdata/Asia/Baku
+dist/gamemaster/tcl/tzdata/Asia/Bangkok
+dist/gamemaster/tcl/tzdata/Asia/Barnaul
+dist/gamemaster/tcl/tzdata/Asia/Beirut
+dist/gamemaster/tcl/tzdata/Asia/Bishkek
+dist/gamemaster/tcl/tzdata/Asia/Brunei
+dist/gamemaster/tcl/tzdata/Asia/Calcutta
+dist/gamemaster/tcl/tzdata/Asia/Chita
+dist/gamemaster/tcl/tzdata/Asia/Choibalsan
+dist/gamemaster/tcl/tzdata/Asia/Chongqing
+dist/gamemaster/tcl/tzdata/Asia/Chungking
+dist/gamemaster/tcl/tzdata/Asia/Colombo
+dist/gamemaster/tcl/tzdata/Asia/Dacca
+dist/gamemaster/tcl/tzdata/Asia/Damascus
+dist/gamemaster/tcl/tzdata/Asia/Dhaka
+dist/gamemaster/tcl/tzdata/Asia/Dili
+dist/gamemaster/tcl/tzdata/Asia/Dubai
+dist/gamemaster/tcl/tzdata/Asia/Dushanbe
+dist/gamemaster/tcl/tzdata/Asia/Famagusta
+dist/gamemaster/tcl/tzdata/Asia/Gaza
+dist/gamemaster/tcl/tzdata/Asia/Harbin
+dist/gamemaster/tcl/tzdata/Asia/Hebron
+dist/gamemaster/tcl/tzdata/Asia/Ho_Chi_Minh
+dist/gamemaster/tcl/tzdata/Asia/Hong_Kong
+dist/gamemaster/tcl/tzdata/Asia/Hovd
+dist/gamemaster/tcl/tzdata/Asia/Irkutsk
+dist/gamemaster/tcl/tzdata/Asia/Istanbul
+dist/gamemaster/tcl/tzdata/Asia/Jakarta
+dist/gamemaster/tcl/tzdata/Asia/Jayapura
+dist/gamemaster/tcl/tzdata/Asia/Jerusalem
+dist/gamemaster/tcl/tzdata/Asia/Kabul
+dist/gamemaster/tcl/tzdata/Asia/Kamchatka
+dist/gamemaster/tcl/tzdata/Asia/Karachi
+dist/gamemaster/tcl/tzdata/Asia/Kashgar
+dist/gamemaster/tcl/tzdata/Asia/Kathmandu
+dist/gamemaster/tcl/tzdata/Asia/Katmandu
+dist/gamemaster/tcl/tzdata/Asia/Khandyga
+dist/gamemaster/tcl/tzdata/Asia/Kolkata
+dist/gamemaster/tcl/tzdata/Asia/Krasnoyarsk
+dist/gamemaster/tcl/tzdata/Asia/Kuala_Lumpur
+dist/gamemaster/tcl/tzdata/Asia/Kuching
+dist/gamemaster/tcl/tzdata/Asia/Kuwait
+dist/gamemaster/tcl/tzdata/Asia/Macao
+dist/gamemaster/tcl/tzdata/Asia/Macau
+dist/gamemaster/tcl/tzdata/Asia/Magadan
+dist/gamemaster/tcl/tzdata/Asia/Makassar
+dist/gamemaster/tcl/tzdata/Asia/Manila
+dist/gamemaster/tcl/tzdata/Asia/Muscat
+dist/gamemaster/tcl/tzdata/Asia/Nicosia
+dist/gamemaster/tcl/tzdata/Asia/Novokuznetsk
+dist/gamemaster/tcl/tzdata/Asia/Novosibirsk
+dist/gamemaster/tcl/tzdata/Asia/Omsk
+dist/gamemaster/tcl/tzdata/Asia/Oral
+dist/gamemaster/tcl/tzdata/Asia/Phnom_Penh
+dist/gamemaster/tcl/tzdata/Asia/Pontianak
+dist/gamemaster/tcl/tzdata/Asia/Pyongyang
+dist/gamemaster/tcl/tzdata/Asia/Qatar
+dist/gamemaster/tcl/tzdata/Asia/Qyzylorda
+dist/gamemaster/tcl/tzdata/Asia/Rangoon
+dist/gamemaster/tcl/tzdata/Asia/Riyadh
+dist/gamemaster/tcl/tzdata/Asia/Saigon
+dist/gamemaster/tcl/tzdata/Asia/Sakhalin
+dist/gamemaster/tcl/tzdata/Asia/Samarkand
+dist/gamemaster/tcl/tzdata/Asia/Seoul
+dist/gamemaster/tcl/tzdata/Asia/Shanghai
+dist/gamemaster/tcl/tzdata/Asia/Singapore
+dist/gamemaster/tcl/tzdata/Asia/Srednekolymsk
+dist/gamemaster/tcl/tzdata/Asia/Taipei
+dist/gamemaster/tcl/tzdata/Asia/Tashkent
+dist/gamemaster/tcl/tzdata/Asia/Tbilisi
+dist/gamemaster/tcl/tzdata/Asia/Tehran
+dist/gamemaster/tcl/tzdata/Asia/Tel_Aviv
+dist/gamemaster/tcl/tzdata/Asia/Thimbu
+dist/gamemaster/tcl/tzdata/Asia/Thimphu
+dist/gamemaster/tcl/tzdata/Asia/Tokyo
+dist/gamemaster/tcl/tzdata/Asia/Tomsk
+dist/gamemaster/tcl/tzdata/Asia/Ujung_Pandang
+dist/gamemaster/tcl/tzdata/Asia/Ulaanbaatar
+dist/gamemaster/tcl/tzdata/Asia/Ulan_Bator
+dist/gamemaster/tcl/tzdata/Asia/Urumqi
+dist/gamemaster/tcl/tzdata/Asia/Ust-Nera
+dist/gamemaster/tcl/tzdata/Asia/Vientiane
+dist/gamemaster/tcl/tzdata/Asia/Vladivostok
+dist/gamemaster/tcl/tzdata/Asia/Yakutsk
+dist/gamemaster/tcl/tzdata/Asia/Yangon
+dist/gamemaster/tcl/tzdata/Asia/Yekaterinburg
+dist/gamemaster/tcl/tzdata/Asia/Yerevan
+dist/gamemaster/tcl/tzdata/Atlantic/Azores
+dist/gamemaster/tcl/tzdata/Atlantic/Bermuda
+dist/gamemaster/tcl/tzdata/Atlantic/Canary
+dist/gamemaster/tcl/tzdata/Atlantic/Cape_Verde
+dist/gamemaster/tcl/tzdata/Atlantic/Faeroe
+dist/gamemaster/tcl/tzdata/Atlantic/Faroe
+dist/gamemaster/tcl/tzdata/Atlantic/Jan_Mayen
+dist/gamemaster/tcl/tzdata/Atlantic/Madeira
+dist/gamemaster/tcl/tzdata/Atlantic/Reykjavik
+dist/gamemaster/tcl/tzdata/Atlantic/South_Georgia
+dist/gamemaster/tcl/tzdata/Atlantic/St_Helena
+dist/gamemaster/tcl/tzdata/Atlantic/Stanley
+dist/gamemaster/tcl/tzdata/Australia/ACT
+dist/gamemaster/tcl/tzdata/Australia/Adelaide
+dist/gamemaster/tcl/tzdata/Australia/Brisbane
+dist/gamemaster/tcl/tzdata/Australia/Broken_Hill
+dist/gamemaster/tcl/tzdata/Australia/Canberra
+dist/gamemaster/tcl/tzdata/Australia/Currie
+dist/gamemaster/tcl/tzdata/Australia/Darwin
+dist/gamemaster/tcl/tzdata/Australia/Eucla
+dist/gamemaster/tcl/tzdata/Australia/Hobart
+dist/gamemaster/tcl/tzdata/Australia/LHI
+dist/gamemaster/tcl/tzdata/Australia/Lindeman
+dist/gamemaster/tcl/tzdata/Australia/Lord_Howe
+dist/gamemaster/tcl/tzdata/Australia/Melbourne
+dist/gamemaster/tcl/tzdata/Australia/North
+dist/gamemaster/tcl/tzdata/Australia/NSW
+dist/gamemaster/tcl/tzdata/Australia/Perth
+dist/gamemaster/tcl/tzdata/Australia/Queensland
+dist/gamemaster/tcl/tzdata/Australia/South
+dist/gamemaster/tcl/tzdata/Australia/Sydney
+dist/gamemaster/tcl/tzdata/Australia/Tasmania
+dist/gamemaster/tcl/tzdata/Australia/Victoria
+dist/gamemaster/tcl/tzdata/Australia/West
+dist/gamemaster/tcl/tzdata/Australia/Yancowinna
+dist/gamemaster/tcl/tzdata/Brazil/Acre
+dist/gamemaster/tcl/tzdata/Brazil/DeNoronha
+dist/gamemaster/tcl/tzdata/Brazil/East
+dist/gamemaster/tcl/tzdata/Brazil/West
+dist/gamemaster/tcl/tzdata/Canada/Atlantic
+dist/gamemaster/tcl/tzdata/Canada/Central
+dist/gamemaster/tcl/tzdata/Canada/East-Saskatchewan
+dist/gamemaster/tcl/tzdata/Canada/Eastern
+dist/gamemaster/tcl/tzdata/Canada/Mountain
+dist/gamemaster/tcl/tzdata/Canada/Newfoundland
+dist/gamemaster/tcl/tzdata/Canada/Pacific
+dist/gamemaster/tcl/tzdata/Canada/Saskatchewan
+dist/gamemaster/tcl/tzdata/Canada/Yukon
+dist/gamemaster/tcl/tzdata/CET
+dist/gamemaster/tcl/tzdata/Chile/Continental
+dist/gamemaster/tcl/tzdata/Chile/EasterIsland
+dist/gamemaster/tcl/tzdata/CST6CDT
+dist/gamemaster/tcl/tzdata/Cuba
+dist/gamemaster/tcl/tzdata/EET
+dist/gamemaster/tcl/tzdata/Egypt
+dist/gamemaster/tcl/tzdata/Eire
+dist/gamemaster/tcl/tzdata/EST
+dist/gamemaster/tcl/tzdata/EST5EDT
+dist/gamemaster/tcl/tzdata/Etc/GMT
+dist/gamemaster/tcl/tzdata/Etc/GMT+0
+dist/gamemaster/tcl/tzdata/Etc/GMT+1
+dist/gamemaster/tcl/tzdata/Etc/GMT+10
+dist/gamemaster/tcl/tzdata/Etc/GMT+11
+dist/gamemaster/tcl/tzdata/Etc/GMT+12
+dist/gamemaster/tcl/tzdata/Etc/GMT+2
+dist/gamemaster/tcl/tzdata/Etc/GMT+3
+dist/gamemaster/tcl/tzdata/Etc/GMT+4
+dist/gamemaster/tcl/tzdata/Etc/GMT+5
+dist/gamemaster/tcl/tzdata/Etc/GMT+6
+dist/gamemaster/tcl/tzdata/Etc/GMT+7
+dist/gamemaster/tcl/tzdata/Etc/GMT+8
+dist/gamemaster/tcl/tzdata/Etc/GMT+9
+dist/gamemaster/tcl/tzdata/Etc/GMT-0
+dist/gamemaster/tcl/tzdata/Etc/GMT-1
+dist/gamemaster/tcl/tzdata/Etc/GMT-10
+dist/gamemaster/tcl/tzdata/Etc/GMT-11
+dist/gamemaster/tcl/tzdata/Etc/GMT-12
+dist/gamemaster/tcl/tzdata/Etc/GMT-13
+dist/gamemaster/tcl/tzdata/Etc/GMT-14
+dist/gamemaster/tcl/tzdata/Etc/GMT-2
+dist/gamemaster/tcl/tzdata/Etc/GMT-3
+dist/gamemaster/tcl/tzdata/Etc/GMT-4
+dist/gamemaster/tcl/tzdata/Etc/GMT-5
+dist/gamemaster/tcl/tzdata/Etc/GMT-6
+dist/gamemaster/tcl/tzdata/Etc/GMT-7
+dist/gamemaster/tcl/tzdata/Etc/GMT-8
+dist/gamemaster/tcl/tzdata/Etc/GMT-9
+dist/gamemaster/tcl/tzdata/Etc/GMT0
+dist/gamemaster/tcl/tzdata/Etc/Greenwich
+dist/gamemaster/tcl/tzdata/Etc/UCT
+dist/gamemaster/tcl/tzdata/Etc/Universal
+dist/gamemaster/tcl/tzdata/Etc/UTC
+dist/gamemaster/tcl/tzdata/Etc/Zulu
+dist/gamemaster/tcl/tzdata/Europe/Amsterdam
+dist/gamemaster/tcl/tzdata/Europe/Andorra
+dist/gamemaster/tcl/tzdata/Europe/Astrakhan
+dist/gamemaster/tcl/tzdata/Europe/Athens
+dist/gamemaster/tcl/tzdata/Europe/Belfast
+dist/gamemaster/tcl/tzdata/Europe/Belgrade
+dist/gamemaster/tcl/tzdata/Europe/Berlin
+dist/gamemaster/tcl/tzdata/Europe/Bratislava
+dist/gamemaster/tcl/tzdata/Europe/Brussels
+dist/gamemaster/tcl/tzdata/Europe/Bucharest
+dist/gamemaster/tcl/tzdata/Europe/Budapest
+dist/gamemaster/tcl/tzdata/Europe/Busingen
+dist/gamemaster/tcl/tzdata/Europe/Chisinau
+dist/gamemaster/tcl/tzdata/Europe/Copenhagen
+dist/gamemaster/tcl/tzdata/Europe/Dublin
+dist/gamemaster/tcl/tzdata/Europe/Gibraltar
+dist/gamemaster/tcl/tzdata/Europe/Guernsey
+dist/gamemaster/tcl/tzdata/Europe/Helsinki
+dist/gamemaster/tcl/tzdata/Europe/Isle_of_Man
+dist/gamemaster/tcl/tzdata/Europe/Istanbul
+dist/gamemaster/tcl/tzdata/Europe/Jersey
+dist/gamemaster/tcl/tzdata/Europe/Kaliningrad
+dist/gamemaster/tcl/tzdata/Europe/Kiev
+dist/gamemaster/tcl/tzdata/Europe/Kirov
+dist/gamemaster/tcl/tzdata/Europe/Lisbon
+dist/gamemaster/tcl/tzdata/Europe/Ljubljana
+dist/gamemaster/tcl/tzdata/Europe/London
+dist/gamemaster/tcl/tzdata/Europe/Luxembourg
+dist/gamemaster/tcl/tzdata/Europe/Madrid
+dist/gamemaster/tcl/tzdata/Europe/Malta
+dist/gamemaster/tcl/tzdata/Europe/Mariehamn
+dist/gamemaster/tcl/tzdata/Europe/Minsk
+dist/gamemaster/tcl/tzdata/Europe/Monaco
+dist/gamemaster/tcl/tzdata/Europe/Moscow
+dist/gamemaster/tcl/tzdata/Europe/Nicosia
+dist/gamemaster/tcl/tzdata/Europe/Oslo
+dist/gamemaster/tcl/tzdata/Europe/Paris
+dist/gamemaster/tcl/tzdata/Europe/Podgorica
+dist/gamemaster/tcl/tzdata/Europe/Prague
+dist/gamemaster/tcl/tzdata/Europe/Riga
+dist/gamemaster/tcl/tzdata/Europe/Rome
+dist/gamemaster/tcl/tzdata/Europe/Samara
+dist/gamemaster/tcl/tzdata/Europe/San_Marino
+dist/gamemaster/tcl/tzdata/Europe/Sarajevo
+dist/gamemaster/tcl/tzdata/Europe/Saratov
+dist/gamemaster/tcl/tzdata/Europe/Simferopol
+dist/gamemaster/tcl/tzdata/Europe/Skopje
+dist/gamemaster/tcl/tzdata/Europe/Sofia
+dist/gamemaster/tcl/tzdata/Europe/Stockholm
+dist/gamemaster/tcl/tzdata/Europe/Tallinn
+dist/gamemaster/tcl/tzdata/Europe/Tirane
+dist/gamemaster/tcl/tzdata/Europe/Tiraspol
+dist/gamemaster/tcl/tzdata/Europe/Ulyanovsk
+dist/gamemaster/tcl/tzdata/Europe/Uzhgorod
+dist/gamemaster/tcl/tzdata/Europe/Vaduz
+dist/gamemaster/tcl/tzdata/Europe/Vatican
+dist/gamemaster/tcl/tzdata/Europe/Vienna
+dist/gamemaster/tcl/tzdata/Europe/Vilnius
+dist/gamemaster/tcl/tzdata/Europe/Volgograd
+dist/gamemaster/tcl/tzdata/Europe/Warsaw
+dist/gamemaster/tcl/tzdata/Europe/Zagreb
+dist/gamemaster/tcl/tzdata/Europe/Zaporozhye
+dist/gamemaster/tcl/tzdata/Europe/Zurich
+dist/gamemaster/tcl/tzdata/GB
+dist/gamemaster/tcl/tzdata/GB-Eire
+dist/gamemaster/tcl/tzdata/GMT
+dist/gamemaster/tcl/tzdata/GMT+0
+dist/gamemaster/tcl/tzdata/GMT-0
+dist/gamemaster/tcl/tzdata/GMT0
+dist/gamemaster/tcl/tzdata/Greenwich
+dist/gamemaster/tcl/tzdata/Hongkong
+dist/gamemaster/tcl/tzdata/HST
+dist/gamemaster/tcl/tzdata/Iceland
+dist/gamemaster/tcl/tzdata/Indian/Antananarivo
+dist/gamemaster/tcl/tzdata/Indian/Chagos
+dist/gamemaster/tcl/tzdata/Indian/Christmas
+dist/gamemaster/tcl/tzdata/Indian/Cocos
+dist/gamemaster/tcl/tzdata/Indian/Comoro
+dist/gamemaster/tcl/tzdata/Indian/Kerguelen
+dist/gamemaster/tcl/tzdata/Indian/Mahe
+dist/gamemaster/tcl/tzdata/Indian/Maldives
+dist/gamemaster/tcl/tzdata/Indian/Mauritius
+dist/gamemaster/tcl/tzdata/Indian/Mayotte
+dist/gamemaster/tcl/tzdata/Indian/Reunion
+dist/gamemaster/tcl/tzdata/Iran
+dist/gamemaster/tcl/tzdata/Israel
+dist/gamemaster/tcl/tzdata/Jamaica
+dist/gamemaster/tcl/tzdata/Japan
+dist/gamemaster/tcl/tzdata/Kwajalein
+dist/gamemaster/tcl/tzdata/Libya
+dist/gamemaster/tcl/tzdata/MET
+dist/gamemaster/tcl/tzdata/Mexico/BajaNorte
+dist/gamemaster/tcl/tzdata/Mexico/BajaSur
+dist/gamemaster/tcl/tzdata/Mexico/General
+dist/gamemaster/tcl/tzdata/MST
+dist/gamemaster/tcl/tzdata/MST7MDT
+dist/gamemaster/tcl/tzdata/Navajo
+dist/gamemaster/tcl/tzdata/NZ
+dist/gamemaster/tcl/tzdata/NZ-CHAT
+dist/gamemaster/tcl/tzdata/Pacific/Apia
+dist/gamemaster/tcl/tzdata/Pacific/Auckland
+dist/gamemaster/tcl/tzdata/Pacific/Bougainville
+dist/gamemaster/tcl/tzdata/Pacific/Chatham
+dist/gamemaster/tcl/tzdata/Pacific/Chuuk
+dist/gamemaster/tcl/tzdata/Pacific/Easter
+dist/gamemaster/tcl/tzdata/Pacific/Efate
+dist/gamemaster/tcl/tzdata/Pacific/Enderbury
+dist/gamemaster/tcl/tzdata/Pacific/Fakaofo
+dist/gamemaster/tcl/tzdata/Pacific/Fiji
+dist/gamemaster/tcl/tzdata/Pacific/Funafuti
+dist/gamemaster/tcl/tzdata/Pacific/Galapagos
+dist/gamemaster/tcl/tzdata/Pacific/Gambier
+dist/gamemaster/tcl/tzdata/Pacific/Guadalcanal
+dist/gamemaster/tcl/tzdata/Pacific/Guam
+dist/gamemaster/tcl/tzdata/Pacific/Honolulu
+dist/gamemaster/tcl/tzdata/Pacific/Johnston
+dist/gamemaster/tcl/tzdata/Pacific/Kiritimati
+dist/gamemaster/tcl/tzdata/Pacific/Kosrae
+dist/gamemaster/tcl/tzdata/Pacific/Kwajalein
+dist/gamemaster/tcl/tzdata/Pacific/Majuro
+dist/gamemaster/tcl/tzdata/Pacific/Marquesas
+dist/gamemaster/tcl/tzdata/Pacific/Midway
+dist/gamemaster/tcl/tzdata/Pacific/Nauru
+dist/gamemaster/tcl/tzdata/Pacific/Niue
+dist/gamemaster/tcl/tzdata/Pacific/Norfolk
+dist/gamemaster/tcl/tzdata/Pacific/Noumea
+dist/gamemaster/tcl/tzdata/Pacific/Pago_Pago
+dist/gamemaster/tcl/tzdata/Pacific/Palau
+dist/gamemaster/tcl/tzdata/Pacific/Pitcairn
+dist/gamemaster/tcl/tzdata/Pacific/Pohnpei
+dist/gamemaster/tcl/tzdata/Pacific/Ponape
+dist/gamemaster/tcl/tzdata/Pacific/Port_Moresby
+dist/gamemaster/tcl/tzdata/Pacific/Rarotonga
+dist/gamemaster/tcl/tzdata/Pacific/Saipan
+dist/gamemaster/tcl/tzdata/Pacific/Samoa
+dist/gamemaster/tcl/tzdata/Pacific/Tahiti
+dist/gamemaster/tcl/tzdata/Pacific/Tarawa
+dist/gamemaster/tcl/tzdata/Pacific/Tongatapu
+dist/gamemaster/tcl/tzdata/Pacific/Truk
+dist/gamemaster/tcl/tzdata/Pacific/Wake
+dist/gamemaster/tcl/tzdata/Pacific/Wallis
+dist/gamemaster/tcl/tzdata/Pacific/Yap
+dist/gamemaster/tcl/tzdata/Poland
+dist/gamemaster/tcl/tzdata/Portugal
+dist/gamemaster/tcl/tzdata/PRC
+dist/gamemaster/tcl/tzdata/PST8PDT
+dist/gamemaster/tcl/tzdata/ROC
+dist/gamemaster/tcl/tzdata/ROK
+dist/gamemaster/tcl/tzdata/Singapore
+dist/gamemaster/tcl/tzdata/SystemV/AST4
+dist/gamemaster/tcl/tzdata/SystemV/AST4ADT
+dist/gamemaster/tcl/tzdata/SystemV/CST6
+dist/gamemaster/tcl/tzdata/SystemV/CST6CDT
+dist/gamemaster/tcl/tzdata/SystemV/EST5
+dist/gamemaster/tcl/tzdata/SystemV/EST5EDT
+dist/gamemaster/tcl/tzdata/SystemV/HST10
+dist/gamemaster/tcl/tzdata/SystemV/MST7
+dist/gamemaster/tcl/tzdata/SystemV/MST7MDT
+dist/gamemaster/tcl/tzdata/SystemV/PST8
+dist/gamemaster/tcl/tzdata/SystemV/PST8PDT
+dist/gamemaster/tcl/tzdata/SystemV/YST9
+dist/gamemaster/tcl/tzdata/SystemV/YST9YDT
+dist/gamemaster/tcl/tzdata/Turkey
+dist/gamemaster/tcl/tzdata/UCT
+dist/gamemaster/tcl/tzdata/Universal
+dist/gamemaster/tcl/tzdata/US/Alaska
+dist/gamemaster/tcl/tzdata/US/Aleutian
+dist/gamemaster/tcl/tzdata/US/Arizona
+dist/gamemaster/tcl/tzdata/US/Central
+dist/gamemaster/tcl/tzdata/US/East-Indiana
+dist/gamemaster/tcl/tzdata/US/Eastern
+dist/gamemaster/tcl/tzdata/US/Hawaii
+dist/gamemaster/tcl/tzdata/US/Indiana-Starke
+dist/gamemaster/tcl/tzdata/US/Michigan
+dist/gamemaster/tcl/tzdata/US/Mountain
+dist/gamemaster/tcl/tzdata/US/Pacific
+dist/gamemaster/tcl/tzdata/US/Pacific-New
+dist/gamemaster/tcl/tzdata/US/Samoa
+dist/gamemaster/tcl/tzdata/UTC
+dist/gamemaster/tcl/tzdata/W-SU
+dist/gamemaster/tcl/tzdata/WET
+dist/gamemaster/tcl/tzdata/Zulu
+dist/gamemaster/tcl/word.tcl
+dist/gamemaster/tcl8/8.4/platform-1.0.14.tm
+dist/gamemaster/tcl8/8.4/platform/shell-1.1.4.tm
+dist/gamemaster/tcl8/8.5/msgcat-1.6.1.tm
+dist/gamemaster/tcl8/8.5/tcltest-2.5.0.tm
+dist/gamemaster/tcl8/8.6/http-2.9.0.tm
+dist/gamemaster/tcl86t.dll
+dist/gamemaster/tk/bgerror.tcl
+dist/gamemaster/tk/button.tcl
+dist/gamemaster/tk/choosedir.tcl
+dist/gamemaster/tk/clrpick.tcl
+dist/gamemaster/tk/comdlg.tcl
+dist/gamemaster/tk/console.tcl
+dist/gamemaster/tk/dialog.tcl
+dist/gamemaster/tk/entry.tcl
+dist/gamemaster/tk/focus.tcl
+dist/gamemaster/tk/fontchooser.tcl
+dist/gamemaster/tk/iconlist.tcl
+dist/gamemaster/tk/icons.tcl
+dist/gamemaster/tk/images/logo.eps
+dist/gamemaster/tk/images/logo100.gif
+dist/gamemaster/tk/images/logo64.gif
+dist/gamemaster/tk/images/logoLarge.gif
+dist/gamemaster/tk/images/logoMed.gif
+dist/gamemaster/tk/images/pwrdLogo.eps
+dist/gamemaster/tk/images/pwrdLogo100.gif
+dist/gamemaster/tk/images/pwrdLogo150.gif
+dist/gamemaster/tk/images/pwrdLogo175.gif
+dist/gamemaster/tk/images/pwrdLogo200.gif
+dist/gamemaster/tk/images/pwrdLogo75.gif
+dist/gamemaster/tk/images/README
+dist/gamemaster/tk/images/tai-ku.gif
+dist/gamemaster/tk/license.terms
+dist/gamemaster/tk/listbox.tcl
+dist/gamemaster/tk/megawidget.tcl
+dist/gamemaster/tk/menu.tcl
+dist/gamemaster/tk/mkpsenc.tcl
+dist/gamemaster/tk/msgbox.tcl
+dist/gamemaster/tk/msgs/cs.msg
+dist/gamemaster/tk/msgs/da.msg
+dist/gamemaster/tk/msgs/de.msg
+dist/gamemaster/tk/msgs/el.msg
+dist/gamemaster/tk/msgs/en.msg
+dist/gamemaster/tk/msgs/en_gb.msg
+dist/gamemaster/tk/msgs/eo.msg
+dist/gamemaster/tk/msgs/es.msg
+dist/gamemaster/tk/msgs/fr.msg
+dist/gamemaster/tk/msgs/hu.msg
+dist/gamemaster/tk/msgs/it.msg
+dist/gamemaster/tk/msgs/nl.msg
+dist/gamemaster/tk/msgs/pl.msg
+dist/gamemaster/tk/msgs/pt.msg
+dist/gamemaster/tk/msgs/ru.msg
+dist/gamemaster/tk/msgs/sv.msg
+dist/gamemaster/tk/obsolete.tcl
+dist/gamemaster/tk/optMenu.tcl
+dist/gamemaster/tk/palette.tcl
+dist/gamemaster/tk/panedwindow.tcl
+dist/gamemaster/tk/pkgIndex.tcl
+dist/gamemaster/tk/safetk.tcl
+dist/gamemaster/tk/scale.tcl
+dist/gamemaster/tk/scrlbar.tcl
+dist/gamemaster/tk/spinbox.tcl
+dist/gamemaster/tk/tclIndex
+dist/gamemaster/tk/tearoff.tcl
+dist/gamemaster/tk/text.tcl
+dist/gamemaster/tk/tk.tcl
+dist/gamemaster/tk/tkfbox.tcl
+dist/gamemaster/tk/ttk/altTheme.tcl
+dist/gamemaster/tk/ttk/aquaTheme.tcl
+dist/gamemaster/tk/ttk/button.tcl
+dist/gamemaster/tk/ttk/clamTheme.tcl
+dist/gamemaster/tk/ttk/classicTheme.tcl
+dist/gamemaster/tk/ttk/combobox.tcl
+dist/gamemaster/tk/ttk/cursors.tcl
+dist/gamemaster/tk/ttk/defaults.tcl
+dist/gamemaster/tk/ttk/entry.tcl
+dist/gamemaster/tk/ttk/fonts.tcl
+dist/gamemaster/tk/ttk/menubutton.tcl
+dist/gamemaster/tk/ttk/notebook.tcl
+dist/gamemaster/tk/ttk/panedwindow.tcl
+dist/gamemaster/tk/ttk/progress.tcl
+dist/gamemaster/tk/ttk/scale.tcl
+dist/gamemaster/tk/ttk/scrollbar.tcl
+dist/gamemaster/tk/ttk/sizegrip.tcl
+dist/gamemaster/tk/ttk/spinbox.tcl
+dist/gamemaster/tk/ttk/treeview.tcl
+dist/gamemaster/tk/ttk/ttk.tcl
+dist/gamemaster/tk/ttk/utils.tcl
+dist/gamemaster/tk/ttk/vistaTheme.tcl
+dist/gamemaster/tk/ttk/winTheme.tcl
+dist/gamemaster/tk/ttk/xpTheme.tcl
+dist/gamemaster/tk/unsupported.tcl
+dist/gamemaster/tk/xmfbox.tcl
+dist/gamemaster/tk86t.dll
+dist/gamemaster/ucrtbase.dll
+dist/gamemaster/unicodedata.pyd
+dist/gamemaster/VCRUNTIME140.dll
+dist/icon.ico
+dist/output/away_name.txt
+dist/output/away_score.txt
+dist/output/home_name.txt
+dist/output/home_score.txt
+dist/output/Section.txt
+dist/output/time.txt
+experiments (gitnore)/dist/before.txt
+experiments (gitnore)/dist/gamemaster.json
+experiments (gitnore)/dist/gamemaster/_asyncio.pyd
+experiments (gitnore)/dist/gamemaster/_bz2.pyd
+experiments (gitnore)/dist/gamemaster/_ctypes.pyd
+experiments (gitnore)/dist/gamemaster/_decimal.pyd
+experiments (gitnore)/dist/gamemaster/_hashlib.pyd
+experiments (gitnore)/dist/gamemaster/_lzma.pyd
+experiments (gitnore)/dist/gamemaster/_multiprocessing.pyd
+experiments (gitnore)/dist/gamemaster/_overlapped.pyd
+experiments (gitnore)/dist/gamemaster/_queue.pyd
+experiments (gitnore)/dist/gamemaster/_socket.pyd
+experiments (gitnore)/dist/gamemaster/_ssl.pyd
+experiments (gitnore)/dist/gamemaster/_tkinter.pyd
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-console-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-datetime-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-debug-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-errorhandling-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-file-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-file-l1-2-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-file-l2-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-handle-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-heap-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-interlocked-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-libraryloader-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-localization-l1-2-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-memory-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-namedpipe-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-processenvironment-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-processthreads-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-processthreads-l1-1-1.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-profile-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-rtlsupport-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-string-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-synch-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-synch-l1-2-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-sysinfo-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-timezone-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-core-util-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-conio-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-convert-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-environment-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-filesystem-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-heap-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-locale-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-math-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-process-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-runtime-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-stdio-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-string-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-time-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/api-ms-win-crt-utility-l1-1-0.dll
+experiments (gitnore)/dist/gamemaster/base_library.zip
+experiments (gitnore)/dist/gamemaster/gamemaster.exe.manifest
+experiments (gitnore)/dist/gamemaster/libcrypto-1_1.dll
+experiments (gitnore)/dist/gamemaster/libffi-7.dll
+experiments (gitnore)/dist/gamemaster/libssl-1_1.dll
+experiments (gitnore)/dist/gamemaster/pyexpat.pyd
+experiments (gitnore)/dist/gamemaster/python39.dll
+experiments (gitnore)/dist/gamemaster/select.pyd
+experiments (gitnore)/dist/gamemaster/tcl/auto.tcl
+experiments (gitnore)/dist/gamemaster/tcl/clock.tcl
+experiments (gitnore)/dist/gamemaster/tcl/encoding/ascii.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/big5.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp1250.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp1251.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp1252.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp1253.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp1254.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp1255.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp1256.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp1257.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp1258.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp437.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp737.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp775.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp850.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp852.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp855.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp857.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp860.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp861.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp862.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp863.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp864.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp865.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp866.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp869.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp874.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp932.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp936.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp949.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/cp950.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/dingbats.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/ebcdic.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/euc-cn.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/euc-jp.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/euc-kr.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/gb12345.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/gb1988.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/gb2312-raw.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/gb2312.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso2022-jp.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso2022-kr.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso2022.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-1.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-10.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-13.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-14.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-15.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-16.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-2.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-3.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-4.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-5.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-6.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-7.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-8.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/iso8859-9.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/jis0201.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/jis0208.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/jis0212.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/koi8-r.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/koi8-u.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/ksc5601.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macCentEuro.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macCroatian.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macCyrillic.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macDingbats.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macGreek.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macIceland.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macJapan.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macRoman.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macRomania.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macThai.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macTurkish.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/macUkraine.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/shiftjis.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/symbol.enc
+experiments (gitnore)/dist/gamemaster/tcl/encoding/tis-620.enc
+experiments (gitnore)/dist/gamemaster/tcl/history.tcl
+experiments (gitnore)/dist/gamemaster/tcl/http1.0/http.tcl
+experiments (gitnore)/dist/gamemaster/tcl/http1.0/pkgIndex.tcl
+experiments (gitnore)/dist/gamemaster/tcl/init.tcl
+experiments (gitnore)/dist/gamemaster/tcl/msgs/af.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/af_za.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ar.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ar_in.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ar_jo.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ar_lb.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ar_sy.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/be.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/bg.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/bn.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/bn_in.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ca.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/cs.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/da.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/de.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/de_at.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/de_be.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/el.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_au.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_be.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_bw.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_ca.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_gb.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_hk.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_ie.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_in.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_nz.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_ph.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_sg.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_za.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/en_zw.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/eo.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_ar.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_bo.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_cl.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_co.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_cr.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_do.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_ec.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_gt.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_hn.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_mx.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_ni.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_pa.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_pe.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_pr.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_py.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_sv.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_uy.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/es_ve.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/et.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/eu.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/eu_es.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/fa.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/fa_in.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/fa_ir.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/fi.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/fo.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/fo_fo.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/fr.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/fr_be.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/fr_ca.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/fr_ch.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ga.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ga_ie.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/gl.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/gl_es.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/gv.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/gv_gb.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/he.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/hi.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/hi_in.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/hr.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/hu.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/id.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/id_id.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/is.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/it.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/it_ch.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ja.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/kl.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/kl_gl.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ko.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ko_kr.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/kok.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/kok_in.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/kw.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/kw_gb.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/lt.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/lv.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/mk.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/mr.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/mr_in.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ms.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ms_my.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/mt.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/nb.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/nl.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/nl_be.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/nn.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/pl.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/pt.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/pt_br.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ro.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ru.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ru_ua.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/sh.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/sk.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/sl.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/sq.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/sr.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/sv.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/sw.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ta.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/ta_in.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/te.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/te_in.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/th.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/tr.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/uk.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/vi.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/zh.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/zh_cn.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/zh_hk.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/zh_sg.msg
+experiments (gitnore)/dist/gamemaster/tcl/msgs/zh_tw.msg
+experiments (gitnore)/dist/gamemaster/tcl/opt0.4/optparse.tcl
+experiments (gitnore)/dist/gamemaster/tcl/opt0.4/pkgIndex.tcl
+experiments (gitnore)/dist/gamemaster/tcl/package.tcl
+experiments (gitnore)/dist/gamemaster/tcl/parray.tcl
+experiments (gitnore)/dist/gamemaster/tcl/safe.tcl
+experiments (gitnore)/dist/gamemaster/tcl/tclIndex
+experiments (gitnore)/dist/gamemaster/tcl/tm.tcl
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Abidjan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Accra
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Addis_Ababa
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Algiers
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Asmara
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Asmera
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Bamako
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Bangui
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Banjul
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Bissau
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Blantyre
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Brazzaville
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Bujumbura
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Cairo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Casablanca
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Ceuta
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Conakry
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Dakar
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Dar_es_Salaam
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Djibouti
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Douala
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/El_Aaiun
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Freetown
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Gaborone
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Harare
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Johannesburg
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Juba
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Kampala
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Khartoum
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Kigali
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Kinshasa
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Lagos
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Libreville
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Lome
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Luanda
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Lubumbashi
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Lusaka
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Malabo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Maputo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Maseru
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Mbabane
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Mogadishu
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Monrovia
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Nairobi
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Ndjamena
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Niamey
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Nouakchott
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Ouagadougou
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Porto-Novo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Sao_Tome
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Timbuktu
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Tripoli
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Tunis
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Africa/Windhoek
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Adak
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Anchorage
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Anguilla
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Antigua
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Araguaina
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/Buenos_Aires
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/Catamarca
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/ComodRivadavia
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/Cordoba
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/Jujuy
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/La_Rioja
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/Mendoza
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/Rio_Gallegos
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/Salta
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/San_Juan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/San_Luis
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/Tucuman
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Argentina/Ushuaia
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Aruba
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Asuncion
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Atikokan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Atka
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Bahia
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Bahia_Banderas
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Barbados
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Belem
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Belize
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Blanc-Sablon
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Boa_Vista
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Bogota
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Boise
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Buenos_Aires
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Cambridge_Bay
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Campo_Grande
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Cancun
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Caracas
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Catamarca
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Cayenne
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Cayman
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Chicago
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Chihuahua
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Coral_Harbour
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Cordoba
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Costa_Rica
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Creston
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Cuiaba
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Curacao
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Danmarkshavn
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Dawson
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Dawson_Creek
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Denver
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Detroit
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Dominica
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Edmonton
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Eirunepe
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/El_Salvador
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Ensenada
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Fort_Nelson
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Fort_Wayne
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Fortaleza
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Glace_Bay
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Godthab
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Goose_Bay
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Grand_Turk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Grenada
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Guadeloupe
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Guatemala
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Guayaquil
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Guyana
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Halifax
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Havana
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Hermosillo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Indiana/Indianapolis
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Indiana/Knox
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Indiana/Marengo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Indiana/Petersburg
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Indiana/Tell_City
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Indiana/Vevay
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Indiana/Vincennes
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Indiana/Winamac
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Indianapolis
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Inuvik
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Iqaluit
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Jamaica
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Jujuy
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Juneau
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Kentucky/Louisville
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Kentucky/Monticello
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Knox_IN
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Kralendijk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/La_Paz
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Lima
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Los_Angeles
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Louisville
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Lower_Princes
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Maceio
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Managua
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Manaus
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Marigot
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Martinique
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Matamoros
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Mazatlan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Mendoza
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Menominee
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Merida
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Metlakatla
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Mexico_City
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Miquelon
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Moncton
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Monterrey
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Montevideo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Montreal
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Montserrat
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Nassau
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/New_York
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Nipigon
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Nome
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Noronha
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/North_Dakota/Beulah
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/North_Dakota/Center
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/North_Dakota/New_Salem
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Ojinaga
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Panama
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Pangnirtung
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Paramaribo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Phoenix
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Port-au-Prince
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Port_of_Spain
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Porto_Acre
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Porto_Velho
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Puerto_Rico
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Punta_Arenas
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Rainy_River
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Rankin_Inlet
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Recife
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Regina
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Resolute
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Rio_Branco
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Rosario
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Santa_Isabel
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Santarem
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Santiago
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Santo_Domingo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Sao_Paulo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Scoresbysund
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Shiprock
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Sitka
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/St_Barthelemy
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/St_Johns
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/St_Kitts
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/St_Lucia
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/St_Thomas
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/St_Vincent
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Swift_Current
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Tegucigalpa
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Thule
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Thunder_Bay
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Tijuana
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Toronto
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Tortola
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Vancouver
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Virgin
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Whitehorse
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Winnipeg
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Yakutat
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/America/Yellowknife
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/Casey
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/Davis
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/DumontDUrville
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/Macquarie
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/Mawson
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/McMurdo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/Palmer
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/Rothera
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/South_Pole
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/Syowa
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/Troll
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Antarctica/Vostok
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Arctic/Longyearbyen
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Aden
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Almaty
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Amman
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Anadyr
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Aqtau
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Aqtobe
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Ashgabat
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Ashkhabad
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Atyrau
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Baghdad
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Bahrain
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Baku
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Bangkok
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Barnaul
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Beirut
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Bishkek
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Brunei
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Calcutta
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Chita
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Choibalsan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Chongqing
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Chungking
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Colombo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Dacca
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Damascus
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Dhaka
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Dili
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Dubai
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Dushanbe
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Famagusta
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Gaza
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Harbin
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Hebron
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Ho_Chi_Minh
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Hong_Kong
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Hovd
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Irkutsk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Istanbul
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Jakarta
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Jayapura
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Jerusalem
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Kabul
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Kamchatka
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Karachi
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Kashgar
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Kathmandu
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Katmandu
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Khandyga
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Kolkata
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Krasnoyarsk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Kuala_Lumpur
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Kuching
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Kuwait
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Macao
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Macau
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Magadan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Makassar
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Manila
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Muscat
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Nicosia
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Novokuznetsk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Novosibirsk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Omsk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Oral
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Phnom_Penh
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Pontianak
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Pyongyang
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Qatar
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Qyzylorda
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Rangoon
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Riyadh
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Saigon
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Sakhalin
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Samarkand
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Seoul
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Shanghai
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Singapore
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Srednekolymsk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Taipei
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Tashkent
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Tbilisi
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Tehran
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Tel_Aviv
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Thimbu
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Thimphu
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Tokyo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Tomsk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Ujung_Pandang
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Ulaanbaatar
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Ulan_Bator
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Urumqi
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Ust-Nera
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Vientiane
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Vladivostok
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Yakutsk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Yangon
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Yekaterinburg
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Asia/Yerevan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/Azores
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/Bermuda
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/Canary
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/Cape_Verde
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/Faeroe
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/Faroe
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/Jan_Mayen
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/Madeira
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/Reykjavik
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/South_Georgia
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/St_Helena
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Atlantic/Stanley
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/ACT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Adelaide
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Brisbane
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Broken_Hill
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Canberra
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Currie
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Darwin
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Eucla
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Hobart
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/LHI
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Lindeman
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Lord_Howe
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Melbourne
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/North
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/NSW
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Perth
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Queensland
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/South
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Sydney
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Tasmania
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Victoria
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/West
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Australia/Yancowinna
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Brazil/Acre
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Brazil/DeNoronha
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Brazil/East
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Brazil/West
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Canada/Atlantic
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Canada/Central
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Canada/East-Saskatchewan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Canada/Eastern
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Canada/Mountain
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Canada/Newfoundland
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Canada/Pacific
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Canada/Saskatchewan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Canada/Yukon
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/CET
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Chile/Continental
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Chile/EasterIsland
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/CST6CDT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Cuba
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/EET
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Egypt
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Eire
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/EST
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/EST5EDT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+0
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+1
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+10
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+11
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+12
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+2
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+3
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+4
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+5
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+6
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+7
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+8
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT+9
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-0
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-1
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-10
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-11
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-12
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-13
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-14
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-2
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-3
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-4
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-5
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-6
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-7
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-8
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT-9
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/GMT0
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/Greenwich
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/UCT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/Universal
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/UTC
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Etc/Zulu
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Amsterdam
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Andorra
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Astrakhan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Athens
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Belfast
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Belgrade
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Berlin
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Bratislava
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Brussels
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Bucharest
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Budapest
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Busingen
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Chisinau
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Copenhagen
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Dublin
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Gibraltar
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Guernsey
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Helsinki
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Isle_of_Man
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Istanbul
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Jersey
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Kaliningrad
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Kiev
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Kirov
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Lisbon
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Ljubljana
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/London
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Luxembourg
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Madrid
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Malta
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Mariehamn
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Minsk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Monaco
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Moscow
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Nicosia
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Oslo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Paris
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Podgorica
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Prague
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Riga
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Rome
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Samara
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/San_Marino
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Sarajevo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Saratov
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Simferopol
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Skopje
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Sofia
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Stockholm
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Tallinn
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Tirane
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Tiraspol
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Ulyanovsk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Uzhgorod
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Vaduz
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Vatican
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Vienna
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Vilnius
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Volgograd
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Warsaw
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Zagreb
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Zaporozhye
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Europe/Zurich
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/GB
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/GB-Eire
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/GMT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/GMT+0
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/GMT-0
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/GMT0
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Greenwich
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Hongkong
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/HST
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Iceland
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Antananarivo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Chagos
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Christmas
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Cocos
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Comoro
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Kerguelen
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Mahe
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Maldives
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Mauritius
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Mayotte
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Indian/Reunion
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Iran
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Israel
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Jamaica
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Japan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Kwajalein
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Libya
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/MET
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Mexico/BajaNorte
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Mexico/BajaSur
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Mexico/General
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/MST
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/MST7MDT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Navajo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/NZ
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/NZ-CHAT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Apia
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Auckland
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Bougainville
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Chatham
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Chuuk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Easter
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Efate
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Enderbury
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Fakaofo
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Fiji
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Funafuti
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Galapagos
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Gambier
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Guadalcanal
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Guam
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Honolulu
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Johnston
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Kiritimati
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Kosrae
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Kwajalein
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Majuro
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Marquesas
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Midway
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Nauru
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Niue
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Norfolk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Noumea
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Pago_Pago
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Palau
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Pitcairn
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Pohnpei
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Ponape
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Port_Moresby
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Rarotonga
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Saipan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Samoa
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Tahiti
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Tarawa
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Tongatapu
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Truk
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Wake
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Wallis
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Pacific/Yap
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Poland
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Portugal
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/PRC
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/PST8PDT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/ROC
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/ROK
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Singapore
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/AST4
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/AST4ADT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/CST6
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/CST6CDT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/EST5
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/EST5EDT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/HST10
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/MST7
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/MST7MDT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/PST8
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/PST8PDT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/YST9
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/SystemV/YST9YDT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Turkey
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/UCT
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Universal
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Alaska
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Aleutian
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Arizona
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Central
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/East-Indiana
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Eastern
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Hawaii
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Indiana-Starke
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Michigan
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Mountain
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Pacific
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Pacific-New
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/US/Samoa
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/UTC
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/W-SU
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/WET
+experiments (gitnore)/dist/gamemaster/tcl/tzdata/Zulu
+experiments (gitnore)/dist/gamemaster/tcl/word.tcl
+experiments (gitnore)/dist/gamemaster/tcl8/8.4/platform-1.0.14.tm
+experiments (gitnore)/dist/gamemaster/tcl8/8.4/platform/shell-1.1.4.tm
+experiments (gitnore)/dist/gamemaster/tcl8/8.5/msgcat-1.6.1.tm
+experiments (gitnore)/dist/gamemaster/tcl8/8.5/tcltest-2.5.0.tm
+experiments (gitnore)/dist/gamemaster/tcl8/8.6/http-2.9.0.tm
+experiments (gitnore)/dist/gamemaster/tcl86t.dll
+experiments (gitnore)/dist/gamemaster/tk/bgerror.tcl
+experiments (gitnore)/dist/gamemaster/tk/button.tcl
+experiments (gitnore)/dist/gamemaster/tk/choosedir.tcl
+experiments (gitnore)/dist/gamemaster/tk/clrpick.tcl
+experiments (gitnore)/dist/gamemaster/tk/comdlg.tcl
+experiments (gitnore)/dist/gamemaster/tk/console.tcl
+experiments (gitnore)/dist/gamemaster/tk/dialog.tcl
+experiments (gitnore)/dist/gamemaster/tk/entry.tcl
+experiments (gitnore)/dist/gamemaster/tk/focus.tcl
+experiments (gitnore)/dist/gamemaster/tk/fontchooser.tcl
+experiments (gitnore)/dist/gamemaster/tk/iconlist.tcl
+experiments (gitnore)/dist/gamemaster/tk/icons.tcl
+experiments (gitnore)/dist/gamemaster/tk/images/logo.eps
+experiments (gitnore)/dist/gamemaster/tk/images/logo100.gif
+experiments (gitnore)/dist/gamemaster/tk/images/logo64.gif
+experiments (gitnore)/dist/gamemaster/tk/images/logoLarge.gif
+experiments (gitnore)/dist/gamemaster/tk/images/logoMed.gif
+experiments (gitnore)/dist/gamemaster/tk/images/pwrdLogo.eps
+experiments (gitnore)/dist/gamemaster/tk/images/pwrdLogo100.gif
+experiments (gitnore)/dist/gamemaster/tk/images/pwrdLogo150.gif
+experiments (gitnore)/dist/gamemaster/tk/images/pwrdLogo175.gif
+experiments (gitnore)/dist/gamemaster/tk/images/pwrdLogo200.gif
+experiments (gitnore)/dist/gamemaster/tk/images/pwrdLogo75.gif
+experiments (gitnore)/dist/gamemaster/tk/images/README
+experiments (gitnore)/dist/gamemaster/tk/images/tai-ku.gif
+experiments (gitnore)/dist/gamemaster/tk/license.terms
+experiments (gitnore)/dist/gamemaster/tk/listbox.tcl
+experiments (gitnore)/dist/gamemaster/tk/megawidget.tcl
+experiments (gitnore)/dist/gamemaster/tk/menu.tcl
+experiments (gitnore)/dist/gamemaster/tk/mkpsenc.tcl
+experiments (gitnore)/dist/gamemaster/tk/msgbox.tcl
+experiments (gitnore)/dist/gamemaster/tk/msgs/cs.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/da.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/de.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/el.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/en.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/en_gb.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/eo.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/es.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/fr.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/hu.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/it.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/nl.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/pl.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/pt.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/ru.msg
+experiments (gitnore)/dist/gamemaster/tk/msgs/sv.msg
+experiments (gitnore)/dist/gamemaster/tk/obsolete.tcl
+experiments (gitnore)/dist/gamemaster/tk/optMenu.tcl
+experiments (gitnore)/dist/gamemaster/tk/palette.tcl
+experiments (gitnore)/dist/gamemaster/tk/panedwindow.tcl
+experiments (gitnore)/dist/gamemaster/tk/pkgIndex.tcl
+experiments (gitnore)/dist/gamemaster/tk/safetk.tcl
+experiments (gitnore)/dist/gamemaster/tk/scale.tcl
+experiments (gitnore)/dist/gamemaster/tk/scrlbar.tcl
+experiments (gitnore)/dist/gamemaster/tk/spinbox.tcl
+experiments (gitnore)/dist/gamemaster/tk/tclIndex
+experiments (gitnore)/dist/gamemaster/tk/tearoff.tcl
+experiments (gitnore)/dist/gamemaster/tk/text.tcl
+experiments (gitnore)/dist/gamemaster/tk/tk.tcl
+experiments (gitnore)/dist/gamemaster/tk/tkfbox.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/altTheme.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/aquaTheme.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/button.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/clamTheme.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/classicTheme.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/combobox.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/cursors.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/defaults.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/entry.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/fonts.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/menubutton.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/notebook.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/panedwindow.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/progress.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/scale.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/scrollbar.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/sizegrip.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/spinbox.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/treeview.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/ttk.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/utils.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/vistaTheme.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/winTheme.tcl
+experiments (gitnore)/dist/gamemaster/tk/ttk/xpTheme.tcl
+experiments (gitnore)/dist/gamemaster/tk/unsupported.tcl
+experiments (gitnore)/dist/gamemaster/tk/xmfbox.tcl
+experiments (gitnore)/dist/gamemaster/tk86t.dll
+experiments (gitnore)/dist/gamemaster/ucrtbase.dll
+experiments (gitnore)/dist/gamemaster/unicodedata.pyd
+experiments (gitnore)/dist/gamemaster/VCRUNTIME140.dll
+experiments (gitnore)/dist/icon.ico
+experiments (gitnore)/dist/output/time.txt
+experiments (gitnore)/gamemaster.py
+experiments (gitnore)/main.py
+experiments (gitnore)/test.py
+experiments (gitnore)/test1.py
+experiments (gitnore)/test2.py
+gamemaster.iit
+installer.iss
+installer/GameMaster-cache/cacheIndex.txt
+installer/GameMaster-cache/part1/output-info.ini
+installer/GameMaster-SetupFiles/GameMaster.msi
+installer/GameMaster-SetupFiles/GameMaster1.cab
+installer/GameMaster.aip
+output/To Go.txt
+output/Silly Number.txt
+output/Silly  Number.txt
+output/Down.txt
+output/Another value.txt
+output/And one more, even.txt
