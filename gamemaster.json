@@ -1,0 +1,27 @@
+{
+    "name": "Football",
+    "unit": "Quarter",
+    "ct": 4,
+    "times": {
+        "hours": 0,
+        "minutes": 12,
+        "seconds": 0
+    },
+    "scores": {
+        "Touchdown": 6,
+        "Field Goal": 3,
+        "Safety": 2,
+        "Two point": 2,
+        "Extra": 1
+    },
+    "vars": [
+        "Down",
+        "To Go"
+    ],
+    "players": null,
+    "version": 2,
+    "settings": {
+        "on top": false,
+        "alarm": true
+    }
+}
