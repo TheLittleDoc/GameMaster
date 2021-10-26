@@ -1,5 +1,6 @@
 {
     "name": "Football",
+    "version": 2,
     "unit": "Quarter",
     "ct": 4,
     "times": {
@@ -19,7 +20,6 @@
         "To Go"
     ],
     "players": null,
-    "version": 2,
     "settings": {
         "on top": false,
         "alarm": true
