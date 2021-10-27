@@ -176,6 +176,7 @@ class TimerClass(threading.Thread):
             hour.set("{0:02d}".format(hours))
             minute.set("{0:02d}".format(mins))
             second.set("{0:02d}".format(secs))
+
             # stores the formatted version of the time
             to_file = str("%02d" % (mins))+str(":")+str("%02d" % (secs))
 
@@ -189,7 +190,7 @@ class TimerClass(threading.Thread):
             # when temp value = 0; then a messagebox pops up
             # with a message:"Time's up"
             if (self.count == 0):
-                if settings["alarm"] == True:
+                if settings_list["alarm"] == True:
                     messagebox.showinfo("Time Countdown", "Time's up ")
                     timer_stop()
                 else:
@@ -204,10 +205,10 @@ class TimerClass(threading.Thread):
         self.event.set()
         running = False
 th = {}
-def timer(running):
-    # print(running)
-    running = running
+def timer(is_running):
+    
     running = True
+    print(running)
     th[thread_count] = TimerClass(thread_count)
     btn_timer.configure(text="Stop", command=lambda: timer_stop())
     btn_timer.grid(column=1,columnspan=3, sticky=tk.EW, row=2, ipadx=20, ipady=2, padx=0, pady=2)
@@ -220,10 +221,10 @@ def timer_stop():
     btn_timer.grid(column=1,columnspan=3, sticky=tk.EW, row=2, ipadx=20, ipady=2, padx=0, pady=2)
 
 def time_set_default():
-    #print(times)
     hour.set("{0:02d}".format(times["hours"]))
     minute.set("{0:02d}".format(times["minutes"]))
     second.set("{0:02d}".format(times["seconds"]))
+#[ Here is where the initial output happens! Don't forget to fix this too! ]#
     to_file = str("%02d" % (int(times["minutes"])))+str(":")+str("%02d" % (int(times["seconds"])))
     #print(to_file)
     with open("output/time.txt", "w") as f:
@@ -247,6 +248,21 @@ def section_set(type):
                 None
         f.write(str(section.get()))
         f.close()
+
+def time_clear():
+    clearing = messagebox.askyesno("Clear timer","Are you sure you want to clear the timer? This will set it to 00:00:00, not default. If you wish to set it back to the default time, choose \"no\" and then select \"default\" in GameMaster.")
+    if clearing:
+        hour.set("{0:02d}".format(0))
+        minute.set("{0:02d}".format(0))
+        second.set("{0:02d}".format(0))
+        to_file = str("%02d" % (int(0)))+str(":")+str("%02d" % (int(0)))
+            #print(to_file)
+        with open("output/time.txt", "w") as f:
+            f.write(to_file)
+            f.close()
+        timer_stop()
+    else:
+        None
 
 lbl_tmr = tk.Label(master=timing,text="Timer",font=("Arial",18,""),padx=30)
 lbl_tmr.grid(sticky=S,row=0,column=1,columnspan=3)
