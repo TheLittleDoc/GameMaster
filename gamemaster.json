@@ -21,7 +21,7 @@
     ],
     "players": null,
     "settings": {
-        "on top": false,
+        "on top": true,
         "alarm": true
     }
 }
