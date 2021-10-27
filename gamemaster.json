@@ -21,6 +21,9 @@
     ],
     "players": null,
     "settings": {
+        "hours": false,
+        "minutes": true,
+        "seconds": true,
         "on top": true,
         "alarm": true
     }
