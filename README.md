@@ -6,7 +6,7 @@
 
 GameMaster is distributed using a single executable installer. Following the provided instructions with the installer should produce no errors and install correctly.
 
-1  Download the GameMaster installer using the button above.
+1.  Download the GameMaster installer using the button above.
 2. On the second panel, you can see what the current version is, and any necessary release notes. Click next.
 3. We recommend that you install GameMaster into the default location, which, in this instance, will be in your Documents folder. Click next.
 4. Begin the installation. By default, GameMaster will run on the completion of the installation.  
