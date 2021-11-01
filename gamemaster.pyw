@@ -1,88 +1,30 @@
 import tkinter as tk
 from tkinter import *
+#from tkinter.ttk import *
 from tkinter import messagebox
 import os, os.path, sys
 import json
 import time
 import threading
+import types
+import config as gmc
 
-NAME = "GameMaster"
-APP_VERSION = "1.1.0"
-VERSION = 2
 
-with open("gamemaster.json", "r") as f:
+gmc.set_config()
+
+config = gmc.config
+settings_list = gmc.settings_list
+
+def focus(event):
+    widget = window.focus_get()
+    print(widget.name)
     try:
-        config = json.load(f)
-        print(config)
-
+        if "score" in widget.name:
+            print("score in focus")
+        else:
+            print("Enter pressed")
     except:
-        ask_error = messagebox.askokcancel("Error while loading config", "GameMaster configuration file misformatted. Continuing will revert to a known-working default configuration.",icon="error")
-        if ask_error:
-            with open("gamemaster.json", "w") as f:
-                config = {"name": "Football", "version": 1, "unit": "Quarter", "ct": 4, "times": {"hours": 0, "minutes": 12, "seconds": 0}, "scores": {"Touchdown": 6, "Field Goal": 3, "Safety": 2, "Two point": 2, "Extra": 1}, "vars": ["Down", "To Go"], "players": None, "settings": {"on top": False, "alarm": True}}
-                json.dump(config, f, indent=4)
-                f.close()
-            os.execv(sys.executable, ["python"] + sys.argv)
-        else:
-            messagebox.showinfo("Stopping...","GameMaster will now stop running. Please provide a valid configuration file on the next run.")
-            exit()
-        #raise Exception("Error while loading config %s. A stock config file can be found at https://granbybears.live/gamemaster/fix" % f.name) 
-        #None
-            
-#print(config)
-
-# If the config is able to load, only then are these functions defined.
-def set_config():
-    with open("gamemaster.json", "w") as f:
-        json.dump(config, f, indent=4)
-def config_reload():
-    reload_ask = messagebox.askyesno("Reload?","Reloading the config will require restarting GameMaster. This will stop the timer and reset scores and team names. Are you sure you want to continue?",icon="warning")
-    if reload_ask:
-        os.execv(sys.executable, ["python"] + sys.argv)
-    else:
-        None
-
-if "version" in config:
-    versions_tuple = (int(config["version"]),int(VERSION))
-else:
-    ask_version = messagebox.askokcancel("Unknown version number", "The loaded config doesn't contain a version number, or includes an unknown version value. Continuing will add a valid version number to your configuration file.",icon="warning")
-    if ask_version:
-        if "settings" in config:
-            config["version"] = 2
-        else:
-            config["version"] = 1
-    else:
-        messagebox.showinfo("Stopping...","GameMaster will now stop running. Please provide a valid configuration file on the next run.")
-        exit()
-    versions_tuple = (int(config["version"]),int(VERSION))
-
-if config["version"] != VERSION:
-    messagebox.showinfo("Config version mismatch", "The loaded config is version %i, but GameMaster expected configs of version %i. Proceed with caution." % versions_tuple)
-    if config["version"] == 1:
-        update_ask = messagebox.askyesno("Outdated config", "The loaded config is version %i, but configs of version 2 and above are required to use settings. Would you like to try to update?" % versions_tuple[0])
-        if update_ask:
-            config["settings"] = {"on top": False, "alarm": True}
-            config["version"] = 2
-            set_config()
-            config_reload()
-        else:
-            None
-    elif config["version"] == 2:
-        if not "settings" in config.keys:
-            messagebox.showinfo("Config version mismatch", "The loaded config is version %i, but appears to be malformed or improperly updated. If errors arrise or features are unavailable, it is recommended that you reset to a known-working default configuration." % config["version"])
-
-
-else:
-    settings_list = config["settings"]
-
-set_config()
-
-#def focus(event):
-#    widget = window.focus_get()
-#    if "score" in widget.name:
-#        #print("score in focus")
-#    else:
-#        #print("Enter pressed")
+        print("unknown in focus")
 
 window = tk.Tk()
 window.title("GameMaster")
@@ -94,7 +36,7 @@ window.lift()
 window.attributes("-topmost", True)
 window.focus_set()
 if config["version"] > 1:
-    window.attributes("-topmost", settings_list["on top"])
+    window.attributes("-topmost", gmc.settings_list["on top"])
 else:
     window.attributes("-topmost", False)
 
@@ -375,11 +317,11 @@ homeframe.rowconfigure(index=1, weight=1)
 homeframe.rowconfigure(index=2000, weight=100)
 lbl_home = tk.Label(master=homeframe,text="Home",font=("Arial",12,""))
 lbl_home.grid(sticky=EW,row=0,column=0,columnspan=1)
-ent_homename = Entry(master=homeframe, width=2, font=("Arial",12,""),textvariable=name_home, justify="center")
+ent_homename = Entry(master=homeframe, width=2, font=("Arial",12,""),textvariable=name_home)#, justify="center")
 ent_homename.grid(row=0,column=1, sticky=NSEW, pady=2)
 btn_homename = Button(master=homeframe, text="Set", bd="5", command=lambda: nameset("home"))
 btn_homename.grid(row=0,column=2, sticky=NSEW, padx=5)
-ent_home = Entry(master=homeframe, width=4, font=("Arial",26,""),textvariable=score_home, justify="center")
+ent_home = Entry(name="score",master=homeframe, width=4, font=("Arial",26,""),textvariable=score_home, justify="center")
 ent_home.grid(sticky=NS, column=1, row=1, pady=5, padx=5)
 btn_homeup = Button(master=homeframe, text="+", width=2, bd="5",command=lambda: scoreadd("home",1))
 btn_homeup.grid(column=2, row=1)
@@ -399,11 +341,11 @@ awayframe.rowconfigure(index=1, weight=1)
 awayframe.rowconfigure(index=2000, weight=100)
 lbl_away = tk.Label(master=awayframe,text="Away",font=("Arial",12,""))
 lbl_away.grid(sticky=EW,row=0,column=0,columnspan=1)
-ent_awayname = Entry(master=awayframe, width=2, font=("Arial",12,""),textvariable=name_away, justify="center")
+ent_awayname = Entry(master=awayframe, width=2, font=("Arial",12,""),textvariable=name_away)#, justify="center")
 ent_awayname.grid(row=0,column=1, sticky=NSEW, pady=2)
 btn_awayname = Button(master=awayframe, text="Set", bd="5", command=lambda: nameset("away"))
 btn_awayname.grid(row=0,column=2, sticky=NSEW, padx=5)
-ent_away = Entry(master=awayframe, width=4, font=("Arial",26,""),textvariable=score_away, justify="center")
+ent_away = Entry(name="score",master=awayframe, width=4, font=("Arial",26,""),textvariable=score_away, justify="center")
 ent_away.grid(sticky=NS, column=1, row=1, pady=5, padx=5)
 btn_awayup = Button(master=awayframe, text="+", width=2, bd="5",command=lambda: scoreadd("away",1))
 btn_awayup.grid(column=2, row=1)
@@ -494,29 +436,31 @@ settings.rowconfigure(index=2001, weight=1)
 def config_name():
     #print("Config name set: "+str(ent_name.get()))
     config["name"] = ent_name.get()
-    set_config()
+    gmc.set_config()
 
 
 lbl_settings = tk.Label(master=settings,text="Settings",font=("Arial",18,""),padx=5)
 lbl_settings.grid(sticky=S,row=0,column=0,columnspan=3)
 lbl_name = tk.Label(master=settings,text="Config Name:")
-lbl_name.grid(column=0, row=1, sticky=tk.NE, padx=5, pady=5)
-ent_name = tk.Entry(master=settings,)
-ent_name.grid(column=1, row=1, sticky=tk.N, padx=5, pady=5)
+lbl_name.grid(column=0, row=1, sticky=tk.NS, padx=5, pady=5)
+ent_name = tk.Entry(master=settings, width=10, font=("Arial",12,""))
+ent_name.grid(column=1, row=1, sticky=tk.NSEW, padx=5, pady=5)
 ent_name.insert(0, config["name"])
 btn_name = tk.Button(master=settings,text="Set", command=config_name)
 btn_name.grid(column=2, row=1, sticky=tk.NW, padx=5, pady=5)
-btn_reload = tk.Button(master=settings,text="Reload config", command=config_reload)
+btn_reload = tk.Button(master=settings,text="Reload config", command=gmc.config_reload)
 btn_reload.grid(column=1, row=2001, sticky=tk.NW, padx=5, pady=5)
-
 
 if config["version"] > 1:
     st = {}
+    print(settings_list)
     for x in settings_list:
+        print(type(settings_list[x]))
         settings.rowconfigure(index=list(settings_list.keys()).index(x)+2, weight=1)
-        st["btn_".join(x)] = tk.Button(master=settings, bd="5", text=str(x).capitalize(), command=None)
-        st["btn_".join(x)].grid(column=1, row=list(settings_list.keys()).index(x)+2, sticky=EW)
-
+        if isinstance(settings_list[x], bool):
+            print("hi")
+            st["box_".join(x)] = Checkbutton(text=("Toggle " + x.capitalize()),master=settings, command=gmc.config_reload)
+            st["box_".join(x)].grid(column=2, row=list(settings_list.keys()).index(x)+2, sticky=NSEW)
 
 #[================================================]#
 #[================================================]#
