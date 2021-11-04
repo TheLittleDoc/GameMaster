@@ -425,7 +425,7 @@ settings = tk.Frame(width=20, height=10, bd="5", relief=GROOVE)
 settings.grid(row=1, column=1, sticky=NSEW, padx=5, pady=5)
 
 settings.columnconfigure(index=0, weight=1)
-settings.columnconfigure(index=1, weight=1)
+settings.columnconfigure(index=1, weight=10)
 settings.columnconfigure(index=2, weight=1)
 settings.rowconfigure(index=0, weight=1)
 settings.rowconfigure(index=1, weight=1)
@@ -442,12 +442,12 @@ def config_name():
 lbl_settings = tk.Label(master=settings,text="Settings",font=("Arial",18,""),padx=5)
 lbl_settings.grid(sticky=S,row=0,column=0,columnspan=3)
 lbl_name = tk.Label(master=settings,text="Config Name:")
-lbl_name.grid(column=0, row=1, sticky=tk.NS, padx=5, pady=5)
+lbl_name.grid(column=0, row=1, sticky=tk.NS, padx=1)
 ent_name = tk.Entry(master=settings, width=10, font=("Arial",12,""))
-ent_name.grid(column=1, row=1, sticky=tk.NSEW, padx=5, pady=5)
+ent_name.grid(column=1, row=1, sticky=tk.NSEW, padx=5)
 ent_name.insert(0, config["name"])
-btn_name = tk.Button(master=settings,text="Set", command=config_name)
-btn_name.grid(column=2, row=1, sticky=tk.NW, padx=5, pady=5)
+btn_name = tk.Button(master=settings,text="Set", command=config_name,bd=5)
+btn_name.grid(column=2, row=1, sticky=tk.NW, padx=5)
 btn_reload = tk.Button(master=settings,text="Reload config", command=gmc.config_reload)
 btn_reload.grid(column=1, row=2001, sticky=tk.NW, padx=5, pady=5)
 
@@ -460,7 +460,7 @@ if config["version"] > 1:
         if isinstance(settings_list[x], bool):
             print("hi")
             st["box_".join(x)] = Checkbutton(text=("Toggle " + x.capitalize()),master=settings, command=gmc.config_reload)
-            st["box_".join(x)].grid(column=2, row=list(settings_list.keys()).index(x)+2, sticky=NSEW)
+            st["box_".join(x)].grid(column=1, columnspan=2, row=list(settings_list.keys()).index(x)+2, sticky=W)
 
 #[================================================]#
 #[================================================]#

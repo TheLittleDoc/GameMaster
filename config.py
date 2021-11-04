@@ -7,28 +7,25 @@ NAME = "GameMaster"
 APP_VERSION = "1.1.0"
 VERSION = 2
 
-config = {}
 
-def get_config():
-    with open("gamemaster.json", "r") as f:
-        try:
-            config = json.load(f)
-            return config
-            print(config)
+with open("gamemaster.json", "r") as f:
+    try:
+        config = json.load(f)
+        print(config)
 
-        except:
-            ask_error = messagebox.askokcancel("Error while loading config", "GameMaster configuration file misformatted. Continuing will revert to a known-working default configuration.",icon="error")
-            if ask_error:
-                with open("gamemaster.json", "w") as f:
-                    config = {"name": "Football", "version": 1, "unit": "Quarter", "ct": 4, "times": {"hours": 0, "minutes": 12, "seconds": 0}, "scores": {"Touchdown": 6, "Field Goal": 3, "Safety": 2, "Two point": 2, "Extra": 1}, "vars": ["Down", "To Go"], "players": None, "settings": {"on top": False, "alarm": True}}
-                    json.dump(config, f, indent=4)
-                    f.close()
-                os.execv(sys.executable, ["python"] + sys.argv)
-            else:
-                messagebox.showinfo("Stopping...","GameMaster will now stop running. Please provide a valid configuration file on the next run.")
-                exit()
-            #raise Exception("Error while loading config %s. A stock config file can be found at https://granbybears.live/gamemaster/fix" % f.name) 
-            #None
+    except:
+        ask_error = messagebox.askokcancel("Error while loading config", "GameMaster configuration file misformatted. Continuing will revert to a known-working default configuration.",icon="error")
+        if ask_error:
+            with open("gamemaster.json", "w") as f:
+                config = {"name": "Football", "version": 1, "unit": "Quarter", "ct": 4, "times": {"hours": 0, "minutes": 12, "seconds": 0}, "scores": {"Touchdown": 6, "Field Goal": 3, "Safety": 2, "Two point": 2, "Extra": 1}, "vars": ["Down", "To Go"], "players": None, "settings": {"on top": False, "alarm": True}}
+                json.dump(config, f, indent=4)
+                f.close()
+            os.execv(sys.executable, ["python"] + sys.argv)
+        else:
+            messagebox.showinfo("Stopping...","GameMaster will now stop running. Please provide a valid configuration file on the next run.")
+            exit()
+        #raise Exception("Error while loading config %s. A stock config file can be found at https://granbybears.live/gamemaster/fix" % f.name) 
+        #None
             
 #print(config)
 
