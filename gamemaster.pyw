@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import *
-#from tkinter.ttk import *
+# from tkinter.ttk import *
 from tkinter import messagebox
 import os, os.path, sys
 import json
@@ -429,7 +429,8 @@ settings.columnconfigure(index=1, weight=10)
 settings.columnconfigure(index=2, weight=1)
 settings.rowconfigure(index=0, weight=1)
 settings.rowconfigure(index=1, weight=1)
-settings.rowconfigure(index=2000, weight=100)
+settings.rowconfigure(index=1999, weight=100)
+settings.rowconfigure(index=2000, weight=1)
 settings.rowconfigure(index=2001, weight=1)
 
 #[      Settings functions      ]#
@@ -450,6 +451,8 @@ btn_name = tk.Button(master=settings,text="Set", command=config_name,bd=5)
 btn_name.grid(column=2, row=1, sticky=tk.NW, padx=5)
 btn_reload = tk.Button(master=settings,text="Reload config", command=gmc.config_reload)
 btn_reload.grid(column=1, row=2001, sticky=tk.NW, padx=5, pady=5)
+btn_choose = tk.Button(master=settings,text="Select config file", bd="5",command=gmc.config_choose)
+btn_choose.grid(column=1, row=2000, sticky=tk.NW, padx=5, pady=5)
 
 if config["version"] > 1:
     st = {}

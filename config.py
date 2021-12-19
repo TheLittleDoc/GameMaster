@@ -1,4 +1,5 @@
 from tkinter import messagebox
+from tkinter import filedialog as fd
 import os, os.path, sys
 import json
 import time
@@ -7,8 +8,29 @@ NAME = "GameMaster"
 APP_VERSION = "1.1.0"
 VERSION = 2
 
+try:
+    with open("cfgsettings.json", "r") as f:
+        cfgsettings = json.load(f)
+        print(cfgsettings)
+        filename = cfgsettings["path"]
 
-with open("gamemaster.json", "r") as f:
+except:
+    firstrun = messagebox.askyesno("First run?","Is this your first time running GameMaster?",icon="warning")
+    if firstrun:
+        None
+    else:
+        cfgsettings = {"path": "gamemaster.json", "recents": []}
+        with open("cfgsettings.json", "w") as f:
+            json.dump(cfgsettings, f, indent=4)
+            
+            f.close()
+        with open("cfgsettings.json", "r") as f:
+            cfgsettings = json.load(f)
+            print(cfgsettings)
+        os.execv(sys.executable, ["python"] + sys.argv)
+
+
+with open(filename, "r") as f:
     try:
         config = json.load(f)
         print(config)
@@ -16,7 +38,7 @@ with open("gamemaster.json", "r") as f:
     except:
         ask_error = messagebox.askokcancel("Error while loading config", "GameMaster configuration file misformatted. Continuing will revert to a known-working default configuration.",icon="error")
         if ask_error:
-            with open("gamemaster.json", "w") as f:
+            with open(filename, "w") as f:
                 config = {"name": "Football", "version": 1, "unit": "Quarter", "ct": 4, "times": {"hours": 0, "minutes": 12, "seconds": 0}, "scores": {"Touchdown": 6, "Field Goal": 3, "Safety": 2, "Two point": 2, "Extra": 1}, "vars": ["Down", "To Go"], "players": None, "settings": {"on top": False, "alarm": True}}
                 json.dump(config, f, indent=4)
                 f.close()
@@ -31,7 +53,7 @@ with open("gamemaster.json", "r") as f:
 
 # If the config is able to load, only then are these functions defined.
 def set_config():
-    with open("gamemaster.json", "w") as f:
+    with open(filename, "w") as f:
         json.dump(config, f, indent=4)
 def config_reload():
     reload_ask = messagebox.askyesno("Reload?","Reloading the config will require restarting GameMaster. This will stop the timer and reset scores and team names. Are you sure you want to continue?",icon="warning")
@@ -39,6 +61,26 @@ def config_reload():
         os.execv(sys.executable, ["python"] + sys.argv)
     else:
         None
+def config_choose():
+    filetypes = (('JSON Files', '*.json'), ('All Files', '*.*'))
+    choose_ask = messagebox.askyesno("Choose new config?","Choosing a new config will require restarting GameMaster. This will stop the timer and reset scores and team names. Are you sure you want to continue?",icon="warning")
+    if choose_ask:
+        filename = fd.askopenfilename(title='Open a file',initialdir='/',filetypes=filetypes)
+        messagebox.showinfo(title='Selected File',message=filename)
+        if filename in cfgsettings["recents"]:
+            cfgsettings["recents"].remove(filename)
+        else:
+            None
+        cfgsettings["recents"].insert(0,cfgsettings["path"])
+        cfgsettings["path"] = filename
+        with open("cfgsettings.json", "w") as f:
+            json.dump(cfgsettings, f, indent=4)
+            
+            f.close()
+        os.execv(sys.executable, ["python"] + sys.argv)
+    else:
+        None
+
 
 if "version" in config:
     versions_tuple = (int(config["version"]),int(VERSION))
