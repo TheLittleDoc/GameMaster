@@ -8,6 +8,7 @@ import time
 import threading
 import types
 import config as gmc
+from PIL import Image, ImageTk
 
 
 gmc.set_config()
@@ -36,7 +37,7 @@ window.lift()
 window.attributes("-topmost", True)
 window.focus_set()
 if config["version"] > 1:
-    window.attributes("-topmost", gmc.settings_list["on top"])
+    window.attributes("-topmost", settings_list["on top"])
 else:
     window.attributes("-topmost", False)
 
@@ -120,7 +121,16 @@ class TimerClass(threading.Thread):
             second.set("{0:02d}".format(secs))
 
             # stores the formatted version of the time
-            to_file = str("%02d" % (mins))+str(":")+str("%02d" % (secs))
+            if settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == True:
+                to_file = str("%02d" % (hours))+str(":")+str("%02d" % (mins))+str(":")+str("%02d" % (secs))
+            elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == True:
+                to_file = str("%02d" % (mins))+str(":")+str("%02d" % (secs))
+            elif settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == False:
+                to_file = str("%02d" % (hours))+str(":")+str("%02d" % (mins))
+            elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == False:
+                to_file = str("%02d" % (mins))
+            elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
+                to_file = str("%02d" % (hours))
 
             # writes to the output file the formatted version of the time
             with open("output/time.txt", "w") as f:
@@ -167,7 +177,16 @@ def time_set_default():
     minute.set("{0:02d}".format(times["minutes"]))
     second.set("{0:02d}".format(times["seconds"]))
 #[ Here is where the initial output happens! Don't forget to fix this too! ]#
-    to_file = str("%02d" % (int(times["minutes"])))+str(":")+str("%02d" % (int(times["seconds"])))
+    if settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == True:
+        to_file = str("%02d" % (times["hours"]))+str(":")+str("%02d" % (times["minutes"]))+str(":")+str("%02d" % (times["seconds"]))
+    elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == True:
+        to_file = str("%02d" % (times["minutes"]))+str(":")+str("%02d" % (times["seconds"]))
+    elif settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == False:
+        to_file = str("%02d" % (times["hours"]))+str(":")+str("%02d" % (times["minutes"]))
+    elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == False:
+        to_file = str("%02d" % (times["minutes"]))
+    elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
+        to_file = str("%02d" % (times["hours"]))
     # print(to_file)
     with open("output/time.txt", "w") as f:
         f.write(to_file)
@@ -197,7 +216,16 @@ def time_clear():
         hour.set("{0:02d}".format(0))
         minute.set("{0:02d}".format(0))
         second.set("{0:02d}".format(0))
-        to_file = str("%02d" % (int(0)))+str(":")+str("%02d" % (int(0)))
+        if settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == True:
+            to_file = str("%02d" % (0))+str(":")+str("%02d" % (0))+str(":")+str("%02d" % (0))
+        elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == True:
+            to_file = str("%02d" % (0))+str(":")+str("%02d" % (0))
+        elif settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == False:
+            to_file = str("%02d" % (0))+str(":")+str("%02d" % (0))
+        elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == False:
+            to_file = str("%02d" % (0))
+        elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
+            to_file = str("%02d" % (0))
             # print(to_file)
         with open("output/time.txt", "w") as f:
             f.write(to_file)
@@ -223,7 +251,16 @@ btn_clear.grid(column=4,columnspan=1, sticky=tk.W, row=1, ipadx=0, ipady=2, padx
 hour.set("{0:02d}".format(times["hours"]))
 minute.set("{0:02d}".format(times["minutes"]))
 second.set("{0:02d}".format(times["seconds"]))
-to_file = str("%02d" % (int(times["minutes"])))+str(":")+str("%02d" % (int(times["seconds"])))
+if settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == True:
+    to_file = str("%02d" % (times["hours"]))+str(":")+str("%02d" % (times["minutes"]))+str(":")+str("%02d" % (times["seconds"]))
+elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == True:
+    to_file = str("%02d" % (times["minutes"]))+str(":")+str("%02d" % (times["seconds"]))
+elif settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == False:
+    to_file = str("%02d" % (times["hours"]))+str(":")+str("%02d" % (times["minutes"]))
+elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == False:
+    to_file = str("%02d" % (times["minutes"]))
+elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
+    to_file = str("%02d" % (times["hours"]))
 # print(to_file)
 with open("output/time.txt", "w") as f:
     f.write(to_file)
@@ -363,13 +400,13 @@ s = {}
 # Home
 for x in scrs:
     homeframe.rowconfigure(index=list(scrs.keys()).index(x)+3, weight=1)
-    s["btn_".join(x)] = tk.Button(master=homeframe, bd="5", text=str(x), command=lambda x=x: scoreadd("home",int(scrs[x])))
-    s["btn_".join(x)].grid(column=1, row=list(scrs.keys()).index(x)+3, sticky=EW)
+    s["btn_"+x] = tk.Button(master=homeframe, bd="5", text=str(x), command=lambda x=x: scoreadd("home",int(scrs[x])))
+    s["btn_"+x].grid(column=1, row=list(scrs.keys()).index(x)+3, sticky=EW)
 
 for x in scrs:
     awayframe.rowconfigure(index=list(scrs.keys()).index(x)+3, weight=1)
-    s["btn_".join(x)] = tk.Button(master=awayframe, bd="5", text=str(x), command=lambda x=x: scoreadd("away",int(scrs[x])))
-    s["btn_".join(x)].grid(column=1, row=list(scrs.keys()).index(x)+3, sticky=EW)
+    s["btn_"+x] = tk.Button(master=awayframe, bd="5", text=str(x), command=lambda x=x: scoreadd("away",int(scrs[x])))
+    s["btn_"+x].grid(column=1, row=list(scrs.keys()).index(x)+3, sticky=EW)
 
 for x in teams_scores:
     with open(str("output/")+str(x)+str("_score.txt"), "w") as f:
@@ -410,13 +447,14 @@ vars = config["vars"]
 v = {}
 for x in vars:
     variables.rowconfigure(index=vars.index(x)+1, weight=1)
-    v["lbl_".join(x)] = tk.Label(master=variables, text=x, padx=5, pady=5)
-    v["ent_".join(x)] = tk.Entry(master=variables, font=("Arial",12,""),justify="center",width=5) 
-    v["ent_".join(x)].name = x #                                    Fixed \/
-    v["btn_".join(x)] = tk.Button(master=variables, bd="5", text=str("Set ")+str(x), command=lambda x=x: varset(str(x), int(v["ent_".join(x)].get())))
-    v["lbl_".join(x)].grid(sticky=tk.E, column=0, row=int(vars.index(x)+2))
-    v["ent_".join(x)].grid(sticky=NS, column=1, row=int(vars.index(x)+2))
-    v["btn_".join(x)].grid(sticky=W, column=2, row=int(vars.index(x)+2), columnspan=2, padx=2)
+    v["lbl_"+x] = tk.Label(master=variables, text=x, padx=5, pady=5)
+    v["ent_"+x] = tk.Entry(master=variables, font=("Arial",12,""),justify="center",width=5) 
+    v["ent_"+x].name = x #                                    Fixed \/
+    v["btn_"+x] = tk.Button(master=variables, bd="5", text=str("Set ")+str(x), command=lambda x=x: varset(str(x), int(v["ent_"+x].get())))
+    v["lbl_"+x].grid(sticky=tk.E, column=0, row=int(vars.index(x)+2))
+    v["ent_"+x].grid(sticky=NS, column=1, row=int(vars.index(x)+2))
+    v["btn_"+x].grid(sticky=W, column=2, row=int(vars.index(x)+2), columnspan=2, padx=2)
+    print("btn_"+x)
 
 #==================================================#
 #            Settings Setup and Content            #
@@ -439,6 +477,23 @@ def config_name():
     config["name"] = ent_name.get()
     gmc.set_config()
 
+def settings_set(setting,value):
+    # print(setting,value)
+    settings_list[setting] = value
+    if setting == "minutes" and value == False:
+
+        print("false")
+        st["box_seconds"].config(state=DISABLED)
+        stvar["bool_seconds"].set(False)
+        settings_set("seconds",False)
+    elif setting == "minutes" and value == True:
+        st["box_seconds"].config(state=NORMAL)
+        stvar["bool_seconds"].set(False)
+    # print(settings_list)
+    config["settings"] = settings_list
+    gmc.set_config()
+    window.attributes("-topmost", settings_list["on top"])
+    
 
 lbl_settings = tk.Label(master=settings,text="Settings",font=("Arial",18,""),padx=5)
 lbl_settings.grid(sticky=S,row=0,column=0,columnspan=3)
@@ -456,15 +511,23 @@ btn_choose.grid(column=1, row=2000, sticky=tk.NW, padx=5, pady=5)
 
 if config["version"] > 1:
     st = {}
+    stvar = {}
     # print(settings_list)
     for x in settings_list:
         # print(type(settings_list[x]))
         settings.rowconfigure(index=list(settings_list.keys()).index(x)+2, weight=1)
+        print(x)
         if isinstance(settings_list[x], bool):
             # print("hi")
-            st["box_".join(x)] = Checkbutton(text=("Toggle " + x.capitalize()),master=settings, command=gmc.config_reload)
-            st["box_".join(x)].grid(column=1, columnspan=2, row=list(settings_list.keys()).index(x)+2, sticky=W)
-
+            stvar["bool_"+x] = tk.BooleanVar()
+            st["box_"+x] = Checkbutton(text=("Toggle " + x.capitalize()),master=settings, variable=stvar["bool_"+x], command=lambda x=x: settings_set(str(x), stvar["bool_"+x].get())) # Check the syntax for getting boolean status on this checkbox
+            st["box_"+x].grid(column=1, columnspan=2, row=list(settings_list.keys()).index(x)+2, sticky=W)
+            stvar["bool_"+x].set(settings_list[x])
+            if (config["version"] < 3) and (x == "alarm"):
+                stvar["bool_"+x].set(False)
+                st["box_"+x].config(state=DISABLED)
+                print(x)
+                print(str("box_"+x))
 #[================================================]#
 #[================================================]#
 window.mainloop()
