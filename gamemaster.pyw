@@ -79,15 +79,15 @@ second.set("{0:02d}".format(times["seconds"]))
 class TimerClass(threading.Thread):
     
     def __init__(self, thread_ID):
-        #print("Thread Created")
+        # print("Thread Created")
         threading.Thread.__init__(self)
-        #self.name = thread_name
+        # self.name = thread_name
         self.id = thread_ID
         self.event = threading.Event()
         self.count = int(hour.get())*3600 + int(minute.get())*60 + int(second.get())
     def run(self):
         global to_file
-        #self.count = int(hour.get())*3600 + int(minute.get())*60 + int(second.get())
+        # self.count = int(hour.get())*3600 + int(minute.get())*60 + int(second.get())
         running = True
         mins,secs = divmod(self.count,60)
         to_file = str("%02d" % (mins))+str(":")+str("%02d" % (secs))
@@ -141,7 +141,7 @@ class TimerClass(threading.Thread):
             self.event.wait(1)
             
     def stop(self):
-        #print("Stopping...")
+        # print("Stopping...")
         thread_count =+ 1
         # print("Thread count is now %d" % thread_count)
         self.event.set()
@@ -150,7 +150,7 @@ th = {}
 def timer(is_running):
     
     running = True
-    print(running)
+    # print(running)
     th[thread_count] = TimerClass(thread_count)
     btn_timer.configure(text="Stop", command=lambda: timer_stop())
     btn_timer.grid(column=1,columnspan=3, sticky=tk.EW, row=2, ipadx=20, ipady=2, padx=0, pady=2)
@@ -168,7 +168,7 @@ def time_set_default():
     second.set("{0:02d}".format(times["seconds"]))
 #[ Here is where the initial output happens! Don't forget to fix this too! ]#
     to_file = str("%02d" % (int(times["minutes"])))+str(":")+str("%02d" % (int(times["seconds"])))
-    #print(to_file)
+    # print(to_file)
     with open("output/time.txt", "w") as f:
         f.write(to_file)
         f.close()
@@ -179,7 +179,7 @@ def section_set(type):
     with open("output/Section.txt", "w") as f:
         if type == 1:
             if(int(section.get()) < config["ct"]):
-                #print("section setting")
+                # print("section setting")
                 section.set(int(ent_section.get())+1)
             else:
                 None
@@ -198,7 +198,7 @@ def time_clear():
         minute.set("{0:02d}".format(0))
         second.set("{0:02d}".format(0))
         to_file = str("%02d" % (int(0)))+str(":")+str("%02d" % (int(0)))
-            #print(to_file)
+            # print(to_file)
         with open("output/time.txt", "w") as f:
             f.write(to_file)
             f.close()
@@ -224,7 +224,7 @@ hour.set("{0:02d}".format(times["hours"]))
 minute.set("{0:02d}".format(times["minutes"]))
 second.set("{0:02d}".format(times["seconds"]))
 to_file = str("%02d" % (int(times["minutes"])))+str(":")+str("%02d" % (int(times["seconds"])))
-#print(to_file)
+# print(to_file)
 with open("output/time.txt", "w") as f:
     f.write(to_file)
     f.close()
@@ -269,7 +269,7 @@ teams_scores["away"] = 0
 
 def scoreadd(target_team,value):
     teams_scores[target_team] += value
-    #print(teams_scores)
+    # print(teams_scores)
     score_home.set(str(teams_scores["home"]))
     score_away.set(str(teams_scores["away"]))
     for x in teams_scores:
@@ -282,7 +282,7 @@ def scoreset(target_team):
         teams_scores["home"] = int(ent_home.get())
     elif target_team == "away":
         teams_scores["away"] = int(ent_away.get())
-    #print(teams_scores)
+    # print(teams_scores)
     score_home.set(str(teams_scores["home"]))
     score_away.set(str(teams_scores["away"]))
     for x in teams_scores:
@@ -297,10 +297,10 @@ teams_names["away"] = ""
 def nameset(target_team):
     if target_team == "home":
         teams_names[target_team] = ent_homename.get()
-        print(name_home.get())
+        # print(name_home.get())
     elif target_team == "away":
         teams_names[target_team] = ent_awayname.get()
-        print(name_away.get())
+        # print(name_away.get())
     for x in teams_names:
         with open(str("output/")+str(x)+str("_name.txt"), "w") as f:
             f.write(str(teams_names[x]))
@@ -357,9 +357,9 @@ btn_awayset.grid(column=0, row=2, columnspan=3, sticky=EW, pady=5, padx=5)
 # Sets all the scores and variables into the window
 scrs = config["scores"]
 scrs_index = scrs.keys()
-#print(scrs_index)
+# print(scrs_index)
 s = {}
-#print(scrs)
+# print(scrs)
 # Home
 for x in scrs:
     homeframe.rowconfigure(index=list(scrs.keys()).index(x)+3, weight=1)
@@ -400,7 +400,7 @@ variables.rowconfigure(index=2000, weight=100)
 def varset(varname,value):
     with open(str("output/")+str(varname)+str(".txt"), "w") as f:
         f.write(str(value))
-        #print(str(varname) + " Saved")
+        # print(str(varname) + " Saved")
         f.close()
 
 lbl_variables = tk.Label(master=variables,text="Other Variables",font=("Arial",18,""),padx=5,justify="center")
@@ -435,7 +435,7 @@ settings.rowconfigure(index=2001, weight=1)
 
 #[      Settings functions      ]#
 def config_name():
-    #print("Config name set: "+str(ent_name.get()))
+    # print("Config name set: "+str(ent_name.get()))
     config["name"] = ent_name.get()
     gmc.set_config()
 
@@ -456,12 +456,12 @@ btn_choose.grid(column=1, row=2000, sticky=tk.NW, padx=5, pady=5)
 
 if config["version"] > 1:
     st = {}
-    print(settings_list)
+    # print(settings_list)
     for x in settings_list:
-        print(type(settings_list[x]))
+        # print(type(settings_list[x]))
         settings.rowconfigure(index=list(settings_list.keys()).index(x)+2, weight=1)
         if isinstance(settings_list[x], bool):
-            print("hi")
+            # print("hi")
             st["box_".join(x)] = Checkbutton(text=("Toggle " + x.capitalize()),master=settings, command=gmc.config_reload)
             st["box_".join(x)].grid(column=1, columnspan=2, row=list(settings_list.keys()).index(x)+2, sticky=W)
 
