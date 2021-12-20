@@ -1,0 +1,28 @@
+{
+    "name": "Basketball",
+    "version": 2,
+    "unit": "Period",
+    "ct": 4,
+    "times": {
+        "hours": 0,
+        "minutes": 8,
+        "seconds": 0
+    },
+    "scores": {
+        "Free Throw": 1,
+        "Two Point": 2,
+        "Three Point": 3
+    },
+    "vars": [
+        "Fouls Home",
+        "Fouls Away"
+    ],
+    "players": null,
+    "settings": {
+        "hours": false,
+        "minutes": true,
+        "seconds": true,
+        "on top": true,
+        "alarm": true
+    }
+}
