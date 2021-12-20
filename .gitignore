@@ -158,4 +158,7 @@ output/time.txt
 soccer.json
 output/time.txt
 cfgsettings.json
+*.txt
+*.txt
+output/time.txt
 cfgsettings.json
