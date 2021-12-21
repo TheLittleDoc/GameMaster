@@ -10,7 +10,7 @@ import threading
 import types
 import config as gmc
 
-print(os.path.expanduser("/"))
+# print(os.path.expanduser("/"))
 
 
 gmc.set_config()
@@ -464,7 +464,7 @@ for x in vars:
     v["lbl_"+x].grid(sticky=tk.E, column=0, row=int(vars.index(x)+2))
     v["ent_"+x].grid(sticky=NS, column=1, row=int(vars.index(x)+2))
     v["btn_"+x].grid(sticky=W, column=2, row=int(vars.index(x)+2), columnspan=2, padx=2)
-    print("btn_"+x)
+    # print("btn_"+x)
 
 #==================================================#
 #            Settings Setup and Content            #
@@ -492,7 +492,7 @@ def settings_set(setting,value):
     settings_list[setting] = value
     if setting == "minutes" and value == False:
 
-        print("false")
+        # print("false")
         st["box_seconds"].config(state=DISABLED)
         stvar["bool_seconds"].set(False)
         settings_set("seconds",False)
@@ -526,7 +526,7 @@ if config["version"] > 1:
     for x in settings_list:
         # print(type(settings_list[x]))
         settings.rowconfigure(index=list(settings_list.keys()).index(x)+2, weight=1)
-        print(x)
+        # print(x)
         if isinstance(settings_list[x], bool):
             # print("hi")
             stvar["bool_"+x] = tk.BooleanVar()
@@ -536,8 +536,6 @@ if config["version"] > 1:
             if (config["version"] < 3) and (x == "alarm"):
                 stvar["bool_"+x].set(False)
                 st["box_"+x].config(state=DISABLED)
-                print(x)
-                print(str("box_"+x))
 #[================================================]#
 #[================================================]#
 window.mainloop()

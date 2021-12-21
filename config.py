@@ -11,7 +11,7 @@ VERSION = 2
 try:
     with open("cfgsettings.json", "r") as f:
         cfgsettings = json.load(f)
-        print(cfgsettings)
+        # print(cfgsettings)
         filename = cfgsettings["path"]
 
 except:
@@ -26,14 +26,14 @@ except:
             f.close()
         with open("cfgsettings.json", "r") as f:
             cfgsettings = json.load(f)
-            print(cfgsettings)
+            # print(cfgsettings)
         os.execv(sys.executable, ["python"] + sys.argv)
 
 
 with open(filename, "r") as f:
     try:
         config = json.load(f)
-        print(config)
+        # print(config)
 
     except:
         ask_error = messagebox.askokcancel("Error while loading config", "GameMaster configuration file misformatted. Continuing will revert to a known-working default configuration.",icon="error")
@@ -49,7 +49,7 @@ with open(filename, "r") as f:
         #raise Exception("Error while loading config %s. A stock config file can be found at https://granbybears.live/gamemaster/fix" % f.name) 
         #None
             
-#print(config)
+# print(config)
 
 # If the config is able to load, only then are these functions defined.
 def set_config():
