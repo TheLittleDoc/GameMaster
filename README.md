@@ -1,3 +1,4 @@
+![GameMaster Logo, wordmark, and BBG logo](https://github.com/TheLittleDoc/GameMaster/blob/master/header.png)
 # GameMaster
 
 **GameMaster** is a Python-based sports scoreboard tool for OBS. In addition to basic scoring functionality, **GameMaster** can also manage game times, periods, and any other stats or variables related to the sport at hand using a simple JSON configuration file.
@@ -25,9 +26,30 @@ GameMaster is distributed using a single executable installer. Following the pro
 
 ## Info
 
-Latest Version:  **1.0.2**
+Latest Release:  **1.0.2**
+Latest Build:  1.2.0-Pre1
 
 Release notes:
+<details>
+  <summary>1.2.0-Pre1</summary>
+  <ul>
+    <ul>
+      <li>- Updated to config version 2 (documentation forthcoming (for real, this time))</li>
+      <li>- Added config updater (needs work)</li>
+      <li>- Added application settings</li>
+      <li>- Added time output format options</li>
+      <li>- Fixed time only outputting in MM:SS (see above)</li>
+      <li>- Added preliminary config swapper</li>
+      <li>- Added basic first-run detection</li>
+      <li>- Added config error detection (needs work)</li></li>
+      <li>- Added static header image</li>
+      <li>- Reworked general formatting back-end</li>
+      <li>- Not working: "Clear time" button (disabled)</li>
+      <li>- Not Implemented: Player information fed, Config editor, First-run setup, Alarm</li>
+      <li>- Note: If Pre1 is successful on other machines, Pre2 will focus on cleaning up and ironing-out first-run and error detection, Pre3 will fix config updater, and RC1 may debut custom installer.</li>
+  </ul>
+  </ul>
+</details>
 
 - 1.0.2
   - Updated installer to not require admin (it shouldn't have in the first place)
