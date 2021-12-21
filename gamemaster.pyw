@@ -1,5 +1,6 @@
 import tkinter as tk
-from tkinter import *
+from tkinter import *  
+from PIL import ImageTk,Image  
 # from tkinter.ttk import *
 from tkinter import messagebox
 import os, os.path, sys
@@ -8,7 +9,8 @@ import time
 import threading
 import types
 import config as gmc
-from PIL import Image, ImageTk
+
+print(os.path.expanduser("/"))
 
 
 gmc.set_config()
@@ -29,7 +31,7 @@ def focus(event):
 
 window = tk.Tk()
 window.title("GameMaster")
-window.geometry("700x575")
+window.geometry("700x690")
 window.iconbitmap("icon.ico")
 window.resizable(0,1)
 window.bind("<Return>", lambda e: focus(e))
@@ -41,16 +43,24 @@ if config["version"] > 1:
 else:
     window.attributes("-topmost", False)
 
-window.rowconfigure(index=0, weight=2)
-window.rowconfigure(index=1, weight=1)
+window.rowconfigure(index=0, weight=0, minsize=100)
+window.rowconfigure(index=1, weight=2)
+window.rowconfigure(index=2, weight=1)
 window.columnconfigure(index=0, weight=10)
 window.columnconfigure(index=1, weight=0)
+
+header = tk.Frame(width=40, height=10)
+header.grid(column=0, row=0, sticky=tk.EW, columnspan=2, rowspan=1, padx=0, pady=0)
+canvas = Canvas(master=header,width = 700, height = 96)
+canvas.grid(column=0, row=0, columnspan=2, rowspan=2, sticky=tk.NSEW)
+img = ImageTk.PhotoImage(Image.open("header.png"))  
+canvas.create_image(0, 0, anchor=NW, image=img) 
 
 #==================================================#
 #              Timing Setup and Content            #
 #==================================================#
 timing = tk.Frame(width=20, height=10, bd="5", relief=SUNKEN)
-timing.grid(row=0, column=0, sticky=NSEW, padx=5, pady=5)
+timing.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5)
 
 timing.columnconfigure(index=0, weight=2)
 timing.columnconfigure(index=1, weight=1)
@@ -286,7 +296,7 @@ btn_sectiondn.grid(column=1, row=5)
 #             Scoring Setup and Content            #
 #==================================================#
 scoring = tk.Frame(width=20, height=10, bd="5", relief=SUNKEN)
-scoring.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5)
+scoring.grid(row=2, column=0, sticky=NSEW, padx=5, pady=5)
 
 scoring.columnconfigure(index=0, weight=1)
 scoring.columnconfigure(index=1, weight=1)
@@ -425,7 +435,7 @@ for x in teams_names:
 #            Variables Setup and Content           #
 #==================================================#
 variables = tk.Frame(width=20, height=10, bd="5", relief=GROOVE)
-variables.grid(row=0, column=1, sticky=NSEW, padx=5, pady=5)
+variables.grid(row=1, column=1, sticky=NSEW, padx=5, pady=5)
 
 variables.columnconfigure(index=0, weight=1)
 variables.columnconfigure(index=1, weight=1)
@@ -460,7 +470,7 @@ for x in vars:
 #            Settings Setup and Content            #
 #==================================================#
 settings = tk.Frame(width=20, height=10, bd="5", relief=GROOVE)
-settings.grid(row=1, column=1, sticky=NSEW, padx=5, pady=5)
+settings.grid(row=2, column=1, sticky=NSEW, padx=5, pady=5)
 
 settings.columnconfigure(index=0, weight=1)
 settings.columnconfigure(index=1, weight=10)
@@ -505,9 +515,9 @@ ent_name.insert(0, config["name"])
 btn_name = tk.Button(master=settings,text="Set", command=config_name,bd=5)
 btn_name.grid(column=2, row=1, sticky=tk.NW, padx=5)
 btn_reload = tk.Button(master=settings,text="Reload config", bd="5",command=gmc.config_reload)
-btn_reload.grid(column=1, row=2001, sticky=tk.NW, padx=5, pady=5)
+btn_reload.grid(column=1, row=2001, sticky=tk.NSEW, padx=5, pady=5)
 btn_choose = tk.Button(master=settings,text="Select config file", bd="5",command=gmc.config_choose)
-btn_choose.grid(column=1, row=2000, sticky=tk.NW, padx=5, pady=5)
+btn_choose.grid(column=1, row=2000, sticky=tk.NSEW, padx=5, pady=5)
 
 if config["version"] > 1:
     st = {}
