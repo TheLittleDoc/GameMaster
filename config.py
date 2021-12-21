@@ -39,7 +39,7 @@ with open(filename, "r") as f:
         ask_error = messagebox.askokcancel("Error while loading config", "GameMaster configuration file misformatted. Continuing will revert to a known-working default configuration.",icon="error")
         if ask_error:
             with open(filename, "w") as f:
-                config = {"name": "Football", "version": 1, "unit": "Quarter", "ct": 4, "times": {"hours": 0, "minutes": 12, "seconds": 0}, "scores": {"Touchdown": 6, "Field Goal": 3, "Safety": 2, "Two point": 2, "Extra": 1}, "vars": ["Down", "To Go"], "players": None, "settings": {"on top": False, "alarm": True}}
+                config = {"name": "Football", "version": 2, "unit": "Quarter", "ct": 4, "times": {"hours": 0, "minutes": 12, "seconds": 0}, "scores": {"Touchdown": 6, "Field Goal": 3, "Safety": 2, "Two point": 2, "Extra": 1}, "vars": ["Down", "To Go"], "players": None, "settings": {"hours": False,"minutes": True,"seconds": True,"on top": False, "alarm": True}}
                 json.dump(config, f, indent=4)
                 f.close()
             os.execv(sys.executable, ["python"] + sys.argv)
@@ -101,7 +101,7 @@ if config["version"] != VERSION:
     if config["version"] == 1:
         update_ask = messagebox.askyesno("Outdated config", "The loaded config is version %i, but configs of version 2 and above are required to use settings. Would you like to try to update?" % versions_tuple[0])
         if update_ask:
-            config["settings"] = {"on top": False, "alarm": True}
+            config["settings"] = {"hours": False,"minutes": True,"seconds": True,"on top": False, "alarm": True}
             config["version"] = 2
             set_config()
             config_reload()
