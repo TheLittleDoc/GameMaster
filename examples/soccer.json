@@ -1,0 +1,25 @@
+{
+    "name": "Soccer",
+    "version": 2,
+    "unit": "Period",
+    "ct": 2,
+    "times": {
+        "hours": 0,
+        "minutes": 40,
+        "seconds": 0
+    },
+    "scores": {
+        "Goal": 0
+    },
+    "vars": [
+        "Penalty"
+    ],
+    "players": null,
+    "settings": {
+        "hours": false,
+        "minutes": true,
+        "seconds": true,
+        "on top": true,
+        "alarm": true
+    }
+}
