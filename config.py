@@ -14,6 +14,7 @@ try:
         # print(cfgsettings)
         filename = cfgsettings["path"]
 
+
 except:
     firstrun = messagebox.askyesno("First run?","Is this your first time running GameMaster?",icon="warning")
     if firstrun:
@@ -66,18 +67,23 @@ def config_choose():
     choose_ask = messagebox.askyesno("Choose new config?","Choosing a new config will require restarting GameMaster. This will stop the timer and reset scores and team names. Are you sure you want to continue?",icon="warning")
     if choose_ask:
         filename = fd.askopenfilename(title='Open a file',initialdir='/',filetypes=filetypes)
-        messagebox.showinfo(title='Selected File',message=filename)
-        if filename in cfgsettings["recents"]:
-            cfgsettings["recents"].remove(filename)
+        if filename == "":
+            filename = cfgsettings["path"]
+            messagebox.showinfo(title='Config not changed',message=filename, icon='warning')
         else:
-            None
-        cfgsettings["recents"].insert(0,cfgsettings["path"])
-        cfgsettings["path"] = filename
-        with open("cfgsettings.json", "w") as f:
-            json.dump(cfgsettings, f, indent=4)
+            cfgsettings["recents"].insert(0,cfgsettings["path"])
+            cfgsettings["path"] = filename
+            messagebox.showinfo(title='Selected File',message=filename)
+            if filename in cfgsettings["recents"]:
+                cfgsettings["recents"].remove(filename)
+            else:
+                None
             
-            f.close()
-        os.execv(sys.executable, ["python"] + sys.argv)
+            with open("cfgsettings.json", "w") as f:
+                json.dump(cfgsettings, f, indent=4)
+                
+                f.close()
+            os.execv(sys.executable, ["python"] + sys.argv)
     else:
         None
 
