@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import *  
 from PIL import ImageTk,Image  
-# from tkinter.ttk import *
+from tkinter.ttk import *
 from tkinter import messagebox
 import os, os.path, sys
 import json
@@ -31,7 +31,7 @@ def focus(event):
 
 window = tk.Tk()
 window.title("GameMaster")
-window.geometry("700x690")
+window.geometry("600x600")
 window.iconbitmap("icon.ico")
 window.resizable(0,1)
 window.bind("<Return>", lambda e: focus(e))
@@ -53,26 +53,26 @@ header = tk.Frame(width=40, height=10)
 header.grid(column=0, row=0, sticky=tk.EW, columnspan=2, rowspan=1, padx=0, pady=0)
 canvas = Canvas(master=header,width = 700, height = 96)
 canvas.grid(column=0, row=0, columnspan=2, rowspan=2, sticky=tk.NSEW)
-img = ImageTk.PhotoImage(Image.open("header.png"))  
+img = ImageTk.PhotoImage(Image.open("header_alt.png"))  
 canvas.create_image(0, 0, anchor=NW, image=img) 
 
 #==================================================#
 #              Timing Setup and Content            #
 #==================================================#
-timing = tk.Frame(width=20, height=10, bd="5", relief=SUNKEN)
-timing.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5)
+timing = tk.Frame(width=12, height=10, bd="3", relief=SUNKEN)
+timing.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5, ipadx=5)
 
-timing.columnconfigure(index=0, weight=2)
-timing.columnconfigure(index=1, weight=1)
-timing.columnconfigure(index=2, weight=1)
-timing.columnconfigure(index=3, weight=1)
-timing.columnconfigure(index=4, weight=2)
-timing.rowconfigure(index=0, weight=1)
-timing.rowconfigure(index=1, weight=2)
-timing.rowconfigure(index=2, weight=2)
+timing.columnconfigure(index=0, weight=0)
+timing.columnconfigure(index=1, weight=4)
+timing.columnconfigure(index=2, weight=4)
+timing.columnconfigure(index=3, weight=4)
+timing.columnconfigure(index=4, weight=1)
+timing.rowconfigure(index=0, weight=0)
+timing.rowconfigure(index=1, weight=0)
+timing.rowconfigure(index=2, weight=0)
 timing.rowconfigure(index=4, weight=1)
-timing.rowconfigure(index=5, weight=2)
-timing.rowconfigure(index=6, weight=3)
+timing.rowconfigure(index=5, weight=3)
+timing.rowconfigure(index=6, weight=1)
 
 #[  Timing and sections functions  ]#
 global running
@@ -245,19 +245,19 @@ def time_clear():
         None
 
 lbl_tmr = tk.Label(master=timing,text="Timer",font=("Arial",18,""),padx=30)
-lbl_tmr.grid(sticky=S,row=0,column=1,columnspan=3)
+lbl_tmr.grid(sticky=S,row=0,column=0,columnspan=5)
 hourEntry= Entry(master=timing, width=2, font=("Arial",26,""),textvariable=hour, justify="center")
-hourEntry.grid(sticky=NSEW, column=1, row=1)
+hourEntry.grid(sticky=NSEW, column=1, row=1, rowspan=2)
 minuteEntry= Entry(master=timing, width=2, font=("Arial",26,""),textvariable=minute, justify="center")
-minuteEntry.grid(sticky=NSEW, column=2, row=1)
+minuteEntry.grid(sticky=NSEW, column=2, row=1, rowspan=2)
 secondEntry= Entry(master=timing, width=2, font=("Arial",26,""),textvariable=second, justify="center")
-secondEntry.grid(sticky=NSEW, column=3, row=1)
-btn_timer = Button(master=timing, text="Start", bd="5",command=lambda: timer(running))
-btn_timer.grid(column=1,columnspan=3, sticky=tk.EW, row=2, ipadx=20, ipady=2, padx=0, pady=2)
-btn_time = Button(master=timing, text="Default", bd="5",command=lambda: time_set_default())
-btn_time.grid(column=0,columnspan=1, sticky=tk.E, row=1, ipadx=0, ipady=2, padx=4, pady=2)
-btn_clear = Button(master=timing, text="Clear", bd="5",command=lambda: time_clear())
-btn_clear.grid(column=4,columnspan=1, sticky=tk.W, row=1, ipadx=0, ipady=2, padx=4, pady=2)
+secondEntry.grid(sticky=NSEW, column=3, row=1, rowspan=2)
+btn_timer = Button(master=timing, text="Start",command=lambda: timer(running))
+btn_timer.grid(column=0,columnspan=1, sticky=tk.NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
+btn_time = Button(master=timing, text="Default",command=lambda: time_set_default())
+btn_time.grid(column=0,columnspan=1, sticky=tk.NE, row=1, ipadx=0, ipady=2, padx=4)
+btn_clear = Button(master=timing, text="Clear",command=lambda: time_clear())
+btn_clear.grid(column=0,columnspan=1, sticky=tk.NE, row=2, ipadx=0, ipady=2, padx=4)
 hour.set("{0:02d}".format(times["hours"]))
 minute.set("{0:02d}".format(times["minutes"]))
 second.set("{0:02d}".format(times["seconds"]))
@@ -284,18 +284,18 @@ section.set("1")
 with open("output/Section.txt", "w") as f:
     f.write(section.get())
     f.close()
-ent_section = Entry(master=timing, width=3, font=("Arial",18,""),textvariable=section, justify="center", bd="3")
+ent_section = Entry(master=timing, width=3, font=("Arial",18,""),textvariable=section, justify="center")
 ent_section.grid(sticky=NSEW, column=2, row=5)
-btn_sectionup = Button(master=timing, text="+", width=2, bd="5",command=lambda: section_set(1))
+btn_sectionup = Button(master=timing, text="+", width=2,command=lambda: section_set(1))
 btn_sectionup.grid(column=3, row=5)
-btn_sectiondn = Button(master=timing, text="-", width=2, bd="5",command=lambda: section_set(0))
+btn_sectiondn = Button(master=timing, text="-", width=2,command=lambda: section_set(0))
 btn_sectiondn.grid(column=1, row=5)
 
 
 #==================================================#
 #             Scoring Setup and Content            #
 #==================================================#
-scoring = tk.Frame(width=20, height=10, bd="5", relief=SUNKEN)
+scoring = tk.Frame(width=20, height=10, relief=SUNKEN, bd="3")
 scoring.grid(row=2, column=0, sticky=NSEW, padx=5, pady=5)
 
 scoring.columnconfigure(index=0, weight=1)
@@ -354,10 +354,10 @@ def nameset(target_team):
             f.close()
 
 score_home.set("0")
-homeframe = tk.Frame(master=scoring, bd="5", relief="sunken")
+homeframe = tk.Frame(master=scoring, bd="3", relief="sunken")
 homeframe.grid(row=1, column=0, sticky=NSEW, pady=2, padx=2)
 homeframe.columnconfigure(index=0, weight=1)
-homeframe.columnconfigure(index=1, weight=5)
+homeframe.columnconfigure(index=1, weight=500)
 homeframe.columnconfigure(index=2, weight=1)
 homeframe.rowconfigure(index=0, weight=1)
 homeframe.rowconfigure(index=1, weight=1)
@@ -366,22 +366,22 @@ lbl_home = tk.Label(master=homeframe,text="Home",font=("Arial",12,""))
 lbl_home.grid(sticky=EW,row=0,column=0,columnspan=1)
 ent_homename = Entry(master=homeframe, width=2, font=("Arial",12,""),textvariable=name_home)#, justify="center")
 ent_homename.grid(row=0,column=1, sticky=NSEW, pady=2)
-btn_homename = Button(master=homeframe, text="Set", bd="5", command=lambda: nameset("home"))
+btn_homename = Button(master=homeframe, text="Set", command=lambda: nameset("home"), width=4)
 btn_homename.grid(row=0,column=2, sticky=NSEW, padx=5)
 ent_home = Entry(name="score",master=homeframe, width=4, font=("Arial",26,""),textvariable=score_home, justify="center")
 ent_home.grid(sticky=NS, column=1, row=1, pady=5, padx=5)
-btn_homeup = Button(master=homeframe, text="+", width=2, bd="5",command=lambda: scoreadd("home",1))
+btn_homeup = Button(master=homeframe, text="+", width=2,command=lambda: scoreadd("home",1))
 btn_homeup.grid(column=2, row=1)
-btn_homedn = Button(master=homeframe, text="-", width=2, bd="5",command=lambda: scoreadd("home",-1))
+btn_homedn = Button(master=homeframe, text="-", width=2,command=lambda: scoreadd("home",-1))
 btn_homedn.grid(column=0, row=1)
-btn_homeset = Button(master=homeframe, text="Set Score", width=2, bd="5",command=lambda: scoreset("home"))
+btn_homeset = Button(master=homeframe, text="Set Score", width=2,command=lambda: scoreset("home"))
 btn_homeset.grid(column=0, row=2, columnspan=3, sticky=EW, pady=5, padx=5)
 
 score_away.set("0")
-awayframe = tk.Frame(master=scoring, bd="5", relief="sunken")
+awayframe = tk.Frame(master=scoring, bd="3", relief="sunken")
 awayframe.grid(row=1, column=1, sticky=NSEW, pady=2, padx=2)
 awayframe.columnconfigure(index=0, weight=1)
-awayframe.columnconfigure(index=1, weight=5)
+awayframe.columnconfigure(index=1, weight=500)
 awayframe.columnconfigure(index=2, weight=1)
 awayframe.rowconfigure(index=0, weight=1)
 awayframe.rowconfigure(index=1, weight=1)
@@ -390,15 +390,15 @@ lbl_away = tk.Label(master=awayframe,text="Away",font=("Arial",12,""))
 lbl_away.grid(sticky=EW,row=0,column=0,columnspan=1)
 ent_awayname = Entry(master=awayframe, width=2, font=("Arial",12,""),textvariable=name_away)#, justify="center")
 ent_awayname.grid(row=0,column=1, sticky=NSEW, pady=2)
-btn_awayname = Button(master=awayframe, text="Set", bd="5", command=lambda: nameset("away"))
-btn_awayname.grid(row=0,column=2, sticky=NSEW, padx=5)
+btn_awayname = Button(master=awayframe, text="Set", command=lambda: nameset("away"),width=4)
+btn_awayname.grid(row=0,column=2, padx=5)
 ent_away = Entry(name="score",master=awayframe, width=4, font=("Arial",26,""),textvariable=score_away, justify="center")
 ent_away.grid(sticky=NS, column=1, row=1, pady=5, padx=5)
-btn_awayup = Button(master=awayframe, text="+", width=2, bd="5",command=lambda: scoreadd("away",1))
+btn_awayup = Button(master=awayframe, text="+", width=2,command=lambda: scoreadd("away",1))
 btn_awayup.grid(column=2, row=1)
-btn_awaydn = Button(master=awayframe, text="-", width=2, bd="5",command=lambda: scoreadd("away",-1))
+btn_awaydn = Button(master=awayframe, text="-", width=2,command=lambda: scoreadd("away",-1))
 btn_awaydn.grid(column=0, row=1)
-btn_awayset = Button(master=awayframe, text="Set Score", width=2, bd="5",command=lambda: scoreset("away"))
+btn_awayset = Button(master=awayframe, text="Set Score", width=2,command=lambda: scoreset("away"))
 btn_awayset.grid(column=0, row=2, columnspan=3, sticky=EW, pady=5, padx=5)
 
 # Sets all the scores and variables into the window
@@ -410,12 +410,12 @@ s = {}
 # Home
 for x in scrs:
     homeframe.rowconfigure(index=list(scrs.keys()).index(x)+3, weight=1)
-    s["btn_"+x] = tk.Button(master=homeframe, bd="5", text=str(x), command=lambda x=x: scoreadd("home",int(scrs[x])))
+    s["btn_"+x] = Button(master=homeframe, text=str(x), command=lambda x=x: scoreadd("home",int(scrs[x])))
     s["btn_"+x].grid(column=1, row=list(scrs.keys()).index(x)+3, sticky=EW)
 
 for x in scrs:
     awayframe.rowconfigure(index=list(scrs.keys()).index(x)+3, weight=1)
-    s["btn_"+x] = tk.Button(master=awayframe, bd="5", text=str(x), command=lambda x=x: scoreadd("away",int(scrs[x])))
+    s["btn_"+x] = Button(master=awayframe, text=str(x), command=lambda x=x: scoreadd("away",int(scrs[x])))
     s["btn_"+x].grid(column=1, row=list(scrs.keys()).index(x)+3, sticky=EW)
 
 for x in teams_scores:
@@ -434,7 +434,7 @@ for x in teams_names:
 #==================================================#
 #            Variables Setup and Content           #
 #==================================================#
-variables = tk.Frame(width=20, height=10, bd="5", relief=GROOVE)
+variables = tk.Frame(width=20, height=10, bd="3", relief=GROOVE)
 variables.grid(row=1, column=1, sticky=NSEW, padx=5, pady=5)
 
 variables.columnconfigure(index=0, weight=1)
@@ -460,7 +460,7 @@ for x in vars:
     v["lbl_"+x] = tk.Label(master=variables, text=x, padx=5, pady=5)
     v["ent_"+x] = tk.Entry(master=variables, font=("Arial",12,""),justify="center",width=5) 
     v["ent_"+x].name = x #                                    Fixed \/
-    v["btn_"+x] = tk.Button(master=variables, bd="5", text=str("Set ")+str(x), command=lambda x=x: varset(str(x), int(v["ent_"+x].get())))
+    v["btn_"+x] = Button(master=variables, text=str("Set ")+str(x), command=lambda x=x: varset(str(x), int(v["ent_"+x].get())))
     v["lbl_"+x].grid(sticky=tk.E, column=0, row=int(vars.index(x)+2))
     v["ent_"+x].grid(sticky=NS, column=1, row=int(vars.index(x)+2))
     v["btn_"+x].grid(sticky=W, column=2, row=int(vars.index(x)+2), columnspan=2, padx=2)
@@ -469,7 +469,7 @@ for x in vars:
 #==================================================#
 #            Settings Setup and Content            #
 #==================================================#
-settings = tk.Frame(width=20, height=10, bd="5", relief=GROOVE)
+settings = tk.Frame(width=20, height=10, relief=GROOVE, bd="3")
 settings.grid(row=2, column=1, sticky=NSEW, padx=5, pady=5)
 
 settings.columnconfigure(index=0, weight=1)
@@ -507,16 +507,16 @@ def settings_set(setting,value):
 
 lbl_settings = tk.Label(master=settings,text="Settings",font=("Arial",18,""),padx=5)
 lbl_settings.grid(sticky=S,row=0,column=0,columnspan=3)
-lbl_name = tk.Label(master=settings,text="Config Name:")
+lbl_name = tk.Label(master=settings,text="Name:")
 lbl_name.grid(column=0, row=1, sticky=tk.NS, padx=1)
 ent_name = tk.Entry(master=settings, width=10, font=("Arial",12,""))
 ent_name.grid(column=1, row=1, sticky=tk.NSEW, padx=5)
 ent_name.insert(0, config["name"])
-btn_name = tk.Button(master=settings,text="Set", command=config_name,bd=5)
+btn_name = Button(master=settings,text="Set", command=config_name,width=4)
 btn_name.grid(column=2, row=1, sticky=tk.NW, padx=5)
-btn_reload = tk.Button(master=settings,text="Reload config", bd="5",command=gmc.config_reload)
+btn_reload = Button(master=settings,text="Reload config",command=gmc.config_reload)
 btn_reload.grid(column=1, row=2001, sticky=tk.NSEW, padx=5, pady=5)
-btn_choose = tk.Button(master=settings,text="Select config file", bd="5",command=gmc.config_choose)
+btn_choose = Button(master=settings,text="Select config file",command=gmc.config_choose)
 btn_choose.grid(column=1, row=2000, sticky=tk.NSEW, padx=5, pady=5)
 
 if config["version"] > 1:
