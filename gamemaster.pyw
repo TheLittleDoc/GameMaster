@@ -33,7 +33,7 @@ window = tk.Tk()
 window.title("GameMaster")
 window.geometry("600x620")
 window.iconbitmap("icon.ico")
-window.resizable(1,1)
+window.resizable(0,1)
 window.minsize(600, 600)
 window.bind("<Return>", lambda e: focus(e))
 window.lift()
@@ -60,8 +60,17 @@ main_frame.rowconfigure(index=1, weight=2)
 main_frame.rowconfigure(index=2, weight=1)
 main_frame.columnconfigure(index=0, weight=10)
 main_frame.columnconfigure(index=1, weight=0)
+
+settings_frame = tk.Frame(notebook,padx=0, pady=0)
+notebook.add(settings_frame, text="Settings",state=DISABLED)
+
+config_frame = tk.Frame(notebook,padx=0, pady=0)
+notebook.add(config_frame, text="Config",state=DISABLED)
+
 about_frame = tk.Frame(notebook,padx=0, pady=0)
-notebook.add(about_frame, text="About",state=DISABLED)
+notebook.add(about_frame, text="About")
+
+
 
 header = tk.Frame(master=window,width=40, height=10)
 header.grid(column=0, row=0, sticky=tk.EW, columnspan=2, rowspan=1, padx=0, pady=0)
