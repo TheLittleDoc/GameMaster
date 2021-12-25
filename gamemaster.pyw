@@ -69,6 +69,10 @@ notebook.add(config_frame, text="Config",state=DISABLED)
 
 about_frame = tk.Frame(notebook,padx=0, pady=0)
 notebook.add(about_frame, text="About")
+about_frame.rowconfigure(index=0, weight=1)
+about_frame.rowconfigure(index=1, weight=1)
+about_frame.columnconfigure(index=0, weight=1)
+about_frame.columnconfigure(index=0, weight=0)
 
 
 
@@ -561,6 +565,26 @@ if config["version"] > 1:
             if (config["version"] < 3) and (x == "alarm"):
                 stvar["bool_"+x].set(False)
                 st["box_"+x].config(state=DISABLED)
+
+#==================================================#
+#                     About Tab                    #
+#==================================================#
+info = tk.Frame(master=about_frame, width=400, height=1, relief=SUNKEN, bd="3")
+info.grid(row=0, column=0, sticky=NSEW, padx=5, pady=5)
+
+info.rowconfigure(index=0, weight=0)
+info.rowconfigure(index=1, weight=1)
+info.columnconfigure(index=0, weight=1)
+
+
+lbl_aboutheader = tk.Label(master=info,justify=LEFT, text="About GameMaster", font=("Arial",18,""), padx=5)
+lbl_aboutheader.grid(sticky=W, row=0, column=0)
+
+lbl_aboutcontent = tk.Label(master=info, wraplength=390,justify=LEFT,text="GameMaster is maintained by TheLittleDoctor for Bears Broadcast Group. Created in 2021, it sought to fill a need for a simple, easy to use scoreboard and timing app for use with Open Broadcast Software as sporting events all over the world needed to be broadcasted and livestreamed.\n\nGameMaster is open source and can be found at ...", font=("Arial",10,""), padx=5)
+lbl_aboutcontent.grid(sticky=N, row=1, column=0)
+
+
+
 #[================================================]#
 #[================================================]#
 window.mainloop()
