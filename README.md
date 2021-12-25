@@ -31,6 +31,31 @@ Latest Build:  1.2.0-Pre1
 
 Release notes:
 <details>
+  <summary>1.2.0-Pre2</summary>
+  <ul>
+    <ul>
+      <li>Updated to config version 2 (documentation forthcoming (for real, this time))</li>
+      <li>Added config updater (needs work)</li>
+      <li>Added application settings</li>
+      <li>Added time output format options</li>
+      <li>Fixed time only outputting in MM:SS (see above)</li>
+      <li>Added preliminary config swapper</li>
+      <li>Added basic first-run detection</li>
+      <li>Added config error detection (needs work)</li></li>
+      <li>Added static header image</li>
+      <li>Reworked general formatting back-end</li>
+      <li>Not working: "Clear time" button (disabled)</li>
+      <li>Not Implemented: Player information fed, Config editor, First-run setup, Alarm</li>
+      <li>Note: If Pre1 is successful on other machines, Pre2 will focus on cleaning up and ironing-out first-run and error detection, Pre3 will fix config updater, and RC1 may debut custom installer.</li>
+  </ul>
+  </ul>
+</details>
+### 1.2.0-Pre2
+- Fixed issue where cancelling the config selection would cause a crash on next run. 
+- Changed config selection behavior when selecting the same config or not choosing a new config to not restart application.
+- Not Implemented: Player information fed, Config editor, First-run setup, Alarm
+- Note: Pre3 will focus on cleaning up and ironing-out first-run and error detection, Pre4 will fix config updater, and RC1 may debut custom installer.
+<details>
   <summary>1.2.0-Pre1</summary>
   <ul>
     <ul>
