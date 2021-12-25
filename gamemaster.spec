@@ -7,7 +7,7 @@ block_cipher = None
 a = Analysis(['gamemaster.pyw'],
              pathex=['C:\\Users\\TheLittleDoc\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages', 'C:\\Users\\TheLittleDoc\\Desktop\\GameMaster'],
              binaries=[],
-             datas=[],
+             datas=[('icon.ico','.')],
              hiddenimports=[],
              hookspath=[],
              hooksconfig={},
@@ -20,7 +20,11 @@ a = Analysis(['gamemaster.pyw'],
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 
+             
 a.datas += [('header_alt.png','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\header_alt.png', 'DATA')]
+a.datas += [('doc.png','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\doc.png', 'DATA')]
+a.datas += [('discord.png','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\discord.png', 'DATA')]
+a.datas += [('github.png','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\github.png', 'DATA')]
 
 exe = EXE(pyz,
           a.scripts,
