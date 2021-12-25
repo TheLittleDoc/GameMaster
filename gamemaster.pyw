@@ -18,6 +18,16 @@ gmc.set_config()
 config = gmc.config
 settings_list = gmc.settings_list
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
 def focus(event):
     widget = window.focus_get()
     print(widget.name)
@@ -80,7 +90,7 @@ header = tk.Frame(master=window,width=40, height=10)
 header.grid(column=0, row=0, sticky=tk.EW, columnspan=2, rowspan=1, padx=0, pady=0)
 canvas = Canvas(master=header,width = 700, height = 96)
 canvas.grid(column=0, row=0, columnspan=2, rowspan=2, sticky=tk.NSEW)
-img = ImageTk.PhotoImage(Image.open("header_alt.png"))  
+img = ImageTk.PhotoImage(Image.open(resource_path("header_alt.png")))  
 canvas.create_image(0, 0, anchor=NW, image=img) 
 
 #==================================================#

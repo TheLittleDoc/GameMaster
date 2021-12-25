@@ -20,6 +20,8 @@ a = Analysis(['gamemaster.pyw'],
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 
+a.datas += [('header_alt.png','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\header_alt.png', 'DATA')]
+
 exe = EXE(pyz,
           a.scripts,
           a.binaries,
