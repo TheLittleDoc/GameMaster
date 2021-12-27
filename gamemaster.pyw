@@ -239,7 +239,7 @@ def time_set_default():
 
 def section_set(type):
     type=type
-    with open("output/Section.txt", "w") as f:
+    with open("output/section.txt", "w") as f:
         if type == 1:
             if(int(section.get()) < config["ct"]):
                 # print("section setting")
