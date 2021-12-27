@@ -25,3 +25,9 @@ def retrieve_file(url, name):
             decoded_line = line.decode("utf-8")
             f[name] += decoded_line
         print(f[name])
+
+def download_file(url, name):
+    if not "http" in url:
+        messagebox.ABOUT(title='Invalid URL',message='URL must start with "http"', icon='warning')
+    else:
+        request.urlretrieve(url, name)

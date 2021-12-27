@@ -1,55 +1,42 @@
+from tkinter import *
+from tkinter.ttk import *
 from tkinter import messagebox
 from tkinter import filedialog as fd
 import os, os.path, sys
 import json
-import time
-import gm_resources as gmr
+from gm_resources import resource_path, retrieve_file, download_file
+from gm_first_run import first_run
 
 NAME = "GameMaster"
 APP_VERSION = "1.2.0"
 VERSION = 2
 
 try:
-    gmr.retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION+".py","Source Code")
+    retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION+".py","Source Code")
 except:
     messagebox.ABORT("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")    
-
-
-
-
-
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
-    try:
-        # PyInstaller creates a temp folder and stores path in _MEIPASS
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
-
-    return os.path.join(base_path, relative_path)
-
 
 try:
     with open("cfgsettings.json", "r") as f:
         cfgsettings = json.load(f)
         # print(cfgsettings)
         filename = cfgsettings["path"]
-
-
 except:
     firstrun = messagebox.askyesno("First run?","Is this your first time running GameMaster?",icon="warning")
+    cfgsettings = {"path": "gamemaster.json", "recents": []}
+    with open("cfgsettings.json", "w") as f:
+        json.dump(cfgsettings, f, indent=4)
+        
+        f.close()
+    with open("cfgsettings.json", "r") as f:
+        cfgsettings = json.load(f)
+        # print(cfgsettings)
+    
     if firstrun:
-        None
+        first_run()
     else:
-        cfgsettings = {"path": "gamemaster.json", "recents": []}
-        with open("cfgsettings.json", "w") as f:
-            json.dump(cfgsettings, f, indent=4)
-            
-            f.close()
-        with open("cfgsettings.json", "r") as f:
-            cfgsettings = json.load(f)
-            # print(cfgsettings)
-        os.execv(sys.executable, ["python"] + sys.argv)
+        None
+    os.execv(sys.executable, ["python"] + sys.argv)
 
 
 with open(filename, "r") as f:
