@@ -27,6 +27,7 @@ import time
 import threading
 import types
 import gm_config as gmc
+import gm_about as gma
 import webbrowser
 from gm_resources import resource_path
 
@@ -87,12 +88,6 @@ notebook.add(settings_frame, text="Settings",state=DISABLED)
 config_frame = tk.Frame(notebook,padx=0, pady=0)
 notebook.add(config_frame, text="Config",state=DISABLED)
 
-about_frame = tk.Frame(notebook,padx=0, pady=0)
-notebook.add(about_frame, text="About")
-about_frame.rowconfigure(index=0, weight=1)
-about_frame.rowconfigure(index=1, weight=1)
-about_frame.columnconfigure(index=0, weight=1)
-about_frame.columnconfigure(index=1, weight=0)
 
 
 
@@ -589,87 +584,7 @@ if config["version"] > 1:
 #==================================================#
 #                     About Tab                    #
 #==================================================#
-info = tk.Frame(master=about_frame, height=1, relief=SUNKEN, bd="3")
-info.grid(row=0, column=0, sticky=NSEW, padx=5, pady=5)
-
-info.rowconfigure(index=0, weight=0)
-info.rowconfigure(index=1, weight=1)
-info.columnconfigure(index=0, weight=1)
-
-
-lbl_aboutheader = tk.Label(master=info,justify=LEFT, text="About GameMaster", font=("Arial",18,""), padx=5)
-lbl_aboutheader.grid(sticky=W, row=0, column=0)
-
-lbl_aboutcontent = tk.Label(master=info, wraplength=400,justify=LEFT,text="GameMaster is maintained by TheLittleDoctor for Bears Broadcast Group. Created in 2021, it sought to fill a need for a simple, easy to use scoreboard and timing app for use with Open Broadcast Software as sporting events all over the world needed to be broadcasted and livestreamed.\n\nGameMaster is open source and can be found at ...", font=("Arial",10,""), padx=5)
-lbl_aboutcontent.grid(sticky=NW, row=1, column=0)
-
-links = tk.Frame(master=about_frame, height=1, relief=GROOVE, bd="3")
-links.grid(row=0, column=1, sticky=NSEW, padx=5, pady=5,rowspan=2)
-links.rowconfigure(index=0, weight=0)
-links.rowconfigure(index=1, weight=0)
-links.rowconfigure(index=2, weight=0)
-links.rowconfigure(index=3, weight=0)
-links.rowconfigure(index=7, weight=1000)
-links.columnconfigure(index=0, weight=1)
-
-lbl_links = tk.Label(master=links,text="Links", font=("Arial",18,""), padx=5)
-lbl_links.grid(sticky=W, row=0, column=0, columnspan=2)
-
-# lbl_linkscontent = tk.Label(master=links, wraplength=160,justify=LEFT,text="TheLittleDoctor\n\nTheBearBroadcast\n\nOpenBroadcast\n\nOpenBroadcast Software\n\nOpenBroadcast Software Team\n\nOpenBroadcast Software Team", font=("Arial",10,""), padx=5)
-# lbl_linkscontent.grid(sticky=N, row=1, column=0, columnspan=2)
-
-def external_link(link):
-    asklink = messagebox.askyesno("Open link", "GameMaster is opening \"%s\" in your default browser.\n\nDo you want to continue?" % link)
-    if asklink == True:
-        webbrowser.open(link)
-    else:
-        None
-
-doc = tk.Frame(master=links, height=1, relief=RAISED, bd="3")
-doc.rowconfigure(index=0, weight=0)
-doc.rowconfigure(index=1, weight=0)
-doc.columnconfigure(index=0, weight=1)
-doc.grid(row=1, column=0, sticky=NSEW, padx=5, pady=2.5)
-img_doc = Image.open(resource_path("doc.png"))
-img_doc = img_doc.resize((int(96*1.3),int(72*1.3)), Image.ANTIALIAS)
-img_doc = ImageTk.PhotoImage(img_doc)
-lbl_doc = Label(master=doc, image=img_doc)
-lbl_doc.image = img_doc
-lbl_doc.grid(row=0, column=0, sticky=NSEW, padx=5, pady=5)
-btn_doc = Button(master=doc,text="Website", command=lambda: external_link("https://datastream.cf/"))
-btn_doc.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5)
-
-datastream = tk.Frame(master=links, height=1, relief=RAISED, bd="3")
-datastream.rowconfigure(index=0, weight=0)
-datastream.rowconfigure(index=1, weight=0)
-datastream.columnconfigure(index=0, weight=10)
-datastream.columnconfigure(index=1, weight=1)
-datastream.columnconfigure(index=2, weight=10)
-datastream.grid(row=2, column=0, sticky=NSEW, padx=5, pady=2.5)
-img_discord = Image.open(resource_path("discord.png"))
-img_discord = img_discord.resize((int(72),int(72)), Image.ANTIALIAS)
-img_discord = ImageTk.PhotoImage(img_discord)
-lbl_datastream = Label(master=datastream, image=img_discord, width=72, justify=CENTER)
-lbl_datastream.image = img_discord
-lbl_datastream.grid(row=0, column=1, sticky=NSEW, padx=5, pady=5)
-btn_datastream = Button(master=datastream,text="Discord Server", command=lambda: external_link("https://discord.gg/WzA4FncR8f/"))
-btn_datastream.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5, columnspan=3)
-
-github = tk.Frame(master=links, height=1, relief=RAISED, bd="3")
-github.rowconfigure(index=0, weight=0)
-github.rowconfigure(index=1, weight=0)
-github.columnconfigure(index=0, weight=10)
-github.columnconfigure(index=1, weight=1)
-github.columnconfigure(index=2, weight=10)
-github.grid(row=3, column=0, sticky=NSEW, padx=5, pady=2.5)
-img_github = Image.open(resource_path("github.png"))
-img_github = img_github.resize((int(72),int(72)), Image.ANTIALIAS)
-img_github = ImageTk.PhotoImage(img_github)
-lbl_github = Label(master=github, image=img_github, width=72, justify=CENTER)
-lbl_github.image = img_github
-lbl_github.grid(row=0, column=1, sticky=NSEW, padx=5, pady=5)
-btn_github = Button(master=github,text="GitHub Repo", command=lambda: external_link("https://github.com/TheLittleDoc/GameMaster/"))
-btn_github.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5, columnspan=3)
+gma.about_setup(notebook)
 
 #[================================================]#
 #[================================================]#
