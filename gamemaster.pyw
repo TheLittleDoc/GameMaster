@@ -31,15 +31,10 @@ import gm_about as gma
 import webbrowser
 from gm_resources import resource_path
 
-# print(os.path.expanduser("/"))
-
-
 gmc.set_config()
 
 config = gmc.config
 settings_list = gmc.settings_list
-
-
 
 def focus(event):
     widget = window.focus_get()
@@ -87,9 +82,6 @@ notebook.add(settings_frame, text="Settings",state=DISABLED)
 
 config_frame = tk.Frame(notebook,padx=0, pady=0)
 notebook.add(config_frame, text="Config",state=DISABLED)
-
-
-
 
 header = tk.Frame(master=window,width=40, height=10)
 header.grid(column=0, row=0, sticky=tk.EW, columnspan=2, rowspan=1, padx=0, pady=0)
@@ -318,7 +310,6 @@ with open("output/time.txt", "w") as f:
     f.write(to_file)
     f.close()
 
-
 lbl_section = tk.Label(master=timing,text=config["unit"],font=("Arial",18,""),padx=30)
 lbl_section.grid(sticky=S,row=4,column=1,columnspan=3)
 section=StringVar()
@@ -332,7 +323,6 @@ btn_sectionup = Button(master=timing, text="+", width=2,command=lambda: section_
 btn_sectionup.grid(column=3, row=5)
 btn_sectiondn = Button(master=timing, text="-", width=2,command=lambda: section_set(0))
 btn_sectiondn.grid(column=1, row=5)
-
 
 #==================================================#
 #             Scoring Setup and Content            #
@@ -472,7 +462,6 @@ for x in teams_names:
         f.write(str(teams_names[x]))
         f.close()
 
-
 # Score: 0/100
 
 #==================================================#
@@ -548,7 +537,6 @@ def settings_set(setting,value):
     gmc.set_config()
     window.attributes("-topmost", settings_list["on top"])
     
-
 lbl_settings = Label(master=settings,text="Settings",font=("Arial",18,""))#,padx=5)
 lbl_settings.grid(sticky=S,row=0,column=0,columnspan=3)
 lbl_name = Label(master=settings,text="Name:")
