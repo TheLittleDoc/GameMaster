@@ -1,34 +1,42 @@
+from tkinter import *
+from tkinter.ttk import *
 from tkinter import messagebox
 from tkinter import filedialog as fd
 import os, os.path, sys
 import json
-import time
+from gm_resources import resource_path, retrieve_file, download_file
+from gm_first_run import first_run
 
 NAME = "GameMaster"
-APP_VERSION = "1.1.0"
+APP_VERSION = "1.2.0"
 VERSION = 2
+
+try:
+    retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION+".py","Source Code")
+except:
+    messagebox.ABORT("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")    
 
 try:
     with open("cfgsettings.json", "r") as f:
         cfgsettings = json.load(f)
         # print(cfgsettings)
         filename = cfgsettings["path"]
-
-
 except:
     firstrun = messagebox.askyesno("First run?","Is this your first time running GameMaster?",icon="warning")
+    cfgsettings = {"path": "gamemaster.json", "recents": []}
+    with open("cfgsettings.json", "w") as f:
+        json.dump(cfgsettings, f, indent=4)
+        
+        f.close()
+    with open("cfgsettings.json", "r") as f:
+        cfgsettings = json.load(f)
+        # print(cfgsettings)
+    
     if firstrun:
-        None
+        first_run()
     else:
-        cfgsettings = {"path": "gamemaster.json", "recents": []}
-        with open("cfgsettings.json", "w") as f:
-            json.dump(cfgsettings, f, indent=4)
-            
-            f.close()
-        with open("cfgsettings.json", "r") as f:
-            cfgsettings = json.load(f)
-            # print(cfgsettings)
-        os.execv(sys.executable, ["python"] + sys.argv)
+        None
+    os.execv(sys.executable, ["python"] + sys.argv)
 
 
 with open(filename, "r") as f:

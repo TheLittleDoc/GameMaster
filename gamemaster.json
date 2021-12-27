@@ -24,7 +24,7 @@
         "hours": false,
         "minutes": true,
         "seconds": true,
-        "on top": true,
+        "on top": false,
         "alarm": true
     }
 }
