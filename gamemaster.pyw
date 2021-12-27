@@ -501,8 +501,8 @@ vars = config["vars"]
 v = {}
 for x in vars:
     variables.rowconfigure(index=vars.index(x)+1, weight=0)
-    v["lbl_"+x] = tk.Label(master=variables, text=x, padx=5, pady=5)
-    v["ent_"+x] = tk.Entry(master=variables, font=("Arial",12,""),justify="center",width=5) 
+    v["lbl_"+x] = Label(master=variables, text=x)#, padx=5, pady=5)
+    v["ent_"+x] = Entry(master=variables, font=("Arial",12,""),justify="center",width=5) 
     v["ent_"+x].name = x #                                    Fixed \/
     v["btn_"+x] = Button(master=variables, text=str("Set ")+str(x), command=lambda x=x: varset(str(x), int(v["ent_"+x].get())))
     v["lbl_"+x].grid(sticky=tk.E, column=0, row=int(vars.index(x)+2))
@@ -549,11 +549,11 @@ def settings_set(setting,value):
     window.attributes("-topmost", settings_list["on top"])
     
 
-lbl_settings = tk.Label(master=settings,text="Settings",font=("Arial",18,""),padx=5)
+lbl_settings = Label(master=settings,text="Settings",font=("Arial",18,""))#,padx=5)
 lbl_settings.grid(sticky=S,row=0,column=0,columnspan=3)
-lbl_name = tk.Label(master=settings,text="Name:")
+lbl_name = Label(master=settings,text="Name:")
 lbl_name.grid(column=0, row=1, sticky=tk.NS, padx=1)
-ent_name = tk.Entry(master=settings, width=10, font=("Arial",12,""))
+ent_name = Entry(master=settings, width=10, font=("Arial",12,""))
 ent_name.grid(column=1, row=1, sticky=tk.NSEW, padx=5)
 ent_name.insert(0, config["name"])
 btn_name = Button(master=settings,text="Set", command=config_name,width=4)
