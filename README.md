@@ -31,6 +31,17 @@ Latest Build:  1.2.0-Pre1
 
 Release notes:
 <details>
+  <summary>1.2.0-Pre2</summary>
+  <ul>
+    <ul>
+      <li>Fixed issue where cancelling the config selection would cause a crash on next run. </li>
+      <li>Changed config selection behavior when selecting the same config or not choosing a new config to not restart application.</li>
+      <li>Not Implemented: Player information fed, Config editor, First-run setup, Alarm</li>
+      <li>Note: Pre3 will focus on cleaning up and ironing-out first-run and error detection, Pre4 will fix config updater, and RC1 may debut custom installer.</li>
+  </ul>
+  </ul>
+</details>
+<details>
   <summary>1.2.0-Pre1</summary>
   <ul>
     <ul>
