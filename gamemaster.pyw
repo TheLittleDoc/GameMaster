@@ -314,7 +314,7 @@ lbl_section = tk.Label(master=timing,text=config["unit"],font=("Arial",18,""),pa
 lbl_section.grid(sticky=S,row=4,column=1,columnspan=3)
 section=StringVar()
 section.set("1")
-with open("output/Section.txt", "w") as f:
+with open("output/section.txt", "w") as f:
     f.write(section.get())
     f.close()
 ent_section = Entry(master=timing, width=3, font=("Arial",18,""),textvariable=section, justify="center")
