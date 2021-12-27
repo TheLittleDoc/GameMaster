@@ -10,7 +10,7 @@ import threading
 import types
 import gm_config as gmc
 import webbrowser
-from gm_resources import resource_path
+from gm_resources import resource_path, retrieve_file, f
 
 def external_link(link):
     asklink = messagebox.askyesno("Open link", "GameMaster is opening \"%s\" in your default browser.\n\nDo you want to continue?" % link)
@@ -73,12 +73,69 @@ def about_setup(notebook):
     lbl_issues = Label(master=table,anchor=W,justify=LEFT, text="https://github.com/TheLittleDoc/GameMaster/issues", font=("Arial",10,""), relief=SUNKEN, padding=5)
     lbl_issues.grid(sticky=NSEW, row=3, column=1)
 
-    btn_source = Button(master=table, text="Source", command=lambda: None)
+    def show_file(name,to_open,more_info):
+        if "http" in to_open:
+            retrieve_file(to_open, name)
+            text = f[name]
+        else:
+            file = open(resource_path(to_open), "r")
+            text = file.read()
+            file.close()
+        file_window = tk.Toplevel()
+        file_window.title(name)
+        file_window.resizable(True, True)
+        file_window.geometry("660x600")
+        file_window.minsize(660,600)
+        file_window.iconbitmap(resource_path("icon.ico"))
+        file_window.rowconfigure(index=0, weight=0)
+        file_window.rowconfigure(index=1, weight=1)
+        file_window.columnconfigure(index=0, weight=1)
+        file_window.columnconfigure(index=1, weight=0)
+
+        controls_frame = Frame(master=file_window, height=1, relief=RAISED, borderwidth="3")
+        controls_frame.grid(row=0, column=0, sticky=NSEW)
+        controls_frame.rowconfigure(index=0, weight=0)
+        controls_frame.columnconfigure(index=0, weight=0)
+        controls_frame.columnconfigure(index=1, weight=1)
+        controls_frame.columnconfigure(index=2, weight=0)
+
+        btn_close = Button(master=controls_frame, text="Close", command=lambda: file_window.destroy())
+        btn_close.grid(sticky=NSEW, row=0, column=0)
+
+        lbl_file = Label(master=controls_frame,justify=LEFT,text=name, font=("Arial",18,""), padding=3)
+        lbl_file.grid(sticky=NW, row=0, column=1)
+
+        if not more_info == "":
+            btn_more = Button(master=controls_frame, text="More Info", command=lambda: external_link(more_info))
+            btn_more.grid(sticky=NSEW, row=0, column=2)
+        else:
+            None
+        
+        frame_txt = Frame(master=file_window, height=1, relief=SUNKEN, borderwidth="3")
+        frame_txt.grid(row=1, column=0, sticky=NSEW, padx=5,pady=5)
+        frame_txt.rowconfigure(index=0, weight=1)
+        frame_txt.columnconfigure(index=0, weight=1)
+        frame_txt.columnconfigure(index=1, weight=0)
+
+        txt = Text(master=frame_txt)
+        txt.grid(sticky=NSEW, row=0, column=0)
+
+        txt.insert(1.0, text)
+
+        scroll_file = Scrollbar(master=file_window, orient=VERTICAL, width=590,command=txt.yview)
+        scroll_file.grid(row=0, column=1, sticky=NSEW, rowspan=2)
+
+        txt['yscrollcommand'] = scroll_file.set
+
+    btn_source = Button(master=table, text="Source", command=lambda: show_file("GameMaster Source","https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+gmc.APP_VERSION+".py","")) # fix ! ! 
     btn_source.grid(sticky=NSEW, row=5, column=0)
     lbl_source = Label(master=table,anchor=W,justify=LEFT, text="Included copy of source. Opens internally", font=("Arial",10,""), relief=SUNKEN, padding=5)
     lbl_source.grid(sticky=NSEW, row=5, column=1)
 
-    btn_license = Button(master=table, text="License", command=lambda: None)
+    
+
+
+    btn_license = Button(master=table, text="License", command=lambda: show_file("GNU AGPLv3","LICENSE","https://www.gnu.org/licenses/agpl-3.0.en.html"))
     btn_license.grid(sticky=NSEW, row=6, column=0)
     lbl_license = Label(master=table,anchor=W,justify=LEFT, text="Included copy of GNU AGPLv3. Opens internally.", font=("Arial",10,""), relief=SUNKEN, padding=5)
     lbl_license.grid(sticky=NSEW, row=6, column=1)
