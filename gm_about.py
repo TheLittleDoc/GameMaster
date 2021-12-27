@@ -129,17 +129,13 @@ def about_setup(notebook):
 
     btn_source = Button(master=table, text="Source", command=lambda: show_file("GameMaster Source","https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+gmc.APP_VERSION+".py","")) # fix ! ! 
     btn_source.grid(sticky=NSEW, row=5, column=0)
-    lbl_source = Label(master=table,anchor=W,justify=LEFT, text="Included copy of source. Opens internally", font=("Arial",10,""), relief=SUNKEN, padding=5)
+    lbl_source = Label(master=table,anchor=W,justify=LEFT, text="Included copy of source. Opens internally.", font=("Arial",10,""), relief=SUNKEN, padding=5)
     lbl_source.grid(sticky=NSEW, row=5, column=1)
-
-    
-
 
     btn_license = Button(master=table, text="License", command=lambda: show_file("GNU AGPLv3","LICENSE","https://www.gnu.org/licenses/agpl-3.0.en.html"))
     btn_license.grid(sticky=NSEW, row=6, column=0)
     lbl_license = Label(master=table,anchor=W,justify=LEFT, text="Included copy of GNU AGPLv3. Opens internally.", font=("Arial",10,""), relief=SUNKEN, padding=5)
     lbl_license.grid(sticky=NSEW, row=6, column=1)
-
 
     links = tk.Frame(master=about_frame, height=1, relief=GROOVE, bd="3")
     links.grid(row=0, column=1, sticky=NSEW, padx=5, pady=5,rowspan=2)
@@ -152,8 +148,6 @@ def about_setup(notebook):
 
     lbl_links = tk.Label(master=links,text="Links", font=("Arial",18,""), padx=5)
     lbl_links.grid(sticky=W, row=0, column=0, columnspan=2)
-
-
 
     doc = tk.Frame(master=links, height=1, relief=RAISED, bd="2")
     doc.rowconfigure(index=0, weight=0)

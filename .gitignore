@@ -163,3 +163,4 @@ output/time.txt
 cfgsettings.json
 output/time.txt
 .vscode/launch.json
+.vscode/tasks.json
