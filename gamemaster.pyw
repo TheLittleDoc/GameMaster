@@ -28,6 +28,7 @@ import threading
 import types
 import gm_config as gmc
 import webbrowser
+from gm_resources import resource_path
 
 # print(os.path.expanduser("/"))
 
@@ -37,15 +38,7 @@ gmc.set_config()
 config = gmc.config
 settings_list = gmc.settings_list
 
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
-    try:
-        # PyInstaller creates a temp folder and stores path in _MEIPASS
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.abspath(".")
 
-    return os.path.join(base_path, relative_path)
 
 def focus(event):
     widget = window.focus_get()
