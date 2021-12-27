@@ -26,7 +26,7 @@ import json
 import time
 import threading
 import types
-import config as gmc
+import gm_config as gmc
 import webbrowser
 
 # print(os.path.expanduser("/"))

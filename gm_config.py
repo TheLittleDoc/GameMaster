@@ -3,10 +3,35 @@ from tkinter import filedialog as fd
 import os, os.path, sys
 import json
 import time
+from urllib import request
 
 NAME = "GameMaster"
-APP_VERSION = "1.1.0"
+APP_VERSION = "1.2.0"
 VERSION = 2
+
+try:
+    url = "https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION+".py"
+    file = request.urlopen(url)
+except:
+    messagebox.ABORT("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")    
+
+source = ""
+for line in file:
+    decoded_line = line.decode("utf-8")
+    source += decoded_line
+
+
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
 
 try:
     with open("cfgsettings.json", "r") as f:
