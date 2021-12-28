@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['gamemaster.pyw'],
-             pathex=['C:\\Users\\TheLittleDoc\\AppData\\Local\\Programs\\Python\\Python39\\Lib\\site-packages', 'C:\\Users\\TheLittleDoc\\Desktop\\GameMaster'],
+             pathex=['C:\Python310\Lib\site-packages', 'C:\\Users\\TheLittleDoc\\Desktop\\GameMaster'],
              binaries=[],
              datas=[('icon.ico','.')],
              hiddenimports=[],
