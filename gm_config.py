@@ -5,7 +5,7 @@ from tkinter import filedialog as fd
 import os, os.path, sys
 import json
 from gm_resources import resource_path, retrieve_file, download_file
-from gm_first_run import first_run
+from gm_setup import setup
 
 NAME = "GameMaster"
 APP_VERSION = "1.2.0"
@@ -33,7 +33,7 @@ except:
         # print(cfgsettings)
     
     if firstrun:
-        first_run()
+        setup()
     else:
         None
     os.execv(sys.executable, ["python"] + sys.argv)
@@ -64,6 +64,10 @@ with open(filename, "r") as f:
 def set_config():
     with open(filename, "w") as f:
         json.dump(config, f, indent=4)
+def edit_config(property, value):
+    config[property] = value
+    print(value)
+    set_config()
 def config_reload():
     reload_ask = messagebox.askyesno("Reload?","Reloading the config will require restarting GameMaster. This will stop the timer and reset scores and team names. Are you sure you want to continue?",icon="warning")
     if reload_ask:
