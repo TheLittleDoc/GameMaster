@@ -41,9 +41,20 @@ def setup():
     bar.grid(row=2, column=1, sticky=NSEW, padx=10, pady=10)
     bar['value'] = current*100/(len(frames_setup)-1) 
 
+    def retrieve_preset():
+        if not cb_sportselect.get() == "Custom":
+            download_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/examples/"+cb_sportselect.get().lower()+".json",cb_sportselect.get().lower()+".json")
+            with open("cfgsettings.json", "r") as f:
+                cfgsettings = json.load(f)
+                # print(cfgsettings)
+            with open("cfgsettings.json", "w") as f:
+                cfgsettings["path"] = resource_path(cb_sportselect.get().lower()+".json")
+                json.dump(cfgsettings, f, indent=4)
+                f.close()
+
     frames_function[0] = lambda: None
     frames_function[1] = lambda: None
-    frames_function[2] = lambda: None
+    frames_function[2] = lambda: retrieve_preset()
     frames_function[3] = lambda: None
     frames_function[4] = lambda: None
     frames_function[5] = lambda: None
