@@ -1,7 +1,7 @@
 import os
 import sys
 from tkinter import messagebox
-from urllib import request
+from requests import *
 
 f = {}
 
@@ -19,7 +19,8 @@ def retrieve_file(url, name):
     if not "http" in url:
         messagebox.ABOUT(title='Invalid URL',message='URL must start with "http"', icon='warning')
     else:
-        file = request.urlopen(url)
+        file = get(url)
+        print(file.text)
         f[name] = ""
         for line in file:
             decoded_line = line.decode("utf-8")
@@ -30,4 +31,9 @@ def download_file(url, name):
     if not "http" in url:
         messagebox.ABOUT(title='Invalid URL',message='URL must start with "http"', icon='warning')
     else:
-        request.urlretrieve(url, name)
+        file = get(url)
+        print(file.text)
+        with open(name, "w") as f:
+            f.write(file.text)
+            f.close()
+        
