@@ -22,7 +22,7 @@ def setup():
     frames_setup = {}
     
 
-    window_setup = tk.Toplevel()
+    window_setup = tk.Tk()
     window_setup.title("GameMaster Setup")
     window_setup.geometry("600x400")
     window_setup.resizable(False, False)
@@ -270,6 +270,5 @@ def setup():
     lbl_finish.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
     lbl_closingremarks = Label(master=frames_setup[6], wraplength=560, justify=LEFT, text="Thank you for choosing GameMaster!\n\n", font=("Arial", 10))
     lbl_closingremarks.grid(column=0, row=1, sticky=tk.NW)
-
 
     window_setup.mainloop()
