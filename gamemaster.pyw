@@ -118,9 +118,9 @@ minute=StringVar()
 second=StringVar()
 times = config["times"]
 # setting the default value
-hour.set("{0:02d}".format(times["hours"]))
-minute.set("{0:02d}".format(times["minutes"]))
-second.set("{0:02d}".format(times["seconds"]))
+hour.set("{0:02d}".format(int(0 if times["hours"] is None else times["hours"])))
+minute.set("{0:02d}".format(int(0 if times["minutes"] is None else times["minutes"])))
+second.set("{0:02d}".format(int(0 if times["seconds"] is None else times["seconds"])))
 class TimerClass(threading.Thread):
     
     def __init__(self, thread_ID):
@@ -217,20 +217,20 @@ def timer_stop():
     btn_timer.grid(column=0,columnspan=1, sticky=tk.NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
 
 def time_set_default():
-    hour.set("{0:02d}".format(times["hours"]))
-    minute.set("{0:02d}".format(times["minutes"]))
-    second.set("{0:02d}".format(times["seconds"]))
+    hour.set("{0:02d}".format(int(0 if times["hours"] is None else times["hours"])))
+    minute.set("{0:02d}".format(int(0 if times["minutes"] is None else times["minutes"])))
+    second.set("{0:02d}".format(int(0 if times["seconds"] is None else times["seconds"])))
 #[ Here is where the initial output happens! Don't forget to fix this too! ]#
     if settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == True:
-        to_file = str("%02d" % (times["hours"]))+str(":")+str("%02d" % (times["minutes"]))+str(":")+str("%02d" % (times["seconds"]))
+        to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))+str(":")+str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))+str(":")+str("%02d" % (int(0 if times["seconds"] is None else times["seconds"])))
     elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == True:
-        to_file = str("%02d" % (times["minutes"]))+str(":")+str("%02d" % (times["seconds"]))
+        to_file = str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))+str(":")+str("%02d" % (int(0 if times["seconds"] is None else times["seconds"])))
     elif settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == False:
-        to_file = str("%02d" % (times["hours"]))+str(":")+str("%02d" % (times["minutes"]))
+        to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))+str(":")+str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))
     elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == False:
-        to_file = str("%02d" % (times["minutes"]))
+        to_file = str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))
     elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
-        to_file = str("%02d" % (times["hours"]))
+        to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))
     # print(to_file)
     with open("output/time.txt", "w") as f:
         f.write(to_file)
@@ -241,7 +241,7 @@ def section_set(type):
     type=type
     with open("output/section.txt", "w") as f:
         if type == 1:
-            if(int(section.get()) < config["ct"]):
+            if(int(section.get()) < int(config["ct"])):
                 # print("section setting")
                 section.set(int(ent_section.get())+1)
             else:
@@ -292,19 +292,19 @@ btn_time = Button(master=timing, text="Default",command=lambda: time_set_default
 btn_time.grid(column=0,columnspan=1, sticky=tk.NE, row=1, ipadx=0, ipady=2, padx=4)
 btn_clear = Button(master=timing, text="Clear",command=lambda: time_clear())
 btn_clear.grid(column=0,columnspan=1, sticky=tk.NE, row=2, ipadx=0, ipady=2, padx=4)
-hour.set("{0:02d}".format(times["hours"]))
-minute.set("{0:02d}".format(times["minutes"]))
-second.set("{0:02d}".format(times["seconds"]))
+# hour.set("{0:02d}".format(times["hours"]))
+# minute.set("{0:02d}".format(times["minutes"]))
+# second.set("{0:02d}".format(times["seconds"]))
 if settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == True:
-    to_file = str("%02d" % (times["hours"]))+str(":")+str("%02d" % (times["minutes"]))+str(":")+str("%02d" % (times["seconds"]))
+    to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))+str(":")+str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))+str(":")+str("%02d" % (int(0 if times["seconds"] is None else times["seconds"])))
 elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == True:
-    to_file = str("%02d" % (times["minutes"]))+str(":")+str("%02d" % (times["seconds"]))
+    to_file = str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))+str(":")+str("%02d" % (int(0 if times["seconds"] is None else times["seconds"])))
 elif settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == False:
-    to_file = str("%02d" % (times["hours"]))+str(":")+str("%02d" % (times["minutes"]))
+    to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))+str(":")+str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))
 elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == False:
-    to_file = str("%02d" % (times["minutes"]))
+    to_file = str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))
 elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
-    to_file = str("%02d" % (times["hours"]))
+    to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))
 # print(to_file)
 with open("output/time.txt", "w") as f:
     f.write(to_file)
