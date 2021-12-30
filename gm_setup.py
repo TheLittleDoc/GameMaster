@@ -341,11 +341,61 @@ def setup():
     frames_setup[4].rowconfigure(index=0, weight=0)
     frames_setup[4].rowconfigure(index=1, weight=0)
     frames_setup[4].rowconfigure(index=2, weight=0)
-    frames_setup[4].columnconfigure(index=0, weight=0)
-    frames_setup[4].columnconfigure(index=1, weight=1)
-    frames_setup[4].columnconfigure(index=2, weight=0)
-    frames_setup[4].columnconfigure(index=3, weight=1)
-    frames_setup[4].columnconfigure(index=4, weight=0)
+    frames_setup[4].rowconfigure(index=3, weight=0)
+    frames_setup[4].columnconfigure(index=0, weight=1)
+    frames_setup[4].columnconfigure(index=1, weight=4)
+    frames_setup[4].columnconfigure(index=2, weight=1)
+    frames_setup[4].columnconfigure(index=3, weight=3)
+    frames_setup[4].columnconfigure(index=4, weight=1)
+    frames_setup[4].columnconfigure(index=5, weight=0)
+
+    lbl_scoring = Label(master=frames_setup[4], text="Config Setup", font=("Arial", 18))
+    lbl_scoring.grid(column=0, row=0, sticky=tk.NSEW,columnspan=5)
+    lbl_scoringex = Label(master=frames_setup[4], wraplength=560, justify=LEFT, text="Add score value presets and other numerical variables you would want to display alongside your scoreboard.", font=("Arial", 10))
+    lbl_scoringex.grid(column=0, row=1, sticky=tk.NW,columnspan=5)
+
+    score_frame = Frame(master=frames_setup[4],width=40, height=10, relief=GROOVE, borderwidth=5)
+    score_frame.grid(row=2, column=1, sticky=NSEW, padx=5, pady=5, ipadx=5)
+    score_frame.columnconfigure(index=0, weight=0, minsize=5)
+    score_frame.columnconfigure(index=1, weight=5)
+    score_frame.columnconfigure(index=2, weight=0, minsize=5)
+    score_frame.columnconfigure(index=3, weight=1)
+    score_frame.columnconfigure(index=4, weight=0)
+    score_frame.columnconfigure(index=5, weight=0, minsize=5)
+    score_frame.rowconfigure(index=0, weight=1)
+    score_frame.rowconfigure(index=1, weight=0)
+    score_frame.rowconfigure(index=2, weight=0)
+    score_frame.rowconfigure(index=20, weight=100)
+
+    lbl_score = Label(master=score_frame,text="Score",font=("Arial",14,""))
+    lbl_score.grid(sticky=S,row=0,column=0,columnspan=6)
+    lbl_scorename = Label(master=score_frame,text="Name",font=("Arial",12,""))
+    lbl_scorename.grid(sticky=S,row=1,column=1)
+    lbl_scorevalue = Label(master=score_frame,text="Pts",font=("Arial",12,""))
+    lbl_scorevalue.grid(sticky=S,row=1,column=3)
+    
+    
+    scoring = []
+    def score_remove(index):
+        for i in scoring[index]:
+            i.destroy()
+
+        scoring[index] = None
+        print(scoring)
+        
+    def score_create():
+        score_frame.rowconfigure(index=len(scoring)+2, weight=0)
+        scoring.append([Entry(master=score_frame, width=2, font=("Arial",10,""), justify="left"),Label(master=score_frame), Entry(master=score_frame, width=4, font=("Arial",10,""), justify=CENTER), Button(master=score_frame, width=3,text="-", command=lambda: score_remove(len(scoring)-1))])
+        for i in scoring[-1]:
+            print(i)
+            print("column: "+str((scoring[-1].index(i)+1)))
+            print("row: "+str((len(scoring)+1)))
+            i.grid(sticky=EW, column=scoring[-1].index(i)+1, row=len(scoring)+1)
+        btn_score_add.grid_forget()
+        btn_score_add.grid(column=1,columnspan=2, sticky=NSEW, row=len(scoring)+2,pady=5)
+    
+    btn_score_add = Button(master=score_frame, text="+", command=lambda: score_create())
+    btn_score_add.grid(column=1,columnspan=2, sticky=tk.NSEW, row=2,pady=5)
 
 
     frames_setup[5] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
