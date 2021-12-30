@@ -11,17 +11,7 @@ NAME = "GameMaster"
 APP_VERSION = "1.2.0"
 VERSION = 2
 
-try:
-    retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION+".py","Source Code")
-except:
-    messagebox.ABORT("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")    
-
-try:
-    with open("cfgsettings.json", "r") as f:
-        cfgsettings = json.load(f)
-        # print(cfgsettings)
-        filename = cfgsettings["path"]
-except:
+def check():
     firstrun = messagebox.askyesno("First run?","Is this your first time running GameMaster?",icon="warning")
     cfgsettings = {"path": "gamemaster.json", "recents": []}
     with open("cfgsettings.json", "w") as f:
@@ -37,6 +27,19 @@ except:
     else:
         None
     os.execv(sys.executable, ["python"] + sys.argv)
+
+try:
+    retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION+".py","Source Code")
+except:
+    messagebox.ABORT("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")    
+
+try:
+    with open("cfgsettings.json", "r") as f:
+        cfgsettings = json.load(f)
+        # print(cfgsettings)
+        filename = cfgsettings["path"]
+except:
+    check()
 
 
 with open(filename, "r") as f:
@@ -59,6 +62,11 @@ with open(filename, "r") as f:
         #None
             
 # print(config)
+
+if config["name"] == None:
+    check()
+else:
+    None
 
 # If the config is able to load, only then are these functions defined.
 def set_config():
