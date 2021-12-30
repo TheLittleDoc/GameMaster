@@ -270,7 +270,7 @@ def setup():
     lbl_timingex = Label(master=frames_setup[3], wraplength=560, justify=LEFT, text="Below is an example of our timing tool. Fill in the default section length in format HH:MM:SS.", font=("Arial", 10))
     lbl_timingex.grid(column=0, row=1, sticky=tk.NW,columnspan=3)
 
-    timing_setup = Frame(master=frames_setup[3],width=40, height=10, relief=tk.SUNKEN, borderwidth=10)
+    timing_setup = Frame(master=frames_setup[3],width=40, height=10, relief=GROOVE, borderwidth=10)
     timing_setup.grid(row=3, column=1, sticky=NSEW, padx=5, pady=5, ipadx=5)
     timing_setup.columnconfigure(index=0, weight=0)
     timing_setup.columnconfigure(index=1, weight=4)
