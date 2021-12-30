@@ -51,6 +51,12 @@ def setup():
                 cfgsettings["path"] = resource_path(cb_sportselect.get().lower()+".json")
                 json.dump(cfgsettings, f, indent=4)
                 f.close()
+        else:
+            None
+        if not times["hours"] == 0 or not times["minutes"] == 0 or not times["seconds"] == 0:
+            btn_setupfw['state'] = "normal"
+        else:
+            btn_setupfw["state"] = "disabled"
 
     frames_function[0] = lambda: None
     frames_function[1] = lambda: None
@@ -92,6 +98,7 @@ def setup():
         else:
             btn_setupbw['state'] = "normal"
         if current == len(frames_setup)-1:
+            btn_setupbw['state'] = "disabled"
             btn_setupfw['text'] = "Finish"
             btn_setupfw['command'] = lambda: os.execv(sys.executable, ["python"] + sys.argv)
         else:
@@ -128,6 +135,7 @@ def setup():
         else:
             btn_setupbw['state'] = "normal"
         if current == len(frames_setup)-1:
+            btn_setupbw['state'] = "disabled"
             btn_setupfw['text'] = "Finish"
             btn_setupfw['command'] = lambda: os.execv(sys.executable, ["python"] + sys.argv)
         else:
@@ -188,7 +196,7 @@ def setup():
     lbl_configsetup_ = Label(master=frames_setup[2], text="Config Setup", font=("Arial", 18))
     lbl_configsetup_.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
     lbl_sportselect = Label(master=frames_setup[2], text="Select sport: ", font=("Arial", 12))
-    lbl_sportselect.grid(column=0, row=1, sticky=tk.NSEW)
+    lbl_sportselect.grid(column=0, row=1, sticky=tk.NSEW, pady=15)
     cb_sportselect = Combobox(frames_setup[2], state="readonly", values=("Custom", "Soccer", "Football", "Basketball"),width=15)
     lbl_sportname = Label(frames_setup[2], text="Sport name: ", font=("Arial", 12))
     sportname = StringVar()
@@ -245,17 +253,88 @@ def setup():
             ent_periods.grid_forget()
 
     cb_sportselect.bind("<<ComboboxSelected>>", sportselect)
-    cb_sportselect.grid(column=1, row=1, sticky=tk.NSEW,pady=5)
+    cb_sportselect.grid(column=1, row=1, sticky=tk.NSEW,pady=15)
 
     frames_setup[3] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
     frames_setup[3].rowconfigure(index=0, weight=0)
     frames_setup[3].rowconfigure(index=1, weight=0)
-    frames_setup[3].rowconfigure(index=2, weight=0)
-    frames_setup[3].columnconfigure(index=0, weight=0)
-    frames_setup[3].columnconfigure(index=1, weight=0)
+    frames_setup[3].rowconfigure(index=2, weight=1)
+    frames_setup[3].rowconfigure(index=3, weight=0)
+    frames_setup[3].rowconfigure(index=4, weight=1)
+    frames_setup[3].columnconfigure(index=0, weight=1)
+    frames_setup[3].columnconfigure(index=1, weight=3)
     frames_setup[3].columnconfigure(index=2, weight=1)
 
+    lbl_timing = Label(master=frames_setup[3], text="Timing Setup", font=("Arial", 18))
+    lbl_timing.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
+    lbl_timingex = Label(master=frames_setup[3], wraplength=560, justify=LEFT, text="Below is an example of our timing tool. Fill in the default section length in format HH:MM:SS.", font=("Arial", 10))
+    lbl_timingex.grid(column=0, row=1, sticky=tk.NW,columnspan=3)
+
+    timing_setup = Frame(master=frames_setup[3],width=40, height=10, relief=tk.SUNKEN, borderwidth=10)
+    timing_setup.grid(row=3, column=1, sticky=NSEW, padx=5, pady=5, ipadx=5)
+    timing_setup.columnconfigure(index=0, weight=0)
+    timing_setup.columnconfigure(index=1, weight=4)
+    timing_setup.columnconfigure(index=2, weight=4)
+    timing_setup.columnconfigure(index=3, weight=4)
+    timing_setup.columnconfigure(index=4, weight=0, minsize=5)
+    timing_setup.rowconfigure(index=0, weight=0)
+    timing_setup.rowconfigure(index=1, weight=0)
+    timing_setup.rowconfigure(index=2, weight=0)
+    timing_setup.rowconfigure(index=4, weight=3)
+    timing_setup.rowconfigure(index=5, weight=3)
+    timing_setup.rowconfigure(index=6, weight=1)
+    
+    def time_set(var, place, value):
+        times[place] = int(value)
+        edit_config("times", times)
+        if not times["hours"] == None and not times["minutes"] == None and not times["seconds"] == None:
+            btn_setupfw['state'] = "normal"
+        else:
+            None
+            # btn_setupfw['state'] = "disabled"        
+
+    def format(var):
+        var.set("{0:02d}".format(var.get()))
+
+    times = {
+        "hours": None,
+        "minutes": None,
+        "seconds": None
+    }
+    hour=IntVar()
+    hour.trace("w", lambda place, value, function: time_set(hour, "hours", hour.get()))
+    minute=IntVar()
+    minute.trace("w", lambda place, value, function: time_set(minute, "minutes", minute.get()))
+    second=IntVar()
+    second.trace("w", lambda place, value, function: time_set(second,"seconds", second.get()))
+    hour.set("{0:02d}".format(int(0)))
+    minute.set("{0:02d}".format(int(0)))
+    second.set("{0:02d}".format(int(0)))
+    lbl_tmr = tk.Label(master=timing_setup,text="Timer",font=("Arial",18,""),padx=30)
+    lbl_tmr.grid(sticky=S,row=0,column=0,columnspan=4)
+    hourEntry= Entry(master=timing_setup, width=2, font=("Arial",26,""),textvariable=hour, justify="center")
+    hourEntry.grid(sticky=NSEW, column=1, row=1, rowspan=2)
+    minuteEntry= Entry(master=timing_setup, width=2, font=("Arial",26,""),textvariable=minute, justify="center")
+    minuteEntry.grid(sticky=NSEW, column=2, row=1, rowspan=2)
+    secondEntry= Entry(master=timing_setup, width=2, font=("Arial",26,""),textvariable=second, justify="center")
+    secondEntry.grid(sticky=NSEW, column=3, row=1, rowspan=2)
+    btn_timer = Button(master=timing_setup, text="Start", state="disabled",command=lambda: None)
+    btn_timer.grid(column=0,columnspan=1, sticky=tk.NS, row=3,rowspan=2, ipadx=0, ipady=2, padx=4)
+    btn_time = Button(master=timing_setup, text="Default", state="disabled",command=lambda: None)
+    btn_time.grid(column=0,columnspan=1, sticky=tk.NE, row=1, ipadx=0, ipady=2, padx=4)
+    btn_clear = Button(master=timing_setup, text="Clear", state="disabled",command=lambda: None)
+    btn_clear.grid(column=0,columnspan=1, sticky=tk.NE, row=2, ipadx=0, ipady=2, padx=4)
+
+
     frames_setup[4] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
+    frames_setup[4].rowconfigure(index=0, weight=0)
+    frames_setup[4].rowconfigure(index=1, weight=0)
+    frames_setup[4].rowconfigure(index=2, weight=0)
+    frames_setup[4].columnconfigure(index=0, weight=0)
+    frames_setup[4].columnconfigure(index=1, weight=1)
+    frames_setup[4].columnconfigure(index=2, weight=0)
+    frames_setup[4].columnconfigure(index=3, weight=1)
+    frames_setup[4].columnconfigure(index=4, weight=0)
 
 
     frames_setup[5] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
