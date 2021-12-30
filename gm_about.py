@@ -117,12 +117,13 @@ def about_setup(notebook):
         frame_txt.columnconfigure(index=0, weight=1)
         frame_txt.columnconfigure(index=1, weight=0)
 
-        txt = Text(master=frame_txt,state=DISABLED)
+        txt = Text(master=frame_txt)
         txt.grid(sticky=NSEW, row=0, column=0)
 
         txt.insert(1.0, text)
-
-        scroll_file = Scrollbar(master=file_window, orient=VERTICAL, width=590,command=txt.yview)
+        txt["state"] = "disabled"
+        
+        scroll_file = Scrollbar(master=frame_txt, orient=VERTICAL,command=txt.yview)
         scroll_file.grid(row=0, column=1, sticky=NSEW, rowspan=2)
 
         txt['yscrollcommand'] = scroll_file.set
