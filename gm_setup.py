@@ -58,10 +58,13 @@ def setup():
         else:
             btn_setupfw["state"] = "disabled"
 
+    def scale_window(x,y):
+        window_setup.geometry("{}x{}".format(x, y))
+
     frames_function[0] = lambda: None
     frames_function[1] = lambda: None
     frames_function[2] = lambda: retrieve_preset()
-    frames_function[3] = lambda: None
+    frames_function[3] = lambda: scale_window(600,600)
     frames_function[4] = lambda: None
     frames_function[5] = lambda: None
     frames_function[6] = lambda: None
@@ -104,6 +107,10 @@ def setup():
         else:
             btn_setupfw['text'] = "Next"
             btn_setupfw['command'] = lambda: next_frame()
+        if not current == 4:
+            scale_window(600,400)
+        else:
+            scale_window(600,600)
 
     def prev_frame():
         global current
@@ -141,6 +148,10 @@ def setup():
         else:
             btn_setupfw['text'] = "Next"
             btn_setupfw['command'] = lambda: next_frame()
+        if not current == 4:
+            scale_window(600,400)
+        else:
+            scale_window(600,600)
         
 
 
