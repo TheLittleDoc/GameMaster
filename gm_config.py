@@ -8,7 +8,7 @@ from gm_resources import resource_path, retrieve_file, download_file
 from gm_setup import setup
 
 NAME = "GameMaster"
-APP_VERSION = "1.2.0"
+APP_VERSION = "2.0.0"
 VERSION = 2
 
 def check():
