@@ -152,8 +152,6 @@ def setup():
             scale_window(600,400)
         else:
             scale_window(600,600)
-        
-
 
     btn_setupfw = Button(window_setup, text="Next", command=lambda: next_frame())
     btn_setupfw.grid(row=2, column=2, sticky=NSEW, padx=10, pady=10)
@@ -172,8 +170,6 @@ def setup():
     body.rowconfigure(index=0, weight=0)
     body.rowconfigure(index=1, weight=1)
     body.columnconfigure(index=0, weight=1)
-
-
 
     frames_setup[0] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
     frames_setup[0].grid(column=0, row=1, sticky=tk.NSEW, columnspan=3, rowspan=1, padx=10, pady=10)
@@ -353,7 +349,6 @@ def setup():
     frames_setup[4].columnconfigure(index=2, weight=1)
     frames_setup[4].columnconfigure(index=3, weight=3)
     frames_setup[4].columnconfigure(index=4, weight=1)
-    frames_setup[4].columnconfigure(index=5, weight=0)
 
     lbl_scoring = Label(master=frames_setup[4], text="Config Setup", font=("Arial", 18))
     lbl_scoring.grid(column=0, row=0, sticky=tk.NSEW,columnspan=5)
@@ -388,7 +383,7 @@ def setup():
 
         scoring[index] = None
         print(scoring)
-        
+    
     def score_create():
         score_frame.rowconfigure(index=len(scoring)+2, weight=0)
         scoring.append([Entry(master=score_frame, width=2, font=("Arial",10,""), justify="left"),Label(master=score_frame), Entry(master=score_frame, width=4, font=("Arial",10,""), justify=CENTER), Button(master=score_frame, width=3,text="-", command=lambda: score_remove(len(scoring)-1))])
