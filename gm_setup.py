@@ -75,11 +75,11 @@ def setup():
         global frames_function
         frames_setup[current].grid_forget()
         frames_function[current]()
-        print(cb_sportselect.get())
+        # print(cb_sportselect.get())
         if cb_sportselect.get() == "":
-            print("none")
+            # print("none")
             if current+1 == 2:
-                print(2)
+                # print(2)
                 btn_setupfw['state'] = "disabled"
                 current += 1
             else:
@@ -93,9 +93,9 @@ def setup():
                     current += 1
             else:
                 current += 1
-        print("continue")
+        # print("continue")
         bar['value'] = current*100/(len(frames_setup)-1)
-        print("continue")
+        # print("continue")
         frames_setup[current].grid(row=1, column=0,columnspan=3, sticky=NSEW, padx=10, pady=10)
         if current == 0:
             btn_setupbw['state'] = "disabled"
@@ -120,9 +120,9 @@ def setup():
         except:
             None
         if cb_sportselect.get() == "":
-            print("none")
+            # print("none")
             if current+1 == 2:
-                print(2)
+                # print(2)
                 btn_setupfw['state'] = "normal"
                 current -= 1
             else:
@@ -222,7 +222,7 @@ def setup():
     
     ent_periods = Entry(frames_setup[2], textvariable=periods, width=15)
     def set_config():
-        print(config)
+        # print(config)
         with open("gamemaster.json", "w") as f:
             json.dump(config, f, indent=4)
     def edit_config(property, value):
@@ -236,9 +236,9 @@ def setup():
         btn_setupfw['state'] = "normal"
         global sport
         sport = cb_sportselect.get()
-        print(sport)
+        # print(sport)
         if sport == "Custom":
-            print("custom uwu")
+            # print("custom uwu")
             lbl_sportname.grid(column=0, row=2, sticky=tk.NSEW, pady=5)
             
             ent_sportname.grid(column=1, row=2, sticky=tk.NSEW, pady=5)
@@ -250,7 +250,7 @@ def setup():
             ent_periods.grid(column=1, row=4, sticky=tk.NSEW, pady=5)
             # frame_sportsetup.grid_forget()
         elif sport == "Football" or sport == "Soccer" or sport == "Basketball":
-            print("not custom")
+            # print("not custom")
             lbl_sportname.grid_forget()
             ent_sportname.grid_forget()
             lbl_namehelp.grid_forget()
@@ -382,7 +382,7 @@ def setup():
     
     def scores_set():
         for i in scoring:
-            print(i)
+            # print(i)
             if i is not None:
                 scores[i[0].get()] = int(i[2].get())
             else:
@@ -395,18 +395,18 @@ def setup():
             i.destroy()
 
         scoring[index] = None
-        print(scoring)
+        # print(scoring)
     
     def score_create():
         score_frame.rowconfigure(index=len(scoring)+2, weight=0)
         x = len(scoring)
         scoring.append([Entry(master=score_frame, width=2, font=("Arial",10,""), justify="left"),Label(master=score_frame), Entry(master=score_frame, width=4, font=("Arial",10,""), justify=CENTER), Button(master=score_frame, width=3,text="-", command=lambda x=x: score_remove(x))])
-        print("right here!")
-        print(type(scoring[x][0]))
+        # print("right here!")
+        # print(type(scoring[x][0]))
         for i in scoring[-1]:
-            print(i)
-            print("column: "+str((scoring[-1].index(i)+1)))
-            print("row: "+str((len(scoring)+1)))
+            # print(i)
+            # print("column: "+str((scoring[-1].index(i)+1)))
+            # print("row: "+str((len(scoring)+1)))
             i.grid(sticky=EW, column=scoring[-1].index(i)+1, row=len(scoring)+1)
         btn_score_add.grid_forget()
         btn_score_add.grid(column=1,columnspan=4, sticky=NSEW, row=len(scoring)+2,pady=5)
@@ -440,7 +440,7 @@ def setup():
         edit_config("vars",vars)
         with open("cfgsettings.json", "r") as f:
                 cfgsettings = json.load(f)
-        print(cfgsettings['path'])
+        # print(cfgsettings['path'])
         
         show_file("gamemaster.json", cfgsettings['path'], "")
     
@@ -449,19 +449,19 @@ def setup():
             i.destroy()
 
         var[index] = None
-        print(var)
+        # print(var)
     
     def var_create():
         var_frame.rowconfigure(index=len(var)+2, weight=0)
         global var_x
         x = len(var)
         var.append([Entry(master=var_frame, width=15, font=("Arial",10,""), justify="left"),Label(master=var_frame), Button(master=var_frame, width=3,text="-", command=lambda x=x: var_remove(x))])
-        print("right here!")
-        print(type(var[x][0]))
+        # print("right here!")
+        # print(type(var[x][0]))
         for i in var[-1]:
-            print(i)
-            print("column: "+str((var[-1].index(i)+1)))
-            print("row: "+str((len(var)+1)))
+            # print(i)
+            # print("column: "+str((var[-1].index(i)+1)))
+            # print("row: "+str((len(var)+1)))
             i.grid(sticky=EW, column=var[-1].index(i)+1, row=len(var)+1)
         btn_var_add.grid_forget()
         btn_var_add.grid(column=1,columnspan=4, sticky=NSEW, row=len(var)+2,pady=5)
