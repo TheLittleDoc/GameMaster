@@ -7,6 +7,7 @@ import os, os.path, sys
 import json
 import types
 import gm_config as gmc
+from gm_about import show_file
 import webbrowser
 from pyshortcuts import make_shortcut
 from gm_resources import resource_path, retrieve_file, download_file
@@ -48,9 +49,10 @@ def setup():
                 cfgsettings = json.load(f)
                 # print(cfgsettings)
             with open("cfgsettings.json", "w") as f:
-                cfgsettings["path"] = resource_path(cb_sportselect.get().lower()+".json")
+                cfgsettings["path"] = cb_sportselect.get().lower()+".json"
                 json.dump(cfgsettings, f, indent=4)
                 f.close()
+            show_file("gamemaster.json", cfgsettings['path'], "")
         else:
             if not times["hours"] == 0 or not times["minutes"] == 0 or not times["seconds"] == 0:
                 btn_setupfw['state'] = "normal"
@@ -376,6 +378,18 @@ def setup():
     
     
     scoring = []
+    scores = {}
+    
+    def scores_set():
+        for i in scoring:
+            print(i)
+            if i is not None:
+                scores[i[0].get()] = int(i[2].get())
+            else:
+                None
+        edit_config("scores",scores)
+        var_set()
+
     def score_remove(index):
         for i in scoring[index]:
             i.destroy()
@@ -385,18 +399,78 @@ def setup():
     
     def score_create():
         score_frame.rowconfigure(index=len(scoring)+2, weight=0)
-        scoring.append([Entry(master=score_frame, width=2, font=("Arial",10,""), justify="left"),Label(master=score_frame), Entry(master=score_frame, width=4, font=("Arial",10,""), justify=CENTER), Button(master=score_frame, width=3,text="-", command=lambda: score_remove(len(scoring)-1))])
+        x = len(scoring)
+        scoring.append([Entry(master=score_frame, width=2, font=("Arial",10,""), justify="left"),Label(master=score_frame), Entry(master=score_frame, width=4, font=("Arial",10,""), justify=CENTER), Button(master=score_frame, width=3,text="-", command=lambda x=x: score_remove(x))])
+        print("right here!")
+        print(type(scoring[x][0]))
         for i in scoring[-1]:
             print(i)
             print("column: "+str((scoring[-1].index(i)+1)))
             print("row: "+str((len(scoring)+1)))
             i.grid(sticky=EW, column=scoring[-1].index(i)+1, row=len(scoring)+1)
         btn_score_add.grid_forget()
-        btn_score_add.grid(column=1,columnspan=2, sticky=NSEW, row=len(scoring)+2,pady=5)
+        btn_score_add.grid(column=1,columnspan=4, sticky=NSEW, row=len(scoring)+2,pady=5)
     
     btn_score_add = Button(master=score_frame, text="+", command=lambda: score_create())
-    btn_score_add.grid(column=1,columnspan=2, sticky=tk.NSEW, row=2,pady=5)
+    btn_score_add.grid(column=1,columnspan=4, sticky=tk.NSEW, row=2,pady=5)
 
+
+    var_frame = Frame(master=frames_setup[4],width=40, height=10, relief=GROOVE, borderwidth=5)
+    var_frame.grid(row=2, column=3, sticky=NSEW, padx=5, pady=5, ipadx=5)
+    var_frame.columnconfigure(index=0, weight=0, minsize=5)
+    var_frame.columnconfigure(index=1, weight=5)
+    var_frame.columnconfigure(index=2, weight=0)
+    var_frame.columnconfigure(index=3, weight=0)
+    var_frame.columnconfigure(index=4, weight=0, minsize=5)
+
+    lbl_var = Label(master=var_frame,text="Variable",font=("Arial",14,""))
+    lbl_var.grid(sticky=S,row=0,column=0,columnspan=5)
+    lbl_varname = Label(master=var_frame,text="Name",font=("Arial",12,""))
+    lbl_varname.grid(sticky=S,row=1,column=1)
+
+    var = []
+    vars = []
+
+    def var_set():
+        for i in var:
+            if i is not None:
+                vars.append(i[0].get())
+            else:
+                None
+        edit_config("vars",vars)
+        with open("cfgsettings.json", "r") as f:
+                cfgsettings = json.load(f)
+        print(cfgsettings['path'])
+        
+        show_file("gamemaster.json", cfgsettings['path'], "")
+    
+    def var_remove(index):
+        for i in var[index]:
+            i.destroy()
+
+        var[index] = None
+        print(var)
+    
+    def var_create():
+        var_frame.rowconfigure(index=len(var)+2, weight=0)
+        global var_x
+        x = len(var)
+        var.append([Entry(master=var_frame, width=15, font=("Arial",10,""), justify="left"),Label(master=var_frame), Button(master=var_frame, width=3,text="-", command=lambda x=x: var_remove(x))])
+        print("right here!")
+        print(type(var[x][0]))
+        for i in var[-1]:
+            print(i)
+            print("column: "+str((var[-1].index(i)+1)))
+            print("row: "+str((len(var)+1)))
+            i.grid(sticky=EW, column=var[-1].index(i)+1, row=len(var)+1)
+        btn_var_add.grid_forget()
+        btn_var_add.grid(column=1,columnspan=4, sticky=NSEW, row=len(var)+2,pady=5)
+
+    btn_var_add = Button(master=var_frame, text="+", command=lambda: var_create())
+    btn_var_add.grid(column=1,columnspan=3, sticky=tk.NSEW, row=2,pady=5)
+
+    var_create()
+    score_create()
 
     frames_setup[5] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
     frames_setup[5].rowconfigure(index=0, weight=0)
@@ -406,8 +480,10 @@ def setup():
     frames_setup[5].columnconfigure(index=1, weight=0)
     frames_setup[5].columnconfigure(index=2, weight=1)
 
-    lbl_five = Label(master=frames_setup[5], text="Five lol", font=("Arial", 18))
-    lbl_five.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
+    lbl_review = Label(master=frames_setup[5], text="Review config", font=("Arial", 18))
+    lbl_review.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
+    lbl_reviewtext = Label(master=frames_setup[5], text="Please review the textual form of the config now. It will open in about 3 seconds.\nOnce you proceed, you will not be able to edit your config until you re-run the setup tool or unless you edit it textually. Please review it carefully and use the 'Back' button to return and fix any mistakes you find.\n\nNOTE: The 'players' field will not be populated in this version.", font=("Arial", 10), wraplength=560)
+    lbl_reviewtext.grid(column=0, row=1, sticky=tk.NSEW,columnspan=3)
 
     frames_setup[6] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
     frames_setup[6].rowconfigure(index=0, weight=0)
