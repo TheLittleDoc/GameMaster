@@ -52,11 +52,10 @@ def setup():
                 json.dump(cfgsettings, f, indent=4)
                 f.close()
         else:
-            None
-        if not times["hours"] == 0 or not times["minutes"] == 0 or not times["seconds"] == 0:
-            btn_setupfw['state'] = "normal"
-        else:
-            btn_setupfw["state"] = "disabled"
+            if not times["hours"] == 0 or not times["minutes"] == 0 or not times["seconds"] == 0:
+                btn_setupfw['state'] = "normal"
+            else:
+                btn_setupfw["state"] = "disabled"
 
     def scale_window(x,y):
         window_setup.geometry("{}x{}".format(x, y))
