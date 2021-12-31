@@ -63,8 +63,8 @@ def setup():
     frames_function[0] = lambda: None
     frames_function[1] = lambda: None
     frames_function[2] = lambda: retrieve_preset()
-    frames_function[3] = lambda: scale_window(600,600)
-    frames_function[4] = lambda: None
+    frames_function[3] = lambda: None# scale_window(600,600)
+    frames_function[4] = lambda: scores_set()
     frames_function[5] = lambda: None
     frames_function[6] = lambda: None
 
