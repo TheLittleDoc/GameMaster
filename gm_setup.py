@@ -217,7 +217,7 @@ def setup():
     ent_unit = Entry(frames_setup[2], textvariable=unit, width=15)
     lbl_unithelp = Label(frames_setup[2], wraplength=560, justify=LEFT, text="What the time is broken into. Ex: Quarter, Half, Period", font=("Arial", 10))
     lbl_periods = Label(frames_setup[2], text="# of sections: ", font=("Arial", 12))
-    periods = StringVar()
+    periods = IntVar()
     periods.trace("w", lambda name, index,mode: edit_config("ct", str(periods.get())))
     
     ent_periods = Entry(frames_setup[2], textvariable=periods, width=15)
@@ -383,7 +383,7 @@ def setup():
     def scores_set():
         for i in scoring:
             # print(i)
-            if i is not None:
+            if i is not None and ((i[2].get() is not '') or (i[0].get() is not '')):
                 scores[i[0].get()] = int(i[2].get())
             else:
                 None
@@ -403,13 +403,10 @@ def setup():
         scoring.append([Entry(master=score_frame, width=2, font=("Arial",10,""), justify="left"),Label(master=score_frame), Entry(master=score_frame, width=4, font=("Arial",10,""), justify=CENTER), Button(master=score_frame, width=3,text="-", command=lambda x=x: score_remove(x))])
         # print("right here!")
         # print(type(scoring[x][0]))
-        for i in scoring[-1]:
-            # print(i)
-            # print("column: "+str((scoring[-1].index(i)+1)))
-            # print("row: "+str((len(scoring)+1)))
-            i.grid(sticky=EW, column=scoring[-1].index(i)+1, row=len(scoring)+1)
         btn_score_add.grid_forget()
         btn_score_add.grid(column=1,columnspan=4, sticky=NSEW, row=len(scoring)+2,pady=5)
+        for i in scoring[-1]:
+            i.grid(sticky=EW, column=scoring[-1].index(i)+1, row=len(scoring)+1)
     
     btn_score_add = Button(master=score_frame, text="+", command=lambda: score_create())
     btn_score_add.grid(column=1,columnspan=4, sticky=tk.NSEW, row=2,pady=5)
@@ -433,7 +430,7 @@ def setup():
 
     def var_set():
         for i in var:
-            if i is not None:
+            if i is not None and i[0].get() is not '':
                 vars.append(i[0].get())
             else:
                 None
