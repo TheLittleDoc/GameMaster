@@ -364,10 +364,9 @@ def setup():
     score_frame.columnconfigure(index=3, weight=1)
     score_frame.columnconfigure(index=4, weight=0)
     score_frame.columnconfigure(index=5, weight=0, minsize=5)
-    score_frame.rowconfigure(index=0, weight=1)
+    score_frame.rowconfigure(index=0, weight=0)
     score_frame.rowconfigure(index=1, weight=0)
     score_frame.rowconfigure(index=2, weight=0)
-    score_frame.rowconfigure(index=20, weight=100)
 
     lbl_score = Label(master=score_frame,text="Score",font=("Arial",14,""))
     lbl_score.grid(sticky=S,row=0,column=0,columnspan=6)
