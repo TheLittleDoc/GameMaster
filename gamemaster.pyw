@@ -270,7 +270,7 @@ for x in vars:
     v["lbl_"+x] = Label(master=variables, text=x)#, padx=5, pady=5)
     v["ent_"+x] = Entry(master=variables, font=("Arial",12,""),justify="center",width=5) 
     v["ent_"+x].name = x #                                    Fixed \/
-    v["btn_"+x] = Button(master=variables, text=str("Set ")+str(x), command=lambda x=x: varset(str(x), int(v["ent_"+x].get())))
+    v["btn_"+x] = Button(master=variables, text=str("Set"), width=4,command=lambda x=x: varset(str(x), int(v["ent_"+x].get())))
     v["lbl_"+x].grid(sticky=tk.E, column=0, row=int(vars.index(x)+2))
     v["ent_"+x].grid(sticky=NS, column=1, row=int(vars.index(x)+2))
     v["btn_"+x].grid(sticky=W, column=2, row=int(vars.index(x)+2), columnspan=2, padx=2)
