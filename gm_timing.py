@@ -236,9 +236,9 @@ def timing_setup(main_frame):
     with open("output/section.txt", "w") as f:
         f.write(section.get())
         f.close()
-    ent_section = Entry(master=timing, width=3, font=("Arial",18,""),textvariable=section, justify="center")
-    ent_section.grid(sticky=NSEW, column=2, row=5)
+    ent_section = Entry(master=timing, width=3, font=("Arial",18,""),textvariable=section, justify="center", state="readonly")
+    ent_section.grid(sticky=NS, column=2, row=5)
     btn_sectionup = Button(master=timing, text="+", width=2,command=lambda: section_set(1))
-    btn_sectionup.grid(column=3, row=5)
+    btn_sectionup.grid(column=3, row=5, sticky=W)
     btn_sectiondn = Button(master=timing, text="-", width=2,command=lambda: section_set(0))
-    btn_sectiondn.grid(column=1, row=5)
+    btn_sectiondn.grid(column=1, row=5, sticky=E)
