@@ -73,7 +73,7 @@ notebook.grid(column=0, row=1, sticky=tk.NSEW)
 main_frame = tk.Frame(notebook,padx=0, pady=0)
 notebook.add(main_frame, text="Main")
 main_frame.rowconfigure(index=0, weight=0)
-main_frame.rowconfigure(index=1, weight=2)
+main_frame.rowconfigure(index=1, weight=1)
 main_frame.rowconfigure(index=2, weight=1)
 main_frame.columnconfigure(index=0, weight=10)
 main_frame.columnconfigure(index=1, weight=0)
@@ -109,18 +109,23 @@ scoring.rowconfigure(index=1, weight=10)
 lbl_home = tk.Label(master=scoring,text="Scoring",font=("Arial",18,""))
 lbl_home.grid(sticky=EW,row=0,column=0,columnspan=2)
 
-name_home = StringVar()
-score_home = StringVar()
-name_away = StringVar()
-score_away = StringVar()
-
+global teams_scores
 teams_scores = {}
 teams_scores["home"] = 0
 teams_scores["away"] = 0
 
+teams_names = {}
+teams_names["home"] = ""
+teams_names["away"] = ""
+
+name_home = StringVar()
+score_home = StringVar()
+name_away = StringVar()
+score_away = StringVar()
 def scoreadd(target_team,value):
+    print("adding...")
     teams_scores[target_team] += value
-    # print(teams_scores)
+    print(teams_scores)
     score_home.set(str(teams_scores["home"]))
     score_away.set(str(teams_scores["away"]))
     for x in teams_scores:
@@ -129,21 +134,18 @@ def scoreadd(target_team,value):
             f.close()
 
 def scoreset(target_team):
+    time.sleep(.1)
     if target_team == "home":
         teams_scores["home"] = int(ent_home.get())
     elif target_team == "away":
         teams_scores["away"] = int(ent_away.get())
-    # print(teams_scores)
+    print(teams_scores)
     score_home.set(str(teams_scores["home"]))
     score_away.set(str(teams_scores["away"]))
     for x in teams_scores:
         with open(str("output/")+str(x)+str("_score.txt"), "w") as f:
             f.write(str(teams_scores[x]))
             f.close()
-
-teams_names = {}
-teams_names["home"] = ""
-teams_names["away"] = ""
 
 def nameset(target_team):
     if target_team == "home":
@@ -157,22 +159,22 @@ def nameset(target_team):
             f.write(str(teams_names[x]))
             f.close()
 
+
+
 score_home.set("0")
 homeframe = tk.Frame(master=scoring, bd="3", relief="sunken")
 homeframe.grid(row=1, column=0, sticky=NSEW, pady=2, padx=2)
-homeframe.columnconfigure(index=0, weight=0)
+homeframe.columnconfigure(index=0, weight=0, minsize=38)
 homeframe.columnconfigure(index=1, weight=1)
-homeframe.columnconfigure(index=2, weight=0)
+homeframe.columnconfigure(index=2, weight=0, minsize=38)
 homeframe.rowconfigure(index=0, weight=0)
 homeframe.rowconfigure(index=1, weight=1)
 homeframe.rowconfigure(index=2, weight=1)
 homeframe.rowconfigure(index=2000, weight=100)
-lbl_home = tk.Label(master=homeframe,text="Home",font=("Arial",12,""))
+lbl_home = tk.Label(master=homeframe,text="Home",font=("Arial",10,""))
 lbl_home.grid(sticky=EW,row=0,column=0,columnspan=1)
 ent_homename = Entry(master=homeframe, width=2, font=("Arial",12,""),textvariable=name_home)#, justify="center")
-ent_homename.grid(row=0,column=1, sticky=NSEW, pady=2)
-btn_homename = Button(master=homeframe, text="Set", command=lambda: nameset("home"), width=4)
-btn_homename.grid(row=0,column=2, sticky=NSEW, padx=5)
+ent_homename.grid(row=0,column=1,columnspan=2, sticky=NSEW, pady=2, padx=2)
 ent_home = Entry(name="score",master=homeframe, width=4, font=("Arial",26,""),textvariable=score_home, justify="center")
 ent_home.grid(sticky=NS, column=1, row=1, pady=5, padx=5)
 btn_homeup = Button(master=homeframe, text="+", width=2,command=lambda: scoreadd("home",1))
@@ -185,27 +187,35 @@ btn_homeset.grid(column=0, row=2, columnspan=3, sticky=NSEW, pady=5, padx=5)
 score_away.set("0")
 awayframe = tk.Frame(master=scoring, bd="3", relief="sunken")
 awayframe.grid(row=1, column=1, sticky=NSEW, pady=2, padx=2)
-awayframe.columnconfigure(index=0, weight=0)
+awayframe.columnconfigure(index=0, weight=0, minsize=38)
 awayframe.columnconfigure(index=1, weight=1)
-awayframe.columnconfigure(index=2, weight=0)
+awayframe.columnconfigure(index=2, weight=0, minsize=38)
 awayframe.rowconfigure(index=0, weight=0)
 awayframe.rowconfigure(index=1, weight=1)
 awayframe.rowconfigure(index=2, weight=1)
 awayframe.rowconfigure(index=2000, weight=100)
-lbl_away = tk.Label(master=awayframe,text="Away",font=("Arial",12,""))
+lbl_away = tk.Label(master=awayframe,text="Away",font=("Arial",10,""))
 lbl_away.grid(sticky=EW,row=0,column=0,columnspan=1)
 ent_awayname = Entry(master=awayframe, width=2, font=("Arial",12,""),textvariable=name_away)#, justify="center")
-ent_awayname.grid(row=0,column=1, sticky=NSEW, pady=2)
-btn_awayname = Button(master=awayframe, text="Set", command=lambda: nameset("away"),width=4)
-btn_awayname.grid(row=0,column=2, padx=5)
+ent_awayname.grid(row=0,column=1,columnspan=2, sticky=NSEW, pady=2,padx=2)
 ent_away = Entry(name="score",master=awayframe, width=4, font=("Arial",26,""),textvariable=score_away, justify="center")
 ent_away.grid(sticky=NS, column=1, row=1, pady=5, padx=5)
 btn_awayup = Button(master=awayframe, text="+", width=2,command=lambda: scoreadd("away",1))
 btn_awayup.grid(column=2, row=1)
 btn_awaydn = Button(master=awayframe, text="-", width=2,command=lambda: scoreadd("away",-1))
 btn_awaydn.grid(column=0, row=1)
+
 btn_awayset = Button(master=awayframe, text="Set Score", width=2,command=lambda: scoreset("away"))
 btn_awayset.grid(column=0, row=2, columnspan=3, sticky=NSEW, pady=5, padx=5)
+
+name_home.trace("w", lambda name, index, mode: nameset("home"))
+
+# score_home.trace("w", lambda name, index, mode, score_home=score_home: scoreset("home"))
+
+name_away.trace("w", lambda name, index, mode: nameset("away"))
+
+# score_away.trace("w", lambda name, index, mode, score_away=score_away: scoreset("away"))
+
 
 # Sets all the scores and variables into the window
 scrs = config["scores"]
@@ -265,7 +275,7 @@ for x in vars:
     v["lbl_"+x] = Label(master=variables, text=x)#, padx=5, pady=5)
     v["ent_"+x] = Entry(master=variables, font=("Arial",12,""),justify="center",width=5) 
     v["ent_"+x].name = x #                                    Fixed \/
-    v["btn_"+x] = Button(master=variables, text=str("Set ")+str(x), command=lambda x=x: varset(str(x), int(v["ent_"+x].get())))
+    v["btn_"+x] = Button(master=variables, text=str("Set"), width=4,command=lambda x=x: varset(str(x), int(v["ent_"+x].get())))
     v["lbl_"+x].grid(sticky=tk.E, column=0, row=int(vars.index(x)+2))
     v["ent_"+x].grid(sticky=NS, column=1, row=int(vars.index(x)+2))
     v["btn_"+x].grid(sticky=W, column=2, row=int(vars.index(x)+2), columnspan=2, padx=2)
@@ -277,14 +287,18 @@ for x in vars:
 settings = tk.Frame(master=main_frame,width=20, height=10, relief=GROOVE, bd="3")
 settings.grid(row=2, column=1, sticky=NSEW, padx=5, pady=5)
 
-settings.columnconfigure(index=0, weight=1)
-settings.columnconfigure(index=1, weight=10)
-settings.columnconfigure(index=2, weight=1)
+settings.columnconfigure(index=0, weight=0)
+settings.columnconfigure(index=1, weight=1)
+# settings.columnconfigure(index=2, weight=1)
 settings.rowconfigure(index=0, weight=1)
 settings.rowconfigure(index=1, weight=1)
 settings.rowconfigure(index=1999, weight=100)
 settings.rowconfigure(index=2000, weight=0)
 settings.rowconfigure(index=2001, weight=0)
+settings.rowconfigure(index=2002, weight=0)
+settings.rowconfigure(index=2010, weight=0, minsize=2)
+
+configname = StringVar()
 
 #[      Settings functions      ]#
 def config_name():
@@ -313,15 +327,18 @@ lbl_settings = Label(master=settings,text="Settings",font=("Arial",18,""))#,padx
 lbl_settings.grid(sticky=S,row=0,column=0,columnspan=3)
 lbl_name = Label(master=settings,text="Name:")
 lbl_name.grid(column=0, row=1, sticky=tk.NS, padx=1)
-ent_name = Entry(master=settings, width=10, font=("Arial",12,""))
+ent_name = Entry(master=settings, width=10, font=("Arial",12,""),textvariable=configname)
 ent_name.grid(column=1, row=1, sticky=tk.NSEW, padx=5)
 ent_name.insert(0, config["name"])
-btn_name = Button(master=settings,text="Set", command=config_name,width=4)
-btn_name.grid(column=2, row=1, sticky=tk.NW, padx=5)
-btn_reload = Button(master=settings,text="Reload config",command=gmc.config_reload)
-btn_reload.grid(column=1, row=2001, sticky=tk.NSEW, padx=5, pady=5)
-btn_choose = Button(master=settings,text="Select config file",command=gmc.config_choose)
-btn_choose.grid(column=1, row=2000, sticky=tk.NSEW, padx=5, pady=5)
+configname.trace("w", lambda name, index, mode: config_name())
+# btn_name = Button(master=settings,text="Set", command=config_name,width=4)
+# btn_name.grid(column=2, row=1, sticky=tk.NW, padx=5)
+btn_find = Button(master=settings,text="Open output files", width=20,command=lambda: os.startfile(str("output\\")))
+btn_find.grid(column=0, row=2000, sticky=tk.NS, padx=5, columnspan=2)
+btn_reload = Button(master=settings,text="Reload config", width=20, command=gmc.config_reload)
+btn_reload.grid(column=0, row=2001, sticky=tk.NS, padx=5, columnspan=2)
+btn_choose = Button(master=settings,text="Select config file", width=20,command=gmc.config_choose)
+btn_choose.grid(column=0, row=2002, sticky=tk.NS, padx=5, columnspan=2)
 
 if config["version"] > 1:
     st = {}
