@@ -205,7 +205,7 @@ def setup():
     lbl_configsetup_.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
     lbl_sportselect = Label(master=frames_setup[2], text="Select sport: ", font=("Arial", 12))
     lbl_sportselect.grid(column=0, row=1, sticky=tk.NSEW, pady=15)
-    cb_sportselect = Combobox(frames_setup[2], state="readonly", values=("Custom", "Soccer", "Football", "Basketball"),width=15)
+    cb_sportselect = Combobox(frames_setup[2], state="readonly", values=("Custom", "Soccer", "Football", "Basketball", "Foomball"),width=15)
     lbl_sportname = Label(frames_setup[2], text="Sport name: ", font=("Arial", 12))
     sportname = StringVar()
     sportname.trace("w", lambda name, index,mode: edit_config("name", str(sportname.get())))
@@ -249,7 +249,7 @@ def setup():
             lbl_periods.grid(column=0, row=4, sticky=tk.NSEW, pady=5)
             ent_periods.grid(column=1, row=4, sticky=tk.NSEW, pady=5)
             # frame_sportsetup.grid_forget()
-        elif sport == "Football" or sport == "Soccer" or sport == "Basketball":
+        elif sport == "Football" or sport == "Soccer" or sport == "Basketball" or sport == "Foomball":
             # print("not custom")
             lbl_sportname.grid_forget()
             ent_sportname.grid_forget()
