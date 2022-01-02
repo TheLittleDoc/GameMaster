@@ -225,7 +225,9 @@ def timing_setup(main_frame):
     elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
         to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))
     # print(to_file)
-    with open("output/time.txt", "w") as f:
+    if not os.path.exists("output"):
+        os.makedirs("output")
+    with open("output\\time.txt", "w") as f:
         f.write(to_file)
         f.close()
 
@@ -233,7 +235,8 @@ def timing_setup(main_frame):
     lbl_section.grid(sticky=S,row=4,column=1,columnspan=3)
     section=StringVar()
     section.set("1")
-    with open("output/section.txt", "w") as f:
+
+    with open("output\\section.txt", "w") as f:
         f.write(section.get())
         f.close()
     ent_section = Entry(master=timing, width=3, font=("Arial",18,""),textvariable=section, justify="center", state="readonly")
