@@ -1,0 +1,30 @@
+{
+    "name": "Foomball",
+    "version": 2,
+    "unit": "Block",
+    "ct": "7",
+    "times": {
+        "hours": 0,
+        "minutes": 2,
+        "seconds": 17
+    },
+    "scores": {
+        "Gole": 3,
+        "Slamm": 2,
+        "Schip": 1
+    },
+    "vars": [
+        "Fights",
+        "Fooms",
+        "Fights",
+        "Fooms"
+    ],
+    "players": null,
+    "settings": {
+        "hours": false,
+        "minutes": true,
+        "seconds": true,
+        "on top": false,
+        "alarm": true
+    }
+}
