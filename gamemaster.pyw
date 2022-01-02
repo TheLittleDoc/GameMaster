@@ -295,6 +295,7 @@ settings.rowconfigure(index=1, weight=1)
 settings.rowconfigure(index=1999, weight=100)
 settings.rowconfigure(index=2000, weight=0)
 settings.rowconfigure(index=2001, weight=0)
+settings.rowconfigure(index=2002, weight=0)
 
 configname = StringVar()
 
@@ -331,10 +332,12 @@ ent_name.insert(0, config["name"])
 configname.trace("w", lambda name, index, mode: config_name())
 # btn_name = Button(master=settings,text="Set", command=config_name,width=4)
 # btn_name.grid(column=2, row=1, sticky=tk.NW, padx=5)
+btn_find = Button(master=settings,text="Open output files", width=20,command=lambda: os.startfile(str("output\\")))
+btn_find.grid(column=0, row=2000, sticky=tk.NS, padx=5, pady=2, columnspan=2)
 btn_reload = Button(master=settings,text="Reload config", width=20, command=gmc.config_reload)
-btn_reload.grid(column=0, row=2001, sticky=tk.NS, padx=5, pady=5, columnspan=2)
+btn_reload.grid(column=0, row=2001, sticky=tk.NS, padx=5, pady=2, columnspan=2)
 btn_choose = Button(master=settings,text="Select config file", width=20,command=gmc.config_choose)
-btn_choose.grid(column=0, row=2000, sticky=tk.NS, padx=5, pady=5, columnspan=2)
+btn_choose.grid(column=0, row=2002, sticky=tk.NS, padx=5, pady=2, columnspan=2)
 
 if config["version"] > 1:
     st = {}
