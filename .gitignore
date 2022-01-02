@@ -170,3 +170,6 @@ soccer.json
 cfgsettings.json
 cfgsettings.json
 cfgsettings.json
+*.exe
+*.txt
+*.json
