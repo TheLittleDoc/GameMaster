@@ -87,7 +87,7 @@ def setup():
                 current += 1
         else:
             if current == 2:
-                if cb_sportselect.get() is not "Custom":
+                if cb_sportselect.get() == "Football" or cb_sportselect.get() == "Basketball" or cb_sportselect.get() == "Soccer" or cb_sportselect.get() == "Foomball":
                     current = len(frames_setup)-2
                 else:
                     current += 1
