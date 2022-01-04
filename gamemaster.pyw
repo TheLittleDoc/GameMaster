@@ -31,6 +31,7 @@ import gm_config as gmc
 import gm_about as gma
 import gm_timing as gmt
 from gm_resources import resource_path
+import gm_overlay as gmo
 
 gmc.set_config()
 
@@ -69,6 +70,9 @@ window.columnconfigure(0, weight=1)
 
 notebook = Notebook(master=window)
 notebook.grid(column=0, row=1, sticky=tk.NSEW)
+
+overlay_frame = tk.Frame(notebook,padx=0, pady=0)
+notebook.add(overlay_frame, text="Overlay")
 
 main_frame = tk.Frame(notebook,padx=0, pady=0)
 notebook.add(main_frame, text="Main")
@@ -363,6 +367,12 @@ if config["version"] > 1:
 #==================================================#
 gma.about_setup(notebook)
 
+#==================================================#
+#                    Overlay Tab                   #
+#==================================================#
+# gmo.app.run()
+
 #[================================================]#
 #[================================================]#
+threading.Thread(target=gmo.app.run).start()
 window.mainloop()

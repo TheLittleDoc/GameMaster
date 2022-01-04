@@ -1,0 +1,27 @@
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script type="text/javascript">
+(function worker() {
+  $.get('/data', function(data) {
+    $('#time').html(data);    // update page with new data
+    setTimeout(worker, 1000); // run `worker()` again after 1000ms (1s)
+  });
+})();
+</script>
+<title>Hello from Flask</title>
+{% if name %}
+  <h1>Sport: {{ name }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0, 0, 150, 75);
+</script>
+<p>
+  <a href="/">Home</a>
+</p>
