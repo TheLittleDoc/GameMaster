@@ -35,7 +35,11 @@ from gm_resources import resource_path
 gmc.set_config()
 
 config = gmc.config
-settings_list = gmc.settings_list
+try:
+    settings_list = gmc.settings_list
+    print(settings_list)
+except:
+    messagebox.showinfo("Warning","Settings not present in config file. Features which require settings are disabled until the problem is resolved")
 
 def focus(event):
     widget = window.focus_get()
