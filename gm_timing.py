@@ -37,9 +37,14 @@ def timing_setup(main_frame):
     second=StringVar()
     times = config["times"]
     # setting the default value
-    hour.set("{0:02d}".format(int(0 if times["hours"] is None else times["hours"])))
-    minute.set("{0:02d}".format(int(0 if times["minutes"] is None else times["minutes"])))
-    second.set("{0:02d}".format(int(0 if times["seconds"] is None else times["seconds"])))
+    if settings_list["countup"]:
+        hour.set("{0:02d}".format(int(0)))
+        minute.set("{0:02d}".format(int(0)))
+        second.set("{0:02d}".format(int(0)))
+    else:
+        hour.set("{0:02d}".format(int(0 if times["hours"] is None else times["hours"])))
+        minute.set("{0:02d}".format(int(0 if times["minutes"] is None else times["minutes"])))
+        second.set("{0:02d}".format(int(0 if times["seconds"] is None else times["seconds"])))
     class TimerClass(threading.Thread):
         
         def __init__(self, thread_ID):
@@ -104,13 +109,23 @@ def timing_setup(main_frame):
                 # temp value every time
                 # when temp value = 0; then a messagebox pops up
                 # with a message:"Time's up"
-                if (self.count == 0):
-                    if settings_list["alarm"] == True:
+                if settings_list["countup"]:
+                    print(["minutes"])
+                    if (self.count == int(times["hours"])*3600 + int(times["minutes"])*60 + int(times["seconds"])):
                         messagebox.showinfo("Time Countdown", "Time's up ")
-                        timer_stop()
+                        if settings_list["end on time"]:
+                            timer_stop()
+                    self.count += 1
+                else:
+                    if (self.count == 0):
+                        if settings_list["alarm"] == True:
+                            messagebox.showinfo("Time Countdown", "Time's up ")
+                            timer_stop()
+                        else:
+                            None
                     else:
-                        None
-                self.count -= 1
+                        self.count -= 1
+                
                 self.event.wait(1)
                 
         def stop(self):
@@ -136,25 +151,28 @@ def timing_setup(main_frame):
         btn_timer.grid(column=0,columnspan=1, sticky=tk.NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
 
     def time_set_default():
-        hour.set("{0:02d}".format(int(0 if times["hours"] is None else times["hours"])))
-        minute.set("{0:02d}".format(int(0 if times["minutes"] is None else times["minutes"])))
-        second.set("{0:02d}".format(int(0 if times["seconds"] is None else times["seconds"])))
-    #[ Here is where the initial output happens! Don't forget to fix this too! ]#
-        if settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == True:
-            to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))+str(":")+str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))+str(":")+str("%02d" % (int(0 if times["seconds"] is None else times["seconds"])))
-        elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == True:
-            to_file = str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))+str(":")+str("%02d" % (int(0 if times["seconds"] is None else times["seconds"])))
-        elif settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == False:
-            to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))+str(":")+str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))
-        elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == False:
-            to_file = str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))
-        elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
-            to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))
-        # print(to_file)
-        with open("output/time.txt", "w") as f:
-            f.write(to_file)
-            f.close()
-        timer_stop()
+        if settings_list["countup"]:
+            time_clear()
+        else:
+            hour.set("{0:02d}".format(int(0 if times["hours"] is None else times["hours"])))
+            minute.set("{0:02d}".format(int(0 if times["minutes"] is None else times["minutes"])))
+            second.set("{0:02d}".format(int(0 if times["seconds"] is None else times["seconds"])))
+        #[ Here is where the initial output happens! Don't forget to fix this too! ]#
+            if settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == True:
+                to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))+str(":")+str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))+str(":")+str("%02d" % (int(0 if times["seconds"] is None else times["seconds"])))
+            elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == True:
+                to_file = str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))+str(":")+str("%02d" % (int(0 if times["seconds"] is None else times["seconds"])))
+            elif settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == False:
+                to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))+str(":")+str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))
+            elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == False:
+                to_file = str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))
+            elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
+                to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))
+            # print(to_file)
+            with open("output/time.txt", "w") as f:
+                f.write(to_file)
+                f.close()
+            timer_stop()
 
     def section_set(type):
         type=type
@@ -197,7 +215,7 @@ def timing_setup(main_frame):
         else:
             None
 
-    lbl_tmr = tk.Label(master=timing,text="Timer",font=("Arial",18,""),padx=30)
+    lbl_tmr = Label(master=timing,text="Timer",font=("Arial",18,""))
     lbl_tmr.grid(sticky=S,row=0,column=0,columnspan=4)
     hourEntry= Entry(master=timing, width=2, font=("Arial",26,""),textvariable=hour, justify="center")
     hourEntry.grid(sticky=NSEW, column=1, row=1, rowspan=2)

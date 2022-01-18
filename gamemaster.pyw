@@ -357,6 +357,9 @@ if config["version"] > 1:
             if (config["version"] < 3) and (x == "alarm"):
                 stvar["bool_"+x].set(False)
                 st["box_"+x].config(state=DISABLED)
+            if (config["version"] < 2.5) and ((x == "countup") or (x == "end on time")):
+                stvar["bool_"+x].set(False)
+                st["box_"+x].config(state=DISABLED)
 
 #==================================================#
 #                     About Tab                    #
