@@ -25,6 +25,8 @@
         "minutes": true,
         "seconds": true,
         "on top": true,
+        "countup": false,
+        "end on time": false,
         "alarm": true
     }
 }

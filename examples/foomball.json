@@ -23,6 +23,8 @@
         "minutes": true,
         "seconds": true,
         "on top": false,
+        "countup": false,
+        "end on time": false,
         "alarm": true
     }
 }

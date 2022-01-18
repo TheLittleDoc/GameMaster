@@ -1,6 +1,6 @@
 {
     "name": "Soccer",
-    "version": 2,
+    "version": 3,
     "unit": "Period",
     "ct": 2,
     "times": {
@@ -20,6 +20,9 @@
         "minutes": true,
         "seconds": true,
         "on top": true,
+        "countup": true,
+        "end on time": false,
         "alarm": true
+        
     }
 }
