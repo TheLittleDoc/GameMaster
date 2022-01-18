@@ -8,6 +8,8 @@ import threading
 import gm_config as gmc
 from gm_resources import resource_path, retrieve_file, f
 
+# uwu
+
 config = gmc.config
 try:
     settings_list = gmc.settings_list
