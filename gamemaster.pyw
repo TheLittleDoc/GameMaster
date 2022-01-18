@@ -354,10 +354,10 @@ if config["version"] > 1:
             st["box_"+x] = Checkbutton(text=("Toggle " + x.capitalize()),master=settings, variable=stvar["bool_"+x], command=lambda x=x: settings_set(str(x), stvar["bool_"+x].get())) # Check the syntax for getting boolean status on this checkbox
             st["box_"+x].grid(column=1, columnspan=2, row=list(settings_list.keys()).index(x)+2, sticky=W)
             stvar["bool_"+x].set(settings_list[x])
-            if (config["version"] < 3) and (x == "alarm"):
+            if (config["version"] < 4) and (x == "alarm"):
                 stvar["bool_"+x].set(False)
                 st["box_"+x].config(state=DISABLED)
-            if (config["version"] < 2.5) and ((x == "countup") or (x == "end on time")):
+            if (config["version"] < 3) and ((x == "countup") or (x == "end on time")):
                 stvar["bool_"+x].set(False)
                 st["box_"+x].config(state=DISABLED)
 
