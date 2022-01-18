@@ -1,15 +1,17 @@
+from ast import Break
 from tkinter import *
 from tkinter.ttk import *
 from tkinter import messagebox
 from tkinter import filedialog as fd
 import os, os.path, sys
 import json
+from turtle import update
 from gm_resources import resource_path, retrieve_file, download_file
 from gm_setup import setup
 
 NAME = "GameMaster"
 APP_VERSION = "2.0.0"
-VERSION = 2
+VERSION = 3
 
 def check():
     firstrun = messagebox.askyesno("First run?","Is this your first time running GameMaster?",icon="warning")
@@ -115,6 +117,8 @@ else:
     if ask_version:
         if "settings" in config:
             config["version"] = 2
+        if "countup" in config["settings"]:
+            config["version"] = 3
         else:
             config["version"] = 1
     else:
@@ -125,16 +129,24 @@ else:
 if config["version"] != VERSION:
     messagebox.showinfo("Config version mismatch", "The loaded config is version %i, but GameMaster expected configs of version %i. Proceed with caution." % versions_tuple)
     if config["version"] == 1:
-        update_ask = messagebox.askyesno("Outdated config", "The loaded config is version %i, but configs of version 2 and above are required to use settings. Would you like to try to update?" % versions_tuple[0])
+        update_ask = messagebox.askyesno("Outdated config", "The loaded config is version %i, but configs of version 2 and above are required to use settings and stopwatch mode. Would you like to try to update?" % versions_tuple[0])
         if update_ask:
-            config["settings"] = {"hours": False,"minutes": True,"seconds": True,"on top": False, "alarm": True}
-            config["version"] = 2
+            config["settings"] = {"hours": False,"minutes": True,"seconds": True,"on top": False, "countup": False, "end on time": False, "alarm": True}
+            config["version"] = 3
             set_config()
             config_reload()
-        else:
-            None
+        elif not update_ask:
+            print("skip")
     elif config["version"] == 2:
-        if not "settings" in config.keys:
+        update_ask = messagebox.askyesno("Outdated config", "The loaded config is version %i, but configs of version 3 and above are required to use settings and stopwatch mode. Would you like to try to update?" % versions_tuple[0])
+        if update_ask:
+            config["settings"]["countup"] = False
+            config["settings"]["end on time"] = False
+            config["version"] = 3
+            set_config()
+            config_reload()
+    elif config["version"] == 3:
+        if not "countup" in config["settings"]:
             messagebox.showinfo("Config version mismatch", "The loaded config is version %i, but appears to be malformed or improperly updated. If errors arrise or features are unavailable, it is recommended that you reset to a known-working default configuration." % config["version"])
 
 

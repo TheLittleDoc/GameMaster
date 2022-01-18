@@ -9,7 +9,10 @@ import gm_config as gmc
 from gm_resources import resource_path, retrieve_file, f
 
 config = gmc.config
-settings_list = gmc.config["settings"]
+try:
+    settings_list = gmc.settings_list
+except:
+    settings_list = {"hours": False,"minutes": True,"seconds": True,"on top": False, "countup": False, "end on time": False, "alarm": True}
 
 def timing_setup(main_frame):
     timing = tk.Frame(master=main_frame,width=12, height=10, bd="3", relief=SUNKEN)
