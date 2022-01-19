@@ -17,6 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 # For old-times sake:
 # uwu
+
 import tkinter as tk
 from tkinter import *  
 from PIL import ImageTk,Image  

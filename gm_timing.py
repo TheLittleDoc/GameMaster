@@ -97,11 +97,11 @@ def timing_setup(main_frame):
                 if settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == True:
                     to_file = str("%02d" % (hours))+str(":")+str("%02d" % (mins))+str(":")+str("%02d" % (secs))
                 elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == True:
-                    to_file = str("%02d" % (mins))+str(":")+str("%02d" % (secs))
+                    to_file = str("%02d" % (mins+(hours*60)))+str(":")+str("%02d" % (secs))
                 elif settings_list["hours"] == True and settings_list["minutes"] == True and settings_list["seconds"] == False:
                     to_file = str("%02d" % (hours))+str(":")+str("%02d" % (mins))
                 elif settings_list["hours"] == False and settings_list["minutes"] == True and settings_list["seconds"] == False:
-                    to_file = str("%02d" % (mins))
+                    to_file = str("%02d" % (mins+(hours*60)))
                 elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
                     to_file = str("%02d" % (hours))
 
