@@ -117,8 +117,9 @@ def timing_setup(main_frame):
                 if settings_list["countup"]:
                     print(["minutes"])
                     if (self.count == int(times["hours"])*3600 + int(times["minutes"])*60 + int(times["seconds"])):
-                        messagebox.showinfo("Time Countdown", "Time's up ")
+                        # messagebox.showinfo("Time Countdown", "Time's up ") # I will revisit this later, but for now, I'm just removing it entirely.
                         if settings_list["end on time"]:
+                            messagebox.showinfo("Time Countdown", "Time's up ")
                             timer_stop()
                     self.count += 1
                 else:
