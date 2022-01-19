@@ -116,7 +116,7 @@ def timing_setup(main_frame):
                 # with a message:"Time's up"
                 if settings_list["countup"]:
                     print(["minutes"])
-                    if (self.count == int(times["hours"])*3600 + int(times["minutes"])*60 + int(times["seconds"])):
+                    if (self.count >= int(times["hours"])*3600 + int(times["minutes"])*60 + int(times["seconds"])):
                         # messagebox.showinfo("Time Countdown", "Time's up ") # I will revisit this later, but for now, I'm just removing it entirely.
                         if settings_list["end on time"]:
                             messagebox.showinfo("Time Countdown", "Time's up ")
