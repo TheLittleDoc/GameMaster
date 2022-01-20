@@ -115,7 +115,6 @@ def timing_setup(main_frame):
                 # when temp value = 0; then a messagebox pops up
                 # with a message:"Time's up"
                 if settings_list["countup"]:
-                    print(["minutes"])
                     if (self.count >= int(times["hours"])*3600 + int(times["minutes"])*60 + int(times["seconds"])):
                         # messagebox.showinfo("Time Countdown", "Time's up ") # I will revisit this later, but for now, I'm just removing it entirely.
                         if settings_list["end on time"]:
@@ -198,7 +197,7 @@ def timing_setup(main_frame):
             f.close()
 
     def time_clear():
-        clearing = messagebox.askyesno("Clear timer","Are you sure you want to clear the timer? This will set it to 00:00:00, not default. If you wish to set it back to the default time, choose \"no\" and then select \"default\" in GameMaster.")
+        clearing = True # messagebox.askyesno("Clear timer","Are you sure you want to clear the timer? This will set it to 00:00:00, not default. If you wish to set it back to the default time, choose \"no\" and then select \"default\" in GameMaster.")
         if clearing:
             hour.set("{0:02d}".format(0))
             minute.set("{0:02d}".format(0))
