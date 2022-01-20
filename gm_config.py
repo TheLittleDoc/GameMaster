@@ -31,9 +31,14 @@ def check():
     os.execv(sys.executable, ["python"] + sys.argv)
 
 try:
-    retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION+".py","Source Code")
+    print("Loading config...")
+    source = retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION+".py","Source Code")
+    print(source)
+    if source == "404: Not Found":
+        messagebox.showerror("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")
+        os._exit(0)
 except:
-    messagebox.ABORT("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")    
+    print("Error: Source code not found.")    
 
 try:
     with open("cfgsettings.json", "r") as f:
