@@ -6,12 +6,31 @@ from tkinter import filedialog as fd
 import os, os.path, sys
 import json
 from turtle import update
-from gm_resources import resource_path, retrieve_file, download_file
+from gm_resources import resource_path, retrieve_file, download_file, external_link
 from gm_setup import setup
+from packaging.version import Version, parse
 
 NAME = "GameMaster"
-APP_VERSION = "2.1.0"
+APP_VERSION = Version("2.1.0.b3")
 VERSION = 3
+
+print(APP_VERSION)
+
+
+print("Checking for updates...")
+remoteversion = Version(retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/latest.txt", "Newest Version"))
+if APP_VERSION > remoteversion:
+    prerelease = Version(retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/pre.txt", "Prerelease"))
+    if APP_VERSION < prerelease:
+        betaupdate = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + prerelease, icon='info')
+        if(betaupdate):
+            external_link("https://github.com/TheLittleDoc/GameMaster/releases/tag/v" + prerelease)
+elif APP_VERSION < remoteversion:
+    update = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + remoteversion, icon='info')
+    if(update):
+        external_link("https://github.com/TheLittleDoc/GameMaster/releases/tag/v" + remoteversion)
+#except:
+    #print("Error checking for updates")
 
 def check():
     firstrun = messagebox.askyesno("First run?","Is this your first time running GameMaster?",icon="warning")
@@ -30,15 +49,15 @@ def check():
         None
     os.execv(sys.executable, ["python"] + sys.argv)
 
-try:
-    print("Loading config...")
-    source = retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION+".py","Source Code")
-    print(source)
-    if source == "404: Not Found":
-        messagebox.showerror("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")
-        os._exit(0)
-except:
-    print("Error: Source code not found.")    
+
+print("Loading config...")
+source = retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION.public+".py","Source Code")
+
+print(source)
+print(APP_VERSION.public)
+if source == "404: Not Found":
+    messagebox.showerror("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")
+    os._exit(0) 
 
 try:
     with open("cfgsettings.json", "r") as f:
