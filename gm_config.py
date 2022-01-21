@@ -11,7 +11,7 @@ from gm_setup import setup
 from packaging.version import Version, parse
 
 NAME = "GameMaster"
-APP_VERSION = Version("2.1.0.b3")
+APP_VERSION = Version("2.1.0b3")
 VERSION = 3
 
 print(APP_VERSION)
@@ -22,13 +22,13 @@ remoteversion = Version(retrieve_file("https://raw.githubusercontent.com/TheLitt
 if APP_VERSION > remoteversion:
     prerelease = Version(retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/pre.txt", "Prerelease"))
     if APP_VERSION < prerelease:
-        betaupdate = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + prerelease, icon='info')
+        betaupdate = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + prerelease.public +"\n\nDo you want to update?", icon='info')
         if(betaupdate):
-            external_link("https://github.com/TheLittleDoc/GameMaster/releases/tag/v" + prerelease)
+            external_link("https://github.com/TheLittleDoc/GameMaster/releases/tag/v" + prerelease.public)
 elif APP_VERSION < remoteversion:
-    update = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + remoteversion, icon='info')
+    update = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + remoteversion.public +"\n\nDo you want to update?", icon='info')
     if(update):
-        external_link("https://github.com/TheLittleDoc/GameMaster/releases/tag/v" + remoteversion)
+        external_link("https://github.com/TheLittleDoc/GameMaster/releases/tag/v" + remoteversion.public)
 #except:
     #print("Error checking for updates")
 
