@@ -157,8 +157,6 @@ ttk_gamemaster.pyw
 output/time.txt
 output/time.txt
 cfgsettings.json
-*.txt
-*.txt
 output/time.txt
 cfgsettings.json
 output/time.txt
@@ -171,4 +169,4 @@ cfgsettings.json
 cfgsettings.json
 cfgsettings.json
 *.exe
-*.txt
+output/*.txt
