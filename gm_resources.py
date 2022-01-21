@@ -2,8 +2,16 @@ import os
 import sys
 from tkinter import messagebox
 from requests import *
+import webbrowser
 
 f = {}
+
+def external_link(link):
+    asklink = messagebox.askyesno("Open link", "GameMaster is opening \"%s\" in your default browser.\n\nDo you want to continue?" % link)
+    if asklink == True:
+        webbrowser.open(link)
+    else:
+        None
 
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
