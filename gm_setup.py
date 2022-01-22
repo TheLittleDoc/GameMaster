@@ -12,6 +12,8 @@ import webbrowser
 from pyshortcuts import make_shortcut
 from gm_resources import resource_path, retrieve_file, download_file
 
+APP_VERSION = gmc.APP_VERSION
+
 # global frame_sportsetup
 current = 0
 frames_function = {}
