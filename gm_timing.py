@@ -247,6 +247,10 @@ def timing_setup(main_frame):
         to_file = str("%02d" % (int(0 if times["minutes"] is None else times["minutes"])))
     elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
         to_file = str("%02d" % (int(0 if times["hours"] is None else times["hours"])))
+    elif settings_list["hours"] == False and settings_list["minutes"] == False and settings_list["seconds"] == True:
+        to_file = str("%02d" % (int(0 if times["seconds"] is None else times["seconds"])))
+    elif settings_list["hours"] == False and settings_list["minutes"] == False and settings_list["seconds"] == False:
+        to_file=""
     # print(to_file)
     if not os.path.exists("output"):
         os.makedirs("output")

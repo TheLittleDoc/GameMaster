@@ -314,16 +314,31 @@ def config_name():
 def settings_set(setting,value):
     # print(setting,value)
     settings_list[setting] = value
-    if setting == "minutes" and value == False:
-
-        # print("false")
+    print(stvar)
+    if (setting == "seconds" and value == True) and (stvar["bool_minutes"].get() == False):
+        
+        st["box_hours"].config(state=DISABLED)
+        stvar["bool_hours"].set(False)
+        settings_set("hours",False)
+    elif (setting == "hours" and value == True) and (stvar["bool_minutes"].get() == False):
         st["box_seconds"].config(state=DISABLED)
         stvar["bool_seconds"].set(False)
         settings_set("seconds",False)
-    elif setting == "minutes" and value == True:
+    elif (setting == "minutes" and value == True):
         st["box_seconds"].config(state=NORMAL)
+        st["box_hours"].config(state=NORMAL)
+    elif (setting == "minutes" and value == False) and (stvar["bool_seconds"].get() == True) and (stvar["bool_hours"].get() == False) or (setting == "minutes" and value == False) and (stvar["bool_hours"].get() == True) and (stvar["bool_seconds"].get() == True):
+        st["box_hours"].config(state=DISABLED)
+        stvar["bool_hours"].set(False)
+        settings_set("hours",False)
+    elif (setting == "minutes" and value == False) and (stvar["bool_hours"].get() == True) and (stvar["bool_seconds"].get() == False):
+        st["box_seconds"].config(state=DISABLED)
         stvar["bool_seconds"].set(False)
-    # print(settings_list)
+        settings_set("seconds",False)
+    
+    else:
+        None
+
     config["settings"] = settings_list
     gmc.set_config()
     window.attributes("-topmost", settings_list["on top"])
@@ -348,21 +363,16 @@ btn_choose.grid(column=0, row=2002, sticky=tk.NS, padx=5, columnspan=2)
 if config["version"] > 1:
     st = {}
     stvar = {}
-    # print(settings_list)
     for x in settings_list:
-        # print(type(settings_list[x]))
         settings.rowconfigure(index=list(settings_list.keys()).index(x)+2, weight=1)
-        # print(x)
+        print(x)
         if isinstance(settings_list[x], bool):
             # print("hi")
             stvar["bool_"+x] = tk.BooleanVar()
             st["box_"+x] = Checkbutton(text=("Toggle " + x.capitalize()),master=settings, variable=stvar["bool_"+x], command=lambda x=x: settings_set(str(x), stvar["bool_"+x].get())) # Check the syntax for getting boolean status on this checkbox
             st["box_"+x].grid(column=1, columnspan=2, row=list(settings_list.keys()).index(x)+2, sticky=W)
             stvar["bool_"+x].set(settings_list[x])
-            if (config["version"] < 4) and (x == "alarm"):
-                stvar["bool_"+x].set(False)
-                st["box_"+x].config(state=DISABLED)
-            if (config["version"] < 3) and ((x == "countup") or (x == "end on time")):
+            if x not in ["hours","minutes","seconds","on top", "end on time", "countup"]:
                 stvar["bool_"+x].set(False)
                 st["box_"+x].config(state=DISABLED)
 
