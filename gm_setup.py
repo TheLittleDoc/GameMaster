@@ -12,19 +12,19 @@ import webbrowser
 from pyshortcuts import make_shortcut
 from gm_resources import resource_path, retrieve_file, download_file
 
-APP_VERSION = gmc.APP_VERSION
-VERSION = gmc.VERSION
+
 
 # global frame_sportsetup
 current = 0
 frames_function = {}
-config = config = {"name": None, "version": 2, "unit": None, "ct": None, "times": {"hours": None, "minutes": None, "seconds": None}, "scores": {}, "vars": [], "players": None, "settings": {"hours": False,"minutes": True,"seconds": True,"on top": False, "alarm": True}}
+config = config = {"name": None, "version": 3, "unit": None, "ct": None, "times": {"hours": None, "minutes": None, "seconds": None}, "scores": {}, "vars": [], "players": None, "settings": {"hours": False,"minutes": True,"seconds": True,"on top": False,"countup": False, "end on time": False, "alarm": True}}
 
 # make_shortcut(os.path.abspath(os.getcwd())+'\gamemaster.exe', name='GameMaster', icon=resource_path('icon.ico'))
 
 def setup():
     frames_setup = {}
-    
+    APP_VERSION = gmc.APP_VERSION
+    VERSION = gmc.VERSION
 
     window_setup = tk.Tk()
     window_setup.title("GameMaster Setup")
@@ -47,7 +47,7 @@ def setup():
 
     def retrieve_preset():
         if not cb_sportselect.get() == "Custom":
-            download_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/examples/"+cb_sportselect.get().lower()+".json",cb_sportselect.get().lower()+".json")
+            download_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/examples/"+str(VERSION)+"/"+cb_sportselect.get().lower()+".json",cb_sportselect.get().lower()+".json")
             with open("cfgsettings.json", "r") as f:
                 cfgsettings = json.load(f)
                 # print(cfgsettings)

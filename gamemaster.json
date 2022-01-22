@@ -1,6 +1,6 @@
 {
     "name": null,
-    "version": 2,
+    "version": 3,
     "unit": null,
     "ct": null,
     "times": {
@@ -16,6 +16,8 @@
         "minutes": true,
         "seconds": true,
         "on top": false,
+        "countup": false,
+        "end on time": false,
         "alarm": true
     }
 }

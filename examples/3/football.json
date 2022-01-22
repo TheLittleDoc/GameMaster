@@ -1,6 +1,6 @@
 {
     "name": "Football",
-    "version": 2,
+    "version": 3,
     "unit": "Quarter",
     "ct": 4,
     "times": {
