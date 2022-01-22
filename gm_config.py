@@ -25,10 +25,12 @@ if APP_VERSION > remoteversion:
         betaupdate = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + prerelease.public +"\n\nDo you want to update?", icon='info')
         if(betaupdate):
             external_link("https://github.com/TheLittleDoc/GameMaster/releases/tag/v" + prerelease.public)
+            os._exit(0)
 elif APP_VERSION < remoteversion:
     update = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + remoteversion.public +"\n\nDo you want to update?", icon='info')
     if(update):
         external_link("https://github.com/TheLittleDoc/GameMaster/releases/latest")
+        os._exit(0)
 #except:
     #print("Error checking for updates")
 
