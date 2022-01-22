@@ -28,7 +28,7 @@ if APP_VERSION > remoteversion:
 elif APP_VERSION < remoteversion:
     update = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + remoteversion.public +"\n\nDo you want to update?", icon='info')
     if(update):
-        external_link("https://github.com/TheLittleDoc/GameMaster/releases/tag/v" + remoteversion.public)
+        external_link("https://github.com/TheLittleDoc/GameMaster/releases/latest")
 #except:
     #print("Error checking for updates")
 
