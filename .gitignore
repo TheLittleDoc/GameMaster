@@ -165,3 +165,5 @@ output/time.txt
 *.exe
 output/*.txt
 cfgsettings.json
+LICENSE.txt
+section.txt

@@ -17,6 +17,14 @@ a = Analysis(['gamemaster.pyw'],
              win_private_assemblies=False,
              cipher=block_cipher,
              noarchive=False)
+
+splash = Splash('splash.png',
+             binaries=a.binaries,
+             datas=a.datas,
+             text_pos=(10, 375),
+             text_size=12,
+             text_color='black')
+
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 
@@ -33,6 +41,7 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,  
           [],
+          splash,
           name='gamemaster',
           debug=False,
           bootloader_ignore_signals=False,
@@ -45,3 +54,7 @@ exe = EXE(pyz,
           target_arch=None,
           codesign_identity=None,
           entitlements_file=None , icon="icon.ico")
+
+coll = COLLECT(exe,
+                
+          splash.binaries)
