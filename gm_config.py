@@ -9,9 +9,15 @@ from turtle import update
 from gm_resources import resource_path, retrieve_file, download_file, external_link
 from gm_setup import setup
 from packaging.version import Version, parse
+try:
+    import pyi_splash
+    pyi_splash.update_text('UI Loaded ...')
+    pyi_splash.close()
+except:
+    pass
 
 NAME = "GameMaster"
-APP_VERSION = Version("2.1.0b3")
+APP_VERSION = Version("2.1.0b4")
 VERSION = 3
 
 print(APP_VERSION)
