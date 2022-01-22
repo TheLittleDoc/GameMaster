@@ -314,7 +314,6 @@ def config_name():
 def settings_set(setting,value):
     # print(setting,value)
     settings_list[setting] = value
-    print(stvar)
     if (setting == "seconds" and value == True) and (stvar["bool_minutes"].get() == False):
         
         st["box_hours"].config(state=DISABLED)
