@@ -141,7 +141,7 @@ def about_setup(notebook):
 
 
 
-    btn_source = Button(master=table, text="Source", command=lambda: show_file("GameMaster Source","https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+gmc.APP_VERSION+".py","")) # fix ! ! 
+    btn_source = Button(master=table, text="Source", command=lambda: show_file("GameMaster Source","https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+gmc.APP_VERSION.public+".py","")) # fix ! ! 
     btn_source.grid(sticky=NSEW, row=5, column=0)
     lbl_source = Label(master=table,anchor=W,justify=LEFT, text="Included copy of source. Opens internally.", font=("Arial",10,""), relief=SUNKEN, padding=5)
     lbl_source.grid(sticky=NSEW, row=5, column=1)
