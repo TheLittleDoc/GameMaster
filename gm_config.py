@@ -17,7 +17,7 @@ except:
     pass
 
 NAME = "GameMaster"
-APP_VERSION = Version("2.1.0rc2")
+APP_VERSION = Version("2.1.0b5")
 VERSION = 3
 
 print(APP_VERSION)
@@ -26,12 +26,20 @@ print(APP_VERSION)
 print("Checking for updates...")
 remoteversion = Version(retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/latest.txt", "Newest Version"))
 if APP_VERSION > remoteversion:
+    
+
     prerelease = Version(retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/pre.txt", "Prerelease"))
+    print(prerelease)
+    print(APP_VERSION)
+    print(prerelease > APP_VERSION)
+    print(prerelease < APP_VERSION)
     if APP_VERSION < prerelease:
         betaupdate = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + prerelease.public +"\n\nDo you want to update?", icon='info')
         if(betaupdate):
             external_link("https://github.com/TheLittleDoc/GameMaster/releases/tag/v" + prerelease.public)
             os._exit(0)
+    elif APP_VERSION > prerelease:
+        messagebox.showinfo("Unknown Version", "Local version exceeds known remote version. Please proceed with caution.")
 elif APP_VERSION < remoteversion:
     update = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + remoteversion.public +"\n\nDo you want to update?", icon='info')
     if(update):
