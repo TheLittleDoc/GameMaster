@@ -154,13 +154,11 @@ def scoreset(target_team):
 
 def nameset(target_team):
     if target_team == "home":
-        teams_names[target_team] = ent_homename.get()
-        # print(name_home.get())
+        teams_names[target_team] = str(ent_homename.get())
     elif target_team == "away":
-        teams_names[target_team] = ent_awayname.get()
-        # print(name_away.get())
+        teams_names[target_team] = str(ent_awayname.get())
     for x in teams_names:
-        with open(str("output/")+str(x)+str("_name.txt"), "w") as f:
+        with open(str("output/")+str(x)+str("_name.txt"), "w", encoding="utf-8") as f:
             f.write(str(teams_names[x]))
             f.close()
 
