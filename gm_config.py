@@ -54,7 +54,7 @@ elif APP_VERSION < remoteversion:
 
 def check():
     firstrun = messagebox.askyesno("First run?","Is this your first time running GameMaster?",icon="warning")
-    cfgsettings = {"path": "gamemaster.json", "recents": []}
+    cfgsettings = {"path": "gamemaster.json", "recents": [], "firstrun": True}
     with open("cfgsettings.json", "w") as f:
         json.dump(cfgsettings, f, indent=4)
         
@@ -84,6 +84,16 @@ try:
         cfgsettings = json.load(f)
         # print(cfgsettings)
         filename = cfgsettings["path"]
+        if not "firstrun" in cfgsettings:
+            cfgsettings["firstrun"] = True
+            with open("cfgsettings.json", "w") as f:
+                json.dump(cfgsettings, f, indent=4)
+                
+                f.close()
+            with open("cfgsettings.json", "r") as f:
+                cfgsettings = json.load(f)
+                # print(cfgsettings)
+    
 except:
     check()
 
