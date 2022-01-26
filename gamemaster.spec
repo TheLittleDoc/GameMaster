@@ -33,6 +33,7 @@ a.datas += [('header_alt.png','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\hea
 a.datas += [('doc.png','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\doc.png', 'DATA')]
 a.datas += [('discord.png','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\discord.png', 'DATA')]
 a.datas += [('github.png','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\github.png', 'DATA')]
+a.datas += [('kofi.png','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\kofi.png', 'DATA')]
 a.datas += [('LICENSE','C:\\Users\\TheLittleDoc\\Desktop\\GameMaster\\LICENSE', 'DATA')]
 
 exe = EXE(pyz,
