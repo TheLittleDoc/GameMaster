@@ -161,7 +161,26 @@ def config_choose():
             os.execv(sys.executable, ["python"] + sys.argv)
     else:
         None
-
+def donation_alarm():
+    global cfgsettings
+    if cfgsettings["firstrun"]:
+        donation_ask = messagebox.askyesno("Thank you for choosing GameMaster","We hope you are enjoying GameMaster so far!\nGameMaster is updated and maintained by a solo developer to help support sports streaming like yours, all over the world!\nThis is the only time you will see this message, but we ask you to consider donating to GameMaster to support its development for years to come. Even just a few dollars tossed our way would help tremendously, but it is not required to continue to use GameMaster to the fullest. Please help us to help all of you aswe work to maintain and update GameMaster in the future.\n\nSupport GameMaster on Ko-fi?",icon="question")
+        if donation_ask:
+            external_link("https://www.ko-fi.com/gamemasterobs")
+            
+        else:
+            None
+        cfgsettings["firstrun"] = False
+        with open("cfgsettings.json", "w") as f:
+            json.dump(cfgsettings, f, indent=4)
+            
+            f.close()
+        with open("cfgsettings.json", "r") as f:
+            cfgsettings = json.load(f)
+            # print(cfgsettings)
+    
+    else:
+        None
 
 if "version" in config:
     versions_tuple = (int(config["version"]),int(VERSION))

@@ -395,4 +395,5 @@ window.bind("<<NotebookTabChanged>>", lambda event: tab_change())
 
 #[================================================]#
 #[================================================]#
+window.bind('<Destroy>', lambda event: gmc.donation_alarm())
 window.mainloop()
