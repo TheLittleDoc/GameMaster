@@ -378,6 +378,21 @@ if config["version"] > 1:
 #==================================================#
 gma.about_setup(notebook)
 
+persistentgeo = window.winfo_geometry()
+
+def tab_change():
+    if notebook.index(notebook.select()) == 3:
+        print("about")
+        global persistentgeo
+        persistentgeo = window.winfo_geometry()
+        print(type(persistentgeo))
+        window.geometry("600x700")
+    else:
+        print("main")
+        window.geometry(persistentgeo[0:persistentgeo.find("+")-1])
+
+window.bind("<<NotebookTabChanged>>", lambda event: tab_change())
+
 #[================================================]#
 #[================================================]#
 window.mainloop()
