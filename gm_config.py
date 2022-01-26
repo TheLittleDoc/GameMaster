@@ -4,6 +4,7 @@ from tkinter.ttk import *
 from tkinter import messagebox
 from tkinter import filedialog as fd
 import os, os.path, sys
+import time
 import json
 from turtle import update
 from gm_resources import resource_path, retrieve_file, download_file, external_link
@@ -11,7 +12,10 @@ from gm_setup import setup
 from packaging.version import Version, parse
 try:
     import pyi_splash
-    pyi_splash.update_text('UI Loaded ...')
+    pyi_splash.update_text('Tk/Tcl Loaded.')
+    time.sleep(1)
+    pyi_splash.update_text('Welcome to GameMaster! Please wait...')
+    time.sleep(1)
     pyi_splash.close()
 except:
     pass
