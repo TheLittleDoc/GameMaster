@@ -1,6 +1,6 @@
 ![GameMaster Logo, wordmark, and BBG logo](https://github.com/TheLittleDoc/GameMaster/blob/master/header.png)
-# GameMaster
-**GameMaster** is a Python-based sports scoreboard tool for OBS. In addition to basic scoring functionality, **GameMaster** can also manage game times, periods, and any other stats or variables related to the sport at hand using a simple JSON configuration file. 
+# GameMaster       [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I2I694490)
+**GameMaster** is a Python-based sports scoreboard tool for OBS. In addition to basic scoring functionality, **GameMaster** can also manage game times, periods, and any other stats or variables related to the sport at hand using a simple JSON configuration file.
 
 
 ## Quick-start guide
