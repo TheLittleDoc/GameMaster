@@ -190,7 +190,7 @@ def about_setup(notebook):
     lbl_datastream = Label(master=datastream, image=img_discord, width=72, justify=CENTER)
     lbl_datastream.image = img_discord
     lbl_datastream.grid(row=0, column=1, sticky=NSEW, padx=5, pady=5)
-    btn_datastream = Button(master=datastream,text="Discord Server", command=lambda: external_link("https://discord.gg/WzA4FncR8f/"))
+    btn_datastream = Button(master=datastream,text="Discord Server", command=lambda: external_link("https://discord.gg/invite/WzA4FncR8f"))
     btn_datastream.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5, columnspan=3)
 
     github = tk.Frame(master=links, height=1, relief=RAISED, bd="2")
