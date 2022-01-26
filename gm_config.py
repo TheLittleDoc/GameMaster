@@ -21,7 +21,7 @@ except:
     pass
 
 NAME = "GameMaster"
-APP_VERSION = Version("2.1.0rc4")
+APP_VERSION = Version("2.1.0rc5")
 VERSION = 3
 
 print(APP_VERSION)
