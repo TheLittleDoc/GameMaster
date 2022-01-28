@@ -389,7 +389,7 @@ def tab_change():
         global persistentgeo
         persistentgeo = window.winfo_geometry()
         print(type(persistentgeo))
-        window.geometry("600x700")
+        window.geometry("600x720")
     else:
         print("main")
         window.geometry(persistentgeo[0:persistentgeo.find("+")-1])
