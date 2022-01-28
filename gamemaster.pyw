@@ -32,7 +32,7 @@ import types
 import gm_config as gmc
 import gm_about as gma
 import gm_timing as gmt
-from gm_resources import resource_path
+from gm_resources import download_file, resource_path
 
 gmc.set_config()
 
@@ -395,6 +395,21 @@ def tab_change():
         window.geometry(persistentgeo[0:persistentgeo.find("+")-1])
 
 window.bind("<<NotebookTabChanged>>", lambda event: tab_change())
+
+try:
+    with open("news.txt","r") as f:
+        news = f.read()
+except:
+    download_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/news-en.txt","news.txt")
+    gma.show_file("GameMaster News", "news.txt", "github.com/TheLittleDoc/GameMaster")
+    with open("news.txt","r") as f:
+        news = f.read()
+
+if news != download_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/news-en.txt", "news.txt"):
+    with open("news.txt","r") as f:
+        news = f.read()
+    gma.show_file("GameMaster News", "news.txt", "github.com/TheLittleDoc/GameMaster")
+
 
 #[================================================]#
 #[================================================]#

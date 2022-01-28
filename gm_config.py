@@ -21,7 +21,7 @@ except:
     pass
 
 NAME = "GameMaster"
-APP_VERSION = Version("2.1.0rc5")
+APP_VERSION = Version("2.1.0rc6")
 VERSION = 3
 
 # print(APP_VERSION)
@@ -75,9 +75,10 @@ source = retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaste
 
 # print(source)
 # print(APP_VERSION.public)
-if source == "404: Not Found":
-    messagebox.showerror("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")
-    os._exit(0) 
+if APP_VERSION.public <= remoteversion.public:
+    if source == "404: Not Found":
+        messagebox.showerror("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")
+        os._exit(0) 
 
 try:
     with open("cfgsettings.json", "r") as f:
