@@ -17,7 +17,7 @@ except:
     settings_list = {"hours": False,"minutes": True,"seconds": True,"on top": False, "countup": False, "end on time": False, "alarm": True}
 
 def timing_setup(main_frame):
-    timing = tk.Frame(master=main_frame,width=12, height=10, bd="3", relief=SUNKEN)
+    timing = Frame(master=main_frame,width=12, height=10, borderwidth="3", relief=SUNKEN)
     timing.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5, ipadx=5)
 
     timing.columnconfigure(index=0, weight=0)
