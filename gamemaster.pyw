@@ -255,7 +255,7 @@ for x in teams_names:
 #==================================================#
 #            Variables Setup and Content           #
 #==================================================#
-variables = Frame(master=main_frame,width=20, height=10)
+variables = Frame(master=main_frame,width=20, height=10, relief=GROOVE, borderwidth=3)
 variables.grid(row=1, column=1, sticky=NSEW, padx=5, pady=5)
 
 variables.columnconfigure(index=0, weight=1)
