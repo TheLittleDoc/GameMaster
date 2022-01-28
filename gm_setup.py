@@ -184,7 +184,7 @@ def setup():
 
     lbl_setup = Label(master=frames_setup[0], text="Welcome to GameMaster!", font=("Arial", 18))
     lbl_setup.grid(column=0, row=0, sticky=tk.NSEW)
-    lbl_intro = Label(master=frames_setup[0], wraplength=560, justify=LEFT, text="Let’s get you started. In this setup dialog, we’ll walk you through the basics of setting up and using GameMaster, as well as delving into the setup involved with displaying your values inside of OBS. \n\nGameMaster is constantly being updated and maintained by Bears Broadcast Group with help from TheLittleDoctor. Feel free to contact us through any of the channels in the “About” tab following setup.", font=("Arial", 10))
+    lbl_intro = Label(master=frames_setup[0], wraplength=560, justify=LEFT, text="Let’s get you started. In this setup dialog, we’ll walk you through the basics of setting up and using GameMaster, as well as delving into the setup involved with displaying your values inside of OBS. \n\nGameMaster is constantly being updated and maintained by Bears Broadcast Group with help from TheLittleDoctor. Feel free to contact us through any of the channels in the “About” tab following setup.")
     lbl_intro.grid(column=0, row=1, sticky=tk.NW)
 
     frames_setup[1] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
@@ -194,7 +194,7 @@ def setup():
 
     lbl_configsetup = Label(master=frames_setup[1], text="Config Setup", font=("Arial", 18))
     lbl_configsetup.grid(column=0, row=0, sticky=tk.NSEW)
-    lbl_configsetup_intro = Label(master=frames_setup[1], wraplength=560, justify=LEFT, text="One of GameMaster's unique features is the ability to change the sport it can score, which includes preset score values, default period durations, and how many periods can be played.\n\nIn theses next few pages, we will set up your GameMaster configuration to be ready to score the sport you need.", font=("Arial", 10))
+    lbl_configsetup_intro = Label(master=frames_setup[1], wraplength=560, justify=LEFT, text="One of GameMaster's unique features is the ability to change the sport it can score, which includes preset score values, default period durations, and how many periods can be played.\n\nIn theses next few pages, we will set up your GameMaster configuration to be ready to score the sport you need.")
     lbl_configsetup_intro.grid(column=0, row=1, sticky=tk.NW)
 
     frames_setup[2] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
@@ -214,12 +214,12 @@ def setup():
     sportname = StringVar()
     sportname.trace("w", lambda name, index,mode: edit_config("name", str(sportname.get())))
     ent_sportname = Entry(frames_setup[2], textvariable=sportname, width=15)
-    lbl_namehelp = Label(frames_setup[2], wraplength=560, justify=LEFT, text="Name of your sport. Ex: Football, Soccer, Basketball", font=("Arial", 10))
+    lbl_namehelp = Label(frames_setup[2], wraplength=560, justify=LEFT, text="Name of your sport. Ex: Football, Soccer, Basketball")
     unit = StringVar()
     unit.trace("w", lambda name, index,mode: edit_config("unit", str(unit.get())))
     lbl_unit = Label(frames_setup[2], text="Sections: ", font=("Arial", 12))
     ent_unit = Entry(frames_setup[2], textvariable=unit, width=15)
-    lbl_unithelp = Label(frames_setup[2], wraplength=560, justify=LEFT, text="What the time is broken into. Ex: Quarter, Half, Period", font=("Arial", 10))
+    lbl_unithelp = Label(frames_setup[2], wraplength=560, justify=LEFT, text="What the time is broken into. Ex: Quarter, Half, Period")
     lbl_periods = Label(frames_setup[2], text="# of sections: ", font=("Arial", 12))
     periods = IntVar()
     periods.trace("w", lambda name, index,mode: edit_config("ct", str(periods.get())))
@@ -279,7 +279,7 @@ def setup():
 
     lbl_timing = Label(master=frames_setup[3], text="Timing Setup", font=("Arial", 18))
     lbl_timing.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
-    lbl_timingex = Label(master=frames_setup[3], wraplength=560, justify=LEFT, text="Below is an example of our timing tool. Fill in the default section length in format HH:MM:SS.", font=("Arial", 10))
+    lbl_timingex = Label(master=frames_setup[3], wraplength=560, justify=LEFT, text="Below is an example of our timing tool. Fill in the default section length in format HH:MM:SS.")
     lbl_timingex.grid(column=0, row=1, sticky=tk.NW,columnspan=3)
 
     timing_setup = Frame(master=frames_setup[3],width=40, height=10, relief=GROOVE, borderwidth=10)
@@ -357,7 +357,7 @@ def setup():
 
     lbl_scoring = Label(master=frames_setup[4], text="Config Setup", font=("Arial", 18))
     lbl_scoring.grid(column=0, row=0, sticky=tk.NSEW,columnspan=5)
-    lbl_scoringex = Label(master=frames_setup[4], wraplength=560, justify=LEFT, text="Add score value presets and other numerical variables you would want to display alongside your scoreboard.", font=("Arial", 10))
+    lbl_scoringex = Label(master=frames_setup[4], wraplength=560, justify=LEFT, text="Add score value presets and other numerical variables you would want to display alongside your scoreboard.")
     lbl_scoringex.grid(column=0, row=1, sticky=tk.NW,columnspan=5)
 
     score_frame = Frame(master=frames_setup[4],width=40, height=10, relief=GROOVE, borderwidth=5)
@@ -482,7 +482,7 @@ def setup():
 
     lbl_review = Label(master=frames_setup[5], text="Review config", font=("Arial", 18))
     lbl_review.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
-    lbl_reviewtext = Label(master=frames_setup[5], text="Please review the textual form of the config now. It will open in about 3 seconds.\nOnce you proceed, you will not be able to edit your config until you re-run the setup tool or unless you edit it textually. Please review it carefully and use the 'Back' button to return and fix any mistakes you find.\n\nNOTE: The 'players' field will not be populated in this version.", font=("Arial", 10), wraplength=560)
+    lbl_reviewtext = Label(master=frames_setup[5], text="Please review the textual form of the config now. It will open in about 3 seconds.\nOnce you proceed, you will not be able to edit your config until you re-run the setup tool or unless you edit it textually. Please review it carefully and use the 'Back' button to return and fix any mistakes you find.\n\nNOTE: The 'players' field will not be populated in this version.", wraplength=560)
     lbl_reviewtext.grid(column=0, row=1, sticky=tk.NSEW,columnspan=3)
 
     frames_setup[6] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
@@ -495,7 +495,7 @@ def setup():
 
     lbl_finish = Label(master=frames_setup[6], text="Setup Completed", font=("Arial", 18))
     lbl_finish.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
-    lbl_closingremarks = Label(master=frames_setup[6], wraplength=560, justify=LEFT, text="Thank you for choosing GameMaster!\n\n", font=("Arial", 10))
+    lbl_closingremarks = Label(master=frames_setup[6], wraplength=560, justify=LEFT, text="Thank you for choosing GameMaster!\n\n")
     lbl_closingremarks.grid(column=0, row=1, sticky=tk.NW)
 
     window_setup.mainloop()
