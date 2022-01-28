@@ -57,7 +57,9 @@ def focus(event):
 window = tk.Tk()
 window.title("GameMaster")
 window.geometry("600x620")
-window.iconbitmap(resource_path("icon.ico"))
+img = tk.Image("photo", file=resource_path("icon.png"))
+window.tk.call('wm', 'iconphoto', window._w, img)
+
 window.resizable(0,1)
 window.minsize(600, 620)
 window.bind("<Return>", lambda e: focus(e))
