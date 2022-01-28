@@ -18,6 +18,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # For old-times sake:
 # uwu
 
+from ctypes import alignment
 import tkinter as tk
 from tkinter import *  
 from PIL import ImageTk,Image  
@@ -72,10 +73,10 @@ window.rowconfigure(0, weight=0)
 window.rowconfigure(1, weight=1)
 window.columnconfigure(0, weight=1)
 
-notebook = Notebook(master=window)
-notebook.grid(column=0, row=1, sticky=tk.NSEW)
+notebook = Notebook(master=window, padding=0)
+notebook.grid(column=0, row=1, sticky=tk.NSEW, padx=0, pady=0, ipadx=0, ipady=0)
 
-main_frame = tk.Frame(notebook,padx=0, pady=0)
+main_frame = Frame(notebook)
 notebook.add(main_frame, text="Main")
 main_frame.rowconfigure(index=0, weight=0)
 main_frame.rowconfigure(index=1, weight=1)
@@ -83,13 +84,13 @@ main_frame.rowconfigure(index=2, weight=1)
 main_frame.columnconfigure(index=0, weight=10)
 main_frame.columnconfigure(index=1, weight=0)
 
-settings_frame = tk.Frame(notebook,padx=0, pady=0)
+settings_frame = Frame(notebook)
 notebook.add(settings_frame, text="Settings",state=DISABLED)
 
-config_frame = tk.Frame(notebook,padx=0, pady=0)
+config_frame = Frame(notebook)
 notebook.add(config_frame, text="Config",state=DISABLED)
 
-header = tk.Frame(master=window,width=40, height=10)
+header = Frame(master=window,width=40, height=10)
 header.grid(column=0, row=0, sticky=tk.EW, columnspan=2, rowspan=1, padx=0, pady=0)
 canvas = Canvas(master=header,width = 700, height = 96)
 canvas.grid(column=0, row=0, columnspan=2, rowspan=2, sticky=tk.NSEW)
@@ -104,15 +105,15 @@ gmt.timing_setup(main_frame)
 #==================================================#
 #             Scoring Setup and Content            #
 #==================================================#
-scoring = tk.Frame(master=main_frame,width=20, height=10, relief=SUNKEN, bd="3")
+scoring = Frame(master=main_frame,width=20, height=10, relief=SUNKEN, borderwidth="3")
 scoring.grid(row=2, column=0, sticky=NSEW, padx=5, pady=5)
 
 scoring.columnconfigure(index=0, weight=1)
 scoring.columnconfigure(index=1, weight=1)
 scoring.rowconfigure(index=0, weight=0)
 scoring.rowconfigure(index=1, weight=10)
-lbl_home = tk.Label(master=scoring,text="Scoring",font=("Arial",18,""))
-lbl_home.grid(sticky=EW,row=0,column=0,columnspan=2)
+lbl_home = Label(master=scoring,text="Scoring",font=("Arial",18,""), justify="center")
+lbl_home.grid(sticky=NSEW,row=0,column=0,columnspan=2)
 
 global teams_scores
 teams_scores = {}
@@ -165,7 +166,7 @@ def nameset(target_team):
 
 
 score_home.set("0")
-homeframe = tk.Frame(master=scoring, bd="3", relief="sunken")
+homeframe = Frame(master=scoring, borderwidth="3", relief="sunken")
 homeframe.grid(row=1, column=0, sticky=NSEW, pady=2, padx=2)
 homeframe.columnconfigure(index=0, weight=0, minsize=38)
 homeframe.columnconfigure(index=1, weight=1)
@@ -174,7 +175,7 @@ homeframe.rowconfigure(index=0, weight=0)
 homeframe.rowconfigure(index=1, weight=1)
 homeframe.rowconfigure(index=2, weight=1)
 homeframe.rowconfigure(index=2000, weight=100)
-lbl_home = tk.Label(master=homeframe,text="Home",font=("Arial",10,""))
+lbl_home = Label(master=homeframe,text="Home",font=("Arial",14,""), width=2)
 lbl_home.grid(sticky=EW,row=0,column=0,columnspan=1)
 ent_homename = Entry(master=homeframe, width=2, font=("Arial",12,""),textvariable=name_home)#, justify="center")
 ent_homename.grid(row=0,column=1,columnspan=2, sticky=NSEW, pady=2, padx=2)
@@ -188,7 +189,7 @@ btn_homeset = Button(master=homeframe, text="Set Score", width=2,command=lambda:
 btn_homeset.grid(column=0, row=2, columnspan=3, sticky=NSEW, pady=5, padx=5)
 
 score_away.set("0")
-awayframe = tk.Frame(master=scoring, bd="3", relief="sunken")
+awayframe = Frame(master=scoring, borderwidth="3", relief="sunken")
 awayframe.grid(row=1, column=1, sticky=NSEW, pady=2, padx=2)
 awayframe.columnconfigure(index=0, weight=0, minsize=38)
 awayframe.columnconfigure(index=1, weight=1)
@@ -197,15 +198,15 @@ awayframe.rowconfigure(index=0, weight=0)
 awayframe.rowconfigure(index=1, weight=1)
 awayframe.rowconfigure(index=2, weight=1)
 awayframe.rowconfigure(index=2000, weight=100)
-lbl_away = tk.Label(master=awayframe,text="Away",font=("Arial",10,""))
+lbl_away = Label(master=awayframe,text="Away",font=("Arial",14,""), width=2)
 lbl_away.grid(sticky=EW,row=0,column=0,columnspan=1)
 ent_awayname = Entry(master=awayframe, width=2, font=("Arial",12,""),textvariable=name_away)#, justify="center")
 ent_awayname.grid(row=0,column=1,columnspan=2, sticky=NSEW, pady=2,padx=2)
 ent_away = Entry(name="score",master=awayframe, width=4, font=("Arial",26,""),textvariable=score_away, justify="center")
 ent_away.grid(sticky=NS, column=1, row=1, pady=5, padx=5)
-btn_awayup = Button(master=awayframe, text="+", width=2,command=lambda: scoreadd("away",1))
+btn_awayup = Button(master=awayframe, text="+", width=-1, padding=0,command=lambda: scoreadd("away",1))
 btn_awayup.grid(column=2, row=1)
-btn_awaydn = Button(master=awayframe, text="-", width=2,command=lambda: scoreadd("away",-1))
+btn_awaydn = Button(master=awayframe, text="-", width=-1,command=lambda: scoreadd("away",-1))
 btn_awaydn.grid(column=0, row=1)
 
 btn_awayset = Button(master=awayframe, text="Set Score", width=2,command=lambda: scoreset("away"))
@@ -252,7 +253,7 @@ for x in teams_names:
 #==================================================#
 #            Variables Setup and Content           #
 #==================================================#
-variables = tk.Frame(master=main_frame,width=20, height=10, bd="3", relief=GROOVE)
+variables = Frame(master=main_frame,width=20, height=10)
 variables.grid(row=1, column=1, sticky=NSEW, padx=5, pady=5)
 
 variables.columnconfigure(index=0, weight=1)
@@ -268,7 +269,7 @@ def varset(varname,value):
         # print(str(varname) + " Saved")
         f.close()
 
-lbl_variables = tk.Label(master=variables,text="Other Variables",font=("Arial",18,""),padx=5,justify="center")
+lbl_variables = Label(master=variables,text="Other Variables",font=("Arial",18,""),justify="center")
 lbl_variables.grid(sticky=S,row=0,column=0,columnspan=3)
 
 vars = config["vars"]
@@ -287,7 +288,7 @@ for x in vars:
 #==================================================#
 #            Settings Setup and Content            #
 #==================================================#
-settings = tk.Frame(master=main_frame,width=20, height=10, relief=GROOVE, bd="3")
+settings = Frame(master=main_frame,width=20, height=10, relief=GROOVE, borderwidth=3)
 settings.grid(row=2, column=1, sticky=NSEW, padx=5, pady=5)
 
 settings.columnconfigure(index=0, weight=0)

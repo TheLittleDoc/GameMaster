@@ -1,5 +1,5 @@
-import tkinter as tk
-from tkinter import *  
+import tkinter as tk 
+from tkinter import *
 from PIL import ImageTk,Image  
 from tkinter.ttk import *
 from tkinter import messagebox
@@ -9,7 +9,6 @@ import types
 import gm_config as gmc
 from gm_about import show_file
 import webbrowser
-from pyshortcuts import make_shortcut
 from gm_resources import resource_path, retrieve_file, download_file
 
 
@@ -166,8 +165,10 @@ def setup():
     header.grid(column=0, row=0, sticky=tk.EW, columnspan=3, rowspan=1, padx=0, pady=0)
     canvas = Canvas(master=header,width = 700, height = 96)
     canvas.grid(column=0, columnspan=3,row=0, rowspan=2, sticky=tk.NSEW)
-    img = ImageTk.PhotoImage(Image.open(resource_path("header_alt.png")))  
-    canvas.create_image(0, 0, anchor=NW, image=img)
+    global img
+    img = ImageTk.PhotoImage(Image.open(resource_path("header_alt.png")))
+    print(img) 
+    # canvas.create_image(0, 0, anchor=NW, image=ImageTk.PhotoImage(Image.open(resource_path("header_alt.png"))))
 
     body = Frame(master=window_setup,width=40, height=10)
     body.grid(column=0, row=1, sticky=tk.NSEW, columnspan=3, rowspan=1, padx=5, pady=5)

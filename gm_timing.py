@@ -257,7 +257,7 @@ def timing_setup(main_frame):
         f.write(to_file)
         f.close()
 
-    lbl_section = tk.Label(master=timing,text=config["unit"],font=("Arial",18,""),padx=30)
+    lbl_section = Label(master=timing,text=config["unit"],font=("Arial",18,""))
     lbl_section.grid(sticky=S,row=4,column=1,columnspan=3)
     section=StringVar()
     section.set("1")

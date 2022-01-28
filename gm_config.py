@@ -8,7 +8,7 @@ import time
 import json
 from turtle import update
 from gm_resources import resource_path, retrieve_file, download_file, external_link
-from gm_setup import setup
+# from gm_setup import setup
 from packaging.version import Version, parse
 try:
     import pyi_splash
@@ -24,19 +24,19 @@ NAME = "GameMaster"
 APP_VERSION = Version("2.1.0rc5")
 VERSION = 3
 
-print(APP_VERSION)
+# print(APP_VERSION)
 
 
-print("Checking for updates...")
+# print("Checking for updates...")
 remoteversion = Version(retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/latest.txt", "Newest Version"))
 if APP_VERSION > remoteversion:
     
 
     prerelease = Version(retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/pre.txt", "Prerelease"))
-    print(prerelease)
-    print(APP_VERSION)
-    print(prerelease > APP_VERSION)
-    print(prerelease < APP_VERSION)
+    # print(prerelease)
+    # print(APP_VERSION)
+    # print(prerelease > APP_VERSION)
+    # print(prerelease < APP_VERSION)
     if APP_VERSION < prerelease:
         betaupdate = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + prerelease.public +"\n\nDo you want to update?", icon='info')
         if(betaupdate):
@@ -50,7 +50,7 @@ elif APP_VERSION < remoteversion:
         external_link("https://github.com/TheLittleDoc/GameMaster/releases/latest")
         os._exit(0)
 #except:
-    #print("Error checking for updates")
+    ## print("Error checking for updates")
 
 def check():
     firstrun = messagebox.askyesno("First run?","Is this your first time running GameMaster?",icon="warning")
@@ -61,7 +61,7 @@ def check():
         f.close()
     with open("cfgsettings.json", "r") as f:
         cfgsettings = json.load(f)
-        # print(cfgsettings)
+        # # print(cfgsettings)
     
     if firstrun:
         setup()
@@ -70,11 +70,11 @@ def check():
     os.execv(sys.executable, ["python"] + sys.argv)
 
 
-print("Loading source...")
+# print("Loading source...")
 source = retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/distro_source/"+APP_VERSION.public+".py","Source Code")
 
-print(source)
-print(APP_VERSION.public)
+# print(source)
+# print(APP_VERSION.public)
 if source == "404: Not Found":
     messagebox.showerror("Error","Could not retrieve source. Under a GNU AGPLv3 License, a source must be made available to end users. Please check your connection and try again.")
     os._exit(0) 
@@ -82,7 +82,7 @@ if source == "404: Not Found":
 try:
     with open("cfgsettings.json", "r") as f:
         cfgsettings = json.load(f)
-        # print(cfgsettings)
+        # # print(cfgsettings)
         filename = cfgsettings["path"]
         if not "firstrun" in cfgsettings:
             cfgsettings["firstrun"] = True
@@ -92,7 +92,7 @@ try:
                 f.close()
             with open("cfgsettings.json", "r") as f:
                 cfgsettings = json.load(f)
-                # print(cfgsettings)
+                # # print(cfgsettings)
     
 except:
     check()
@@ -100,7 +100,7 @@ except:
 try:
     with open(filename, "r") as f:
         config = json.load(f)
-        # print(config)
+        # # print(config)
 
 except:
     ask_error = messagebox.askokcancel("Error while loading config", "GameMaster configuration file misformatted. Continuing will revert to a known-working default configuration.",icon="error")
@@ -116,7 +116,7 @@ except:
     #raise Exception("Error while loading config %s. A stock config file can be found at https://granbybears.live/gamemaster/fix" % f.name) 
     #None
         
-# print(config)
+# # print(config)
 
 if config["name"] == None:
     check()
@@ -129,7 +129,7 @@ def set_config():
         json.dump(config, f, indent=4)
 def edit_config(property, value):
     config[property] = value
-    print(value)
+    # print(value)
     set_config()
 def config_reload():
     reload_ask = messagebox.askyesno("Reload?","Reloading the config will require restarting GameMaster. This will stop the timer and reset scores and team names. Are you sure you want to continue?",icon="warning")
@@ -177,7 +177,7 @@ def donation_alarm():
             f.close()
         with open("cfgsettings.json", "r") as f:
             cfgsettings = json.load(f)
-            # print(cfgsettings)
+            # # print(cfgsettings)
     
     else:
         None
