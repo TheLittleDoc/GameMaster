@@ -253,7 +253,7 @@ def timing_setup(main_frame):
     # print(to_file)
     if not os.path.exists("output"):
         os.makedirs("output")
-    with open("output\\time.txt", "w") as f:
+    with open("output/time.txt", "w") as f:
         f.write(to_file)
         f.close()
 
@@ -262,7 +262,7 @@ def timing_setup(main_frame):
     section=StringVar()
     section.set("1")
 
-    with open("output\\section.txt", "w") as f:
+    with open("output/section.txt", "w") as f:
         f.write(section.get())
         f.close()
     ent_section = Entry(master=timing, width=3, font=("Arial",18,""),textvariable=section, justify="center", state="readonly")
