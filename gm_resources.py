@@ -43,4 +43,5 @@ def download_file(url, name):
         with open(name, "w") as f:
             f.write(file.text)
             f.close()
+        return(file.text)
         
