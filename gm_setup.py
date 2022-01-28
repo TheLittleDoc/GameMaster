@@ -161,14 +161,14 @@ def setup():
     btn_setupbw = Button(window_setup, text="Back", state=DISABLED,command=lambda: prev_frame())
     btn_setupbw.grid(row=2, column=0, sticky=NSEW, padx=10, pady=10)
 
-    header = tk.Frame(master=window_setup,width=40, height=10)
+    header = Frame(master=window_setup,width=40, height=10)
     header.grid(column=0, row=0, sticky=tk.EW, columnspan=3, rowspan=1, padx=0, pady=0)
     canvas = Canvas(master=header,width = 700, height = 96)
     canvas.grid(column=0, columnspan=3,row=0, rowspan=2, sticky=tk.NSEW)
     global img
     img = ImageTk.PhotoImage(Image.open(resource_path("header_alt.png")))
     print(img) 
-    # canvas.create_image(0, 0, anchor=NW, image=ImageTk.PhotoImage(Image.open(resource_path("header_alt.png"))))
+    canvas.create_image(0, 0, anchor=NW, image=img)
 
     body = Frame(master=window_setup,width=40, height=10)
     body.grid(column=0, row=1, sticky=tk.NSEW, columnspan=3, rowspan=1, padx=5, pady=5)

@@ -8,7 +8,7 @@ import time
 import json
 from turtle import update
 from gm_resources import resource_path, retrieve_file, download_file, external_link
-# from gm_setup import setup
+from gm_setup import setup
 from packaging.version import Version, parse
 try:
     import pyi_splash
