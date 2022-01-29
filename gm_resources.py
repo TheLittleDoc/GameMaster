@@ -7,6 +7,7 @@ import webbrowser
 f = {}
 
 def external_link(link):
+    """ Shows confirmation dialog before opening a link in the default or most recently used browser """
     asklink = messagebox.askyesno("Open link", "GameMaster is opening \"%s\" in your default browser.\n\nDo you want to continue?" % link)
     if asklink == True:
         webbrowser.open(link)

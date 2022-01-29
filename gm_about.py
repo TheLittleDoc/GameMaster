@@ -10,14 +10,14 @@ import threading
 import types
 import gm_config as gmc
 import webbrowser
-from gm_resources import resource_path, retrieve_file, f
+from gm_resources import resource_path, retrieve_file, external_link, f
 
-def external_link(link):
-    asklink = messagebox.askyesno("Open link", "GameMaster is opening \"%s\" in your default browser.\n\nDo you want to continue?" % link)
-    if asklink == True:
-        webbrowser.open(link)
-    else:
-        None
+# def external_link(link):
+#    asklink = messagebox.askyesno("Open link", "GameMaster is opening \"%s\" in your default browser.\n\nDo you want to continue?" % link)
+#    if asklink == True:
+#        webbrowser.open(link)
+#    else:
+#        None
 
 
 
