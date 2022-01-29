@@ -8,6 +8,8 @@ import threading
 import gm_config as gmc
 from gm_resources import resource_path, retrieve_file, f
 
+global kill_thread
+kill_thread = False
 # uwu
 
 config = gmc.config
@@ -55,6 +57,7 @@ def timing_setup(main_frame):
             self.count = int(hour.get())*3600 + int(minute.get())*60 + int(second.get())
         def run(self):
             global to_file
+            
             # self.count = int(hour.get())*3600 + int(minute.get())*60 + int(second.get())
             running = True
             # mins,secs = divmod(self.count,60)
@@ -66,6 +69,10 @@ def timing_setup(main_frame):
             #     f.close()
         
             while self.count > -1 and not self.event.is_set():
+                
+                if kill_thread:
+                    print("called to stop")
+                    timer_stop()
                 mins,secs = divmod(self.count,60)
         
                 # Converting the input entered in mins or secs to hours,
@@ -140,7 +147,7 @@ def timing_setup(main_frame):
         btn_timer.configure(text="Stop", command=lambda: timer_stop())
         btn_timer.grid(column=0,columnspan=1, sticky=NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
         th[thread_count].start()
-
+    
     def timer_stop():
         th[thread_count].stop()
         btn_timer.configure(text="Start", command=lambda: timer(running))
@@ -260,3 +267,6 @@ def timing_setup(main_frame):
     btn_sectionup.grid(column=3, row=5, sticky=W)
     btn_sectiondn = Button(master=timing, text="-", width=2,command=lambda: section_set(0))
     btn_sectiondn.grid(column=1, row=5, sticky=E)
+
+def quit_stop():
+    kill_thread = True

@@ -167,3 +167,4 @@ output/*.txt
 cfgsettings.json
 LICENSE.txt
 section.txt
+output/time.txt
