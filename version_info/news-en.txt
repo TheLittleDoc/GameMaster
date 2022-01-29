@@ -15,7 +15,7 @@ A few things I initially hadn't planned on creating may be coming in the near fu
       translation efforts, please join our Discord server to find out
       more!
   - A Mac Version!
-    Yes, it's real! 
+      Yes, it's real! 
       For the first time in a while, I've finally got acccess to a MacOS
       computer again which has prompted me to revist the idea. It turns
       out it's not actually as far off as I thought it might have been,
