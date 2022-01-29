@@ -17,7 +17,7 @@ except:
     settings_list = {"hours": False,"minutes": True,"seconds": True,"on top": False, "countup": False, "end on time": False, "alarm": True}
 
 def timing_setup(main_frame):
-    timing = tk.Frame(master=main_frame,width=12, height=10, bd="3", relief=SUNKEN)
+    timing = Frame(master=main_frame,width=12, height=10, borderwidth=3, relief=SUNKEN)
     timing.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5, ipadx=5)
 
     timing.columnconfigure(index=0, weight=0)
@@ -48,7 +48,6 @@ def timing_setup(main_frame):
     class TimerClass(threading.Thread):
         
         def __init__(self, thread_ID):
-            # print("Thread Created")
             threading.Thread.__init__(self)
             # self.name = thread_name
             self.id = thread_ID
@@ -67,9 +66,6 @@ def timing_setup(main_frame):
             #     f.close()
         
             while self.count > -1 and not self.event.is_set():
-                print("count")
-                # print(self.count)
-                # print(running)
                 mins,secs = divmod(self.count,60)
         
                 # Converting the input entered in mins or secs to hours,
@@ -133,26 +129,22 @@ def timing_setup(main_frame):
                 self.event.wait(1)
                 
         def stop(self):
-            # print("Stopping...")
             thread_count =+ 1
-            # print("Thread count is now %d" % thread_count)
             self.event.set()
             running = False
     th = {}
     def timer(is_running):
         
         running = True
-        # print(running)
         th[thread_count] = TimerClass(thread_count)
         btn_timer.configure(text="Stop", command=lambda: timer_stop())
-        btn_timer.grid(column=0,columnspan=1, sticky=tk.NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
+        btn_timer.grid(column=0,columnspan=1, sticky=NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
         th[thread_count].start()
 
     def timer_stop():
         th[thread_count].stop()
-        # print(th)
         btn_timer.configure(text="Start", command=lambda: timer(running))
-        btn_timer.grid(column=0,columnspan=1, sticky=tk.NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
+        btn_timer.grid(column=0,columnspan=1, sticky=NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
 
     def time_set_default():
         hour.set("{0:02d}".format(int(0 if (times["hours"] is None) or (settings_list["countup"] == True) else times["hours"])))
@@ -183,7 +175,6 @@ def timing_setup(main_frame):
         with open("output/section.txt", "w") as f:
             if type == 1:
                 if(int(section.get()) < int(config["ct"])):
-                    # print("section setting")
                     section.set(int(ent_section.get())+1)
                 else:
                     None
@@ -211,7 +202,6 @@ def timing_setup(main_frame):
                 to_file = str("%02d" % (0))
             elif settings_list["hours"] == True and settings_list["minutes"] == False and settings_list["seconds"] == False:
                 to_file = str("%02d" % (0))
-                # print(to_file)
             with open("output/time.txt", "w") as f:
                 f.write(to_file)
                 f.close()
@@ -228,11 +218,11 @@ def timing_setup(main_frame):
     secondEntry= Entry(master=timing, width=2, font=("Arial",26,""),textvariable=second, justify="center")
     secondEntry.grid(sticky=NSEW, column=3, row=1, rowspan=2)
     btn_timer = Button(master=timing, text="Start",command=lambda: timer(running))
-    btn_timer.grid(column=0,columnspan=1, sticky=tk.NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
+    btn_timer.grid(column=0,columnspan=1, sticky=NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
     btn_time = Button(master=timing, text="Default",command=lambda: time_set_default())
-    btn_time.grid(column=0,columnspan=1, sticky=tk.NE, row=1, ipadx=0, ipady=2, padx=4)
+    btn_time.grid(column=0,columnspan=1, sticky=NE, row=1, ipadx=0, ipady=2, padx=4)
     btn_clear = Button(master=timing, text="Clear",command=lambda: time_clear())
-    btn_clear.grid(column=0,columnspan=1, sticky=tk.NE, row=2, ipadx=0, ipady=2, padx=4)
+    btn_clear.grid(column=0,columnspan=1, sticky=NE, row=2, ipadx=0, ipady=2, padx=4)
     # hour.set("{0:02d}".format(times["hours"]))
     # minute.set("{0:02d}".format(times["minutes"]))
     # second.set("{0:02d}".format(times["seconds"]))
@@ -250,14 +240,13 @@ def timing_setup(main_frame):
         to_file = str("%02d" % (int(0 if (times["seconds"] is None) or (settings_list["countup"]) else times["seconds"])))
     elif settings_list["hours"] == False and settings_list["minutes"] == False and settings_list["seconds"] == False:
         to_file=""
-    # print(to_file)
     if not os.path.exists("output"):
         os.makedirs("output")
     with open("output/time.txt", "w") as f:
         f.write(to_file)
         f.close()
 
-    lbl_section = tk.Label(master=timing,text=config["unit"],font=("Arial",18,""),padx=30)
+    lbl_section = Label(master=timing,text=config["unit"],font=("Arial",18,""))
     lbl_section.grid(sticky=S,row=4,column=1,columnspan=3)
     section=StringVar()
     section.set("1")

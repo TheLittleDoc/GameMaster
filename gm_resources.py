@@ -40,7 +40,6 @@ def download_file(url, name):
         messagebox.ABOUT(title='Invalid URL',message='URL must start with "http"', icon='warning')
     else:
         file = get(url)
-        print(file.text)
         with open(name, "w") as f:
             f.write(file.text)
             f.close()
