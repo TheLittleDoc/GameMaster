@@ -114,7 +114,7 @@ except:
         os.execv(sys.executable, ["python"] + sys.argv)
     else:
         messagebox.showinfo("Stopping...","GameMaster will now stop running. Please provide a valid configuration file on the next run.")
-        exit()
+        os._exit(0)
     #raise Exception("Error while loading config %s. A stock config file can be found at https://granbybears.live/gamemaster/fix" % f.name) 
     #None
         
@@ -197,7 +197,7 @@ else:
             config["version"] = 1
     else:
         messagebox.showinfo("Stopping...","GameMaster will now stop running. Please provide a valid configuration file on the next run.")
-        exit()
+        os._exit(0)
     versions_tuple = (int(config["version"]),int(VERSION))
 
 if config["version"] != VERSION:
