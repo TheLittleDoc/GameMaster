@@ -395,6 +395,11 @@ if news != download_file("https://raw.githubusercontent.com/TheLittleDoc/GameMas
 
 
 #[================================================]#
+
+def clean_exit():
+    gmc.donation_alarm()
+    os._exit(0)
+
 #[================================================]#
-window.bind('<Destroy>', lambda event: gmc.donation_alarm())
+window.bind('<Destroy>', lambda event: clean_exit())
 window.mainloop()
