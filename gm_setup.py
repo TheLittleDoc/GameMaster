@@ -25,7 +25,7 @@ def setup():
     APP_VERSION = gmc.APP_VERSION
     VERSION = gmc.VERSION
 
-    window_setup = tk.Tk()
+    window_setup = Tk()
     window_setup.title("GameMaster Setup")
     window_setup.geometry("600x400")
     window_setup.resizable(False, False)
@@ -162,30 +162,29 @@ def setup():
     btn_setupbw.grid(row=2, column=0, sticky=NSEW, padx=10, pady=10)
 
     header = Frame(master=window_setup,width=40, height=10)
-    header.grid(column=0, row=0, sticky=tk.EW, columnspan=3, rowspan=1, padx=0, pady=0)
+    header.grid(column=0, row=0, sticky=EW, columnspan=3, rowspan=1, padx=0, pady=0)
     canvas = Canvas(master=header,width = 700, height = 96)
-    canvas.grid(column=0, columnspan=3,row=0, rowspan=2, sticky=tk.NSEW)
+    canvas.grid(column=0, columnspan=3,row=0, rowspan=2, sticky=NSEW)
     global img
-    img = ImageTk.PhotoImage(Image.open(resource_path("header_alt.png")))
-    print(img) 
+    img = ImageTk.PhotoImage(Image.open(resource_path("header_alt.png")))  
     canvas.create_image(0, 0, anchor=NW, image=img)
 
     body = Frame(master=window_setup,width=40, height=10)
-    body.grid(column=0, row=1, sticky=tk.NSEW, columnspan=3, rowspan=1, padx=5, pady=5)
+    body.grid(column=0, row=1, sticky=NSEW, columnspan=3, rowspan=1, padx=5, pady=5)
     body.rowconfigure(index=0, weight=0)
     body.rowconfigure(index=1, weight=1)
     body.columnconfigure(index=0, weight=1)
 
     frames_setup[0] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
-    frames_setup[0].grid(column=0, row=1, sticky=tk.NSEW, columnspan=3, rowspan=1, padx=10, pady=10)
+    frames_setup[0].grid(column=0, row=1, sticky=NSEW, columnspan=3, rowspan=1, padx=10, pady=10)
     frames_setup[0].rowconfigure(index=0, weight=0)
     frames_setup[0].rowconfigure(index=1, weight=1)
     frames_setup[0].columnconfigure(index=0, weight=1)
 
     lbl_setup = Label(master=frames_setup[0], text="Welcome to GameMaster!", font=("Arial", 18))
-    lbl_setup.grid(column=0, row=0, sticky=tk.NSEW)
-    lbl_intro = Label(master=frames_setup[0], wraplength=560, justify=LEFT, text="Let’s get you started. In this setup dialog, we’ll walk you through the basics of setting up and using GameMaster, as well as delving into the setup involved with displaying your values inside of OBS. \n\nGameMaster is constantly being updated and maintained by Bears Broadcast Group with help from TheLittleDoctor. Feel free to contact us through any of the channels in the “About” tab following setup.")
-    lbl_intro.grid(column=0, row=1, sticky=tk.NW)
+    lbl_setup.grid(column=0, row=0, sticky=NSEW)
+    lbl_intro = Label(master=frames_setup[0], wraplength=560, justify=LEFT, text="Let’s get you started. In this setup dialog, we’ll walk you through the basics of setting up and using GameMaster, as well as delving into the setup involved with displaying your values inside of OBS. \n\nGameMaster is constantly being updated and maintained by Bears Broadcast Group with help from TheLittleDoctor. Feel free to contact us through any of the channels in the “About” tab following setup.", font=("Arial", 10))
+    lbl_intro.grid(column=0, row=1, sticky=NW)
 
     frames_setup[1] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
     frames_setup[1].rowconfigure(index=0, weight=0)
@@ -193,9 +192,9 @@ def setup():
     frames_setup[1].columnconfigure(index=0, weight=1)
 
     lbl_configsetup = Label(master=frames_setup[1], text="Config Setup", font=("Arial", 18))
-    lbl_configsetup.grid(column=0, row=0, sticky=tk.NSEW)
-    lbl_configsetup_intro = Label(master=frames_setup[1], wraplength=560, justify=LEFT, text="One of GameMaster's unique features is the ability to change the sport it can score, which includes preset score values, default period durations, and how many periods can be played.\n\nIn theses next few pages, we will set up your GameMaster configuration to be ready to score the sport you need.")
-    lbl_configsetup_intro.grid(column=0, row=1, sticky=tk.NW)
+    lbl_configsetup.grid(column=0, row=0, sticky=NSEW)
+    lbl_configsetup_intro = Label(master=frames_setup[1], wraplength=560, justify=LEFT, text="One of GameMaster's unique features is the ability to change the sport it can score, which includes preset score values, default period durations, and how many periods can be played.\n\nIn theses next few pages, we will set up your GameMaster configuration to be ready to score the sport you need.", font=("Arial", 10))
+    lbl_configsetup_intro.grid(column=0, row=1, sticky=NW)
 
     frames_setup[2] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
     frames_setup[2].rowconfigure(index=0, weight=0)
@@ -206,9 +205,9 @@ def setup():
     frames_setup[2].columnconfigure(index=2, weight=1)
 
     lbl_configsetup_ = Label(master=frames_setup[2], text="Config Setup", font=("Arial", 18))
-    lbl_configsetup_.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
+    lbl_configsetup_.grid(column=0, row=0, sticky=NSEW,columnspan=3)
     lbl_sportselect = Label(master=frames_setup[2], text="Select sport: ", font=("Arial", 12))
-    lbl_sportselect.grid(column=0, row=1, sticky=tk.NSEW, pady=15)
+    lbl_sportselect.grid(column=0, row=1, sticky=NSEW, pady=15)
     cb_sportselect = Combobox(frames_setup[2], state="readonly", values=("Custom", "Soccer", "Football", "Basketball", "Foomball"),width=15)
     lbl_sportname = Label(frames_setup[2], text="Sport name: ", font=("Arial", 12))
     sportname = StringVar()
@@ -226,7 +225,6 @@ def setup():
     
     ent_periods = Entry(frames_setup[2], textvariable=periods, width=15)
     def set_config():
-        # print(config)
         with open("gamemaster.json", "w") as f:
             json.dump(config, f, indent=4)
     def edit_config(property, value):
@@ -243,15 +241,15 @@ def setup():
         # print(sport)
         if sport == "Custom":
             # print("custom uwu")
-            lbl_sportname.grid(column=0, row=2, sticky=tk.NSEW, pady=5)
+            lbl_sportname.grid(column=0, row=2, sticky=NSEW, pady=5)
             
-            ent_sportname.grid(column=1, row=2, sticky=tk.NSEW, pady=5)
-            lbl_namehelp.grid(column=2, row=2, sticky=tk.NSEW, pady=5,padx=5)
-            lbl_unit.grid(column=0, row=3, sticky=tk.NSEW, pady=5)
-            ent_unit.grid(column=1, row=3, sticky=tk.NSEW, pady=5)
-            lbl_unithelp.grid(column=2, row=3, sticky=tk.NW, pady=5, padx=5)
-            lbl_periods.grid(column=0, row=4, sticky=tk.NSEW, pady=5)
-            ent_periods.grid(column=1, row=4, sticky=tk.NSEW, pady=5)
+            ent_sportname.grid(column=1, row=2, sticky=NSEW, pady=5)
+            lbl_namehelp.grid(column=2, row=2, sticky=NSEW, pady=5,padx=5)
+            lbl_unit.grid(column=0, row=3, sticky=NSEW, pady=5)
+            ent_unit.grid(column=1, row=3, sticky=NSEW, pady=5)
+            lbl_unithelp.grid(column=2, row=3, sticky=NW, pady=5, padx=5)
+            lbl_periods.grid(column=0, row=4, sticky=NSEW, pady=5)
+            ent_periods.grid(column=1, row=4, sticky=NSEW, pady=5)
             # frame_sportsetup.grid_forget()
         elif sport == "Football" or sport == "Soccer" or sport == "Basketball" or sport == "Foomball":
             # print("not custom")
@@ -265,7 +263,7 @@ def setup():
             ent_periods.grid_forget()
 
     cb_sportselect.bind("<<ComboboxSelected>>", sportselect)
-    cb_sportselect.grid(column=1, row=1, sticky=tk.NSEW,pady=15)
+    cb_sportselect.grid(column=1, row=1, sticky=NSEW,pady=15)
 
     frames_setup[3] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
     frames_setup[3].rowconfigure(index=0, weight=0)
@@ -278,9 +276,9 @@ def setup():
     frames_setup[3].columnconfigure(index=2, weight=1)
 
     lbl_timing = Label(master=frames_setup[3], text="Timing Setup", font=("Arial", 18))
-    lbl_timing.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
-    lbl_timingex = Label(master=frames_setup[3], wraplength=560, justify=LEFT, text="Below is an example of our timing tool. Fill in the default section length in format HH:MM:SS.")
-    lbl_timingex.grid(column=0, row=1, sticky=tk.NW,columnspan=3)
+    lbl_timing.grid(column=0, row=0, sticky=NSEW,columnspan=3)
+    lbl_timingex = Label(master=frames_setup[3], wraplength=560, justify=LEFT, text="Below is an example of our timing tool. Fill in the default section length in format HH:MM:SS.", font=("Arial", 10))
+    lbl_timingex.grid(column=0, row=1, sticky=NW,columnspan=3)
 
     timing_setup = Frame(master=frames_setup[3],width=40, height=10, relief=GROOVE, borderwidth=10)
     timing_setup.grid(row=3, column=1, sticky=NSEW, padx=5, pady=5, ipadx=5)
@@ -322,7 +320,7 @@ def setup():
     hour.set("{0:02d}".format(int(0)))
     minute.set("{0:02d}".format(int(0)))
     second.set("{0:02d}".format(int(0)))
-    lbl_tmr = tk.Label(master=timing_setup,text="Timer",font=("Arial",18,""),padx=30)
+    lbl_tmr = Label(master=timing_setup,text="Timer",font=("Arial",18,""))
     lbl_tmr.grid(sticky=S,row=0,column=0,columnspan=4)
     hourEntry= Entry(master=timing_setup, width=2, font=("Arial",26,""),textvariable=hour, justify="center")
     hourEntry.bind("<FocusIn>", lambda event: hour.set(""))
@@ -337,11 +335,11 @@ def setup():
     secondEntry.bind("<FocusOut>", lambda event: format(second))
     secondEntry.grid(sticky=NSEW, column=3, row=1, rowspan=2)
     btn_timer = Button(master=timing_setup, text="Start", state="disabled",command=lambda: None)
-    btn_timer.grid(column=0,columnspan=1, sticky=tk.NS, row=3,rowspan=2, ipadx=0, ipady=2, padx=4)
+    btn_timer.grid(column=0,columnspan=1, sticky=NS, row=3,rowspan=2, ipadx=0, ipady=2, padx=4)
     btn_time = Button(master=timing_setup, text="Default", state="disabled",command=lambda: None)
-    btn_time.grid(column=0,columnspan=1, sticky=tk.NE, row=1, ipadx=0, ipady=2, padx=4)
+    btn_time.grid(column=0,columnspan=1, sticky=NE, row=1, ipadx=0, ipady=2, padx=4)
     btn_clear = Button(master=timing_setup, text="Clear", state="disabled",command=lambda: None)
-    btn_clear.grid(column=0,columnspan=1, sticky=tk.NE, row=2, ipadx=0, ipady=2, padx=4)
+    btn_clear.grid(column=0,columnspan=1, sticky=NE, row=2, ipadx=0, ipady=2, padx=4)
 
 
     frames_setup[4] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
@@ -356,9 +354,9 @@ def setup():
     frames_setup[4].columnconfigure(index=4, weight=1)
 
     lbl_scoring = Label(master=frames_setup[4], text="Config Setup", font=("Arial", 18))
-    lbl_scoring.grid(column=0, row=0, sticky=tk.NSEW,columnspan=5)
-    lbl_scoringex = Label(master=frames_setup[4], wraplength=560, justify=LEFT, text="Add score value presets and other numerical variables you would want to display alongside your scoreboard.")
-    lbl_scoringex.grid(column=0, row=1, sticky=tk.NW,columnspan=5)
+    lbl_scoring.grid(column=0, row=0, sticky=NSEW,columnspan=5)
+    lbl_scoringex = Label(master=frames_setup[4], wraplength=560, justify=LEFT, text="Add score value presets and other numerical variables you would want to display alongside your scoreboard.", font=("Arial", 10))
+    lbl_scoringex.grid(column=0, row=1, sticky=NW,columnspan=5)
 
     score_frame = Frame(master=frames_setup[4],width=40, height=10, relief=GROOVE, borderwidth=5)
     score_frame.grid(row=2, column=1, sticky=NSEW, padx=5, pady=5, ipadx=5)
@@ -412,7 +410,7 @@ def setup():
             i.grid(sticky=EW, column=scoring[-1].index(i)+1, row=len(scoring)+1)
     
     btn_score_add = Button(master=score_frame, text="+", command=lambda: score_create())
-    btn_score_add.grid(column=1,columnspan=4, sticky=tk.NSEW, row=2,pady=5)
+    btn_score_add.grid(column=1,columnspan=4, sticky=NSEW, row=2,pady=5)
 
 
     var_frame = Frame(master=frames_setup[4],width=40, height=10, relief=GROOVE, borderwidth=5)
@@ -467,7 +465,7 @@ def setup():
         btn_var_add.grid(column=1,columnspan=4, sticky=NSEW, row=len(var)+2,pady=5)
 
     btn_var_add = Button(master=var_frame, text="+", command=lambda: var_create())
-    btn_var_add.grid(column=1,columnspan=3, sticky=tk.NSEW, row=2,pady=5)
+    btn_var_add.grid(column=1,columnspan=3, sticky=NSEW, row=2,pady=5)
 
     var_create()
     score_create()
@@ -481,9 +479,9 @@ def setup():
     frames_setup[5].columnconfigure(index=2, weight=1)
 
     lbl_review = Label(master=frames_setup[5], text="Review config", font=("Arial", 18))
-    lbl_review.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
-    lbl_reviewtext = Label(master=frames_setup[5], text="Please review the textual form of the config now. It will open in about 3 seconds.\nOnce you proceed, you will not be able to edit your config until you re-run the setup tool or unless you edit it textually. Please review it carefully and use the 'Back' button to return and fix any mistakes you find.\n\nNOTE: The 'players' field will not be populated in this version.", wraplength=560)
-    lbl_reviewtext.grid(column=0, row=1, sticky=tk.NSEW,columnspan=3)
+    lbl_review.grid(column=0, row=0, sticky=NSEW,columnspan=3)
+    lbl_reviewtext = Label(master=frames_setup[5], text="Please review the textual form of the config now. It will open in about 3 seconds.\nOnce you proceed, you will not be able to edit your config until you re-run the setup tool or unless you edit it textually. Please review it carefully and use the 'Back' button to return and fix any mistakes you find.\n\nNOTE: The 'players' field will not be populated in this version.", font=("Arial", 10), wraplength=560)
+    lbl_reviewtext.grid(column=0, row=1, sticky=NSEW,columnspan=3)
 
     frames_setup[6] = Frame(master=window_setup,width=40, height=10, relief=GROOVE, borderwidth=5)
     frames_setup[6].rowconfigure(index=0, weight=0)
@@ -494,8 +492,8 @@ def setup():
     frames_setup[6].columnconfigure(index=2, weight=1)
 
     lbl_finish = Label(master=frames_setup[6], text="Setup Completed", font=("Arial", 18))
-    lbl_finish.grid(column=0, row=0, sticky=tk.NSEW,columnspan=3)
-    lbl_closingremarks = Label(master=frames_setup[6], wraplength=560, justify=LEFT, text="Thank you for choosing GameMaster!\n\n")
-    lbl_closingremarks.grid(column=0, row=1, sticky=tk.NW)
+    lbl_finish.grid(column=0, row=0, sticky=NSEW,columnspan=3)
+    lbl_closingremarks = Label(master=frames_setup[6], wraplength=560, justify=LEFT, text="Thank you for choosing GameMaster!\n\n", font=("Arial", 10))
+    lbl_closingremarks.grid(column=0, row=1, sticky=NW)
 
     window_setup.mainloop()

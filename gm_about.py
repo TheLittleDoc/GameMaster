@@ -32,7 +32,7 @@ def show_file(name,to_open,more_info):
             file = open(resource_path(to_open), "r")
         text = file.read()
         file.close()
-    file_window = tk.Toplevel()
+    file_window = Toplevel()
     
     file_window.title(name)
     file_window.resizable(True, True)
@@ -109,7 +109,7 @@ def about_setup(notebook):
     lbl_aboutcontent = Label(master=info, wraplength=360,justify=LEFT,text="GameMaster is maintained by TheLittleDoctor for Bears Broadcast Group. Created in 2021, it sought to fill a need for a simple, easy to use scoreboard and timing app for use with Open Broadcast Software as sporting events all over the world needed to be broadcasted and livestreamed.\n\nGameMaster is open source under the GNU AGPLv3 license, which states that permissions of this license are conditioned on making the complete source code of licensed works available, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors to GameMaster provide an express grant of patent rights. When a modified version is used to provide a service over a network, the complete source code of the modified version must be made available.",padding=3)
     lbl_aboutcontent.grid(sticky=NW, row=1, column=0)
 
-    table = Frame(master=about_frame, height=1, relief=SUNKEN, borderwidth="3")
+    table = Frame(master=about_frame, height=1, relief=SUNKEN, borderwidth=3)
     table.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5)
     table.rowconfigure(index=0, weight=0, minsize=20)
     table.rowconfigure(index=1, weight=0, minsize=20)
@@ -122,8 +122,8 @@ def about_setup(notebook):
     table.columnconfigure(index=0, weight=0)
     table.columnconfigure(index=1, weight=1)
 
-    lbl_tableheader = tk.Label(master=table,justify=LEFT, text="Resources", font=("Arial",18,""), padx=5)
-    lbl_tableheader.grid(sticky=W, row=0, column=0, columnspan=3)
+    lbl_tableheader = Label(master=table,justify=LEFT, text="Resources", font=("Arial",18,""))
+    lbl_tableheader.grid(sticky=W, row=0, column=0, columnspan=3, padx=5)
 
     btn_obs = Button(master=table, text="OBS Resource", command=lambda: external_link("https://obsproject.com/forum/resources/gamemaster.1441/"))
     btn_obs.grid(sticky=NSEW, row=1, column=0)
@@ -157,7 +157,7 @@ def about_setup(notebook):
     lbl_license = Label(master=table,anchor=W,justify=LEFT, text="Included copy of GNU AGPLv3. Opens internally.", font=("Arial",10,""), relief=SUNKEN, padding=5)
     lbl_license.grid(sticky=NSEW, row=7, column=1)
 
-    links = Frame(master=about_frame, height=1, relief=GROOVE, borderwidth="3")
+    links = Frame(master=about_frame, height=1, relief=GROOVE, borderwidth=3)
     links.grid(row=0, column=1, sticky=NSEW, padx=5, pady=5,rowspan=2)
     links.rowconfigure(index=0, weight=0)
     links.rowconfigure(index=1, weight=0)
@@ -166,10 +166,10 @@ def about_setup(notebook):
     links.rowconfigure(index=7, weight=1)
     links.columnconfigure(index=0, weight=1)
 
-    lbl_links = tk.Label(master=links,text="Links", font=("Arial",18,""), padx=5)
-    lbl_links.grid(sticky=W, row=0, column=0, columnspan=2)
+    lbl_links = Label(master=links,text="Links", font=("Arial",18,""))
+    lbl_links.grid(sticky=W, row=0, column=0, columnspan=2, padx=5)
 
-    kofi = Frame(master=links, height=1, relief=RAISED, borderwidth="2")
+    kofi = Frame(master=links, height=1, relief=RAISED, borderwidth=2)
     kofi.rowconfigure(index=0, weight=0)
     kofi.rowconfigure(index=1, weight=0)
     kofi.columnconfigure(index=0, weight=10)
@@ -185,7 +185,7 @@ def about_setup(notebook):
     btn_kofi = Button(master=kofi,text="Donate on Ko-Fi", command=lambda: external_link("https://ko-fi.com/gamemasterobs"))
     btn_kofi.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5, columnspan=3)
 
-    doc = Frame(master=links, height=1, relief=RAISED, borderwidth="2")
+    doc = Frame(master=links, height=1, relief=RAISED, borderwidth=2)
     doc.rowconfigure(index=0, weight=0)
     doc.rowconfigure(index=1, weight=0)
     doc.columnconfigure(index=0, weight=1)
@@ -199,7 +199,7 @@ def about_setup(notebook):
     btn_doc = Button(master=doc,text="Website", command=lambda: external_link("https://datastream.cf/"))
     btn_doc.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5)
 
-    datastream = Frame(master=links, height=1, relief=RAISED, borderwidth="2")
+    datastream = Frame(master=links, height=1, relief=RAISED, borderwidth=2)
     datastream.rowconfigure(index=0, weight=0)
     datastream.rowconfigure(index=1, weight=0)
     datastream.columnconfigure(index=0, weight=10)
@@ -215,7 +215,7 @@ def about_setup(notebook):
     btn_datastream = Button(master=datastream,text="Discord Server", command=lambda: external_link("https://discord.gg/invite/WzA4FncR8f"))
     btn_datastream.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5, columnspan=3)
 
-    github = Frame(master=links, height=1, relief=RAISED, borderwidth="2")
+    github = Frame(master=links, height=1, relief=RAISED, borderwidth=2)
     github.rowconfigure(index=0, weight=0)
     github.rowconfigure(index=1, weight=0)
     github.columnconfigure(index=0, weight=10)
