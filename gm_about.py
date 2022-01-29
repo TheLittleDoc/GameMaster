@@ -72,7 +72,7 @@ def show_file(name,to_open,more_info):
     frame_txt.columnconfigure(index=0, weight=1)
     frame_txt.columnconfigure(index=1, weight=0)
 
-    txt = Text(master=frame_txt)
+    txt = Text(wrap=WORD, master=frame_txt)
     txt.grid(sticky=NSEW, row=0, column=0)
 
     txt.insert(1.0, text)
