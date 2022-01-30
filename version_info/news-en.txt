@@ -2,6 +2,8 @@ News!
 
 *** Updated to say that v2.1.0 is imminent. I anticipate a full release tonight or tomorrow. ***
 
+
+
 Update v2.1.0 and gmConfig v3 will be finished soon! Thanks so much for sticking with us!
 
 With this update, we're going to move a lot more toward a community driven app. As updates are made by the community, they will be pushed out to users with increasing regularity using our new update detection system. Additionally, news and information can be shared with this new alert system! 
