@@ -20,7 +20,7 @@ except:
     pass
 
 NAME = "GameMaster"
-APP_VERSION = Version("2.1.0rc6")
+APP_VERSION = Version("2.1.0")
 VERSION = 3
 
 remoteversion = Version(retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/latest.txt", "Newest Version"))

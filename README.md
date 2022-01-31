@@ -7,29 +7,60 @@
 
 **GameMaster** is distributed using a single executable installer. Following the provided instructions with the installer should produce no errors and install correctly.
 
-1.  Download the  **GameMaster** installer from our  [GitHub releases page](https://github.com/TheLittleDoc/GameMaster/releases/tag/v2.0.0).  
+### Windows installation instructions
+
+1.  Download the  **GameMaster** installer from our [GitHub releases page](https://github.com/TheLittleDoc/GameMaster/releases/tag/v2.1.0). v2.1.0 and later include an automatic update check, so you'll now know if a new version is available.  
 2.  Run the installer and follow the installation directions.  
 3.  We recommend that you install  **GameMaster** into the default location, which, in this instance, will be in your local applications folder.  
 4.  When the installation is complete, a  **GameMaster** setup tool will run which will allow you to setup up your own config file or pick from a list of examples. It may take a moment to start. Follow all setup instructions.  
 5.  Review the newly-created config file before finishing the setup tool.  
 6.  Following the conclusion of the setup tool,  **GameMaster**  will reload and appear populated as you configured it.  
 7.  To use the outputs in OBS, just create OBS text sources that "Read from file", and select whichever of the output files you want.  
- 
+
+### Mac installation instructions
+*Mac binaries are currently under development. If you're feeling brave, you can try to run it from the source on the [Mac branch](https://github.com/TheLittleDoc/GameMaster/tree/mac), but I can't recommend it or offer much support.*  
 
 ## Planned Features
-| Next Update | Near-term | Long-term |
-|-|--|-|
-Player Details | Graphical scoreboard output (flask) |Sound board |
-Config Preset uploader | In-app update detection and wizard
-Hotkeys|
-Scoreboard overlay creator|
+| Next Update               | Near-term                             | Long-term                             |
+|---------------------------|---------------------------------------|---------------------------------------|
+| Hotkeys                   | Player Details                        | Sound board                           |
+| Settings tab              | Scoreboard overlay creator            | Graphical scoreboard output (flask)   |
+| Player details            | Config Preset uploader                |                                       |
+| Alarm options             |                                       |                                       |
 
 
 ## Info
-Latest Version:  **v2.0.0**
+Latest Version:  **v2.1.0**
+### v2.1.0
+
+- **QoL fixed and changes**
+  - Added splash-screen on startup (aa9b266)
+  - Fixed outdated client compatibility (8696fef) #4
+  - Added automatic update checks (4bf0c80)
+  - News system for sending announcements to clients (2dc0fad)
+  - Moved completely over to Ttk (f6b1018)
+- **Reworked a lot of the timing functionality**
+  - Added Stop-watch and count-up functionality (28bfa7f) #5 
+  - Changed overflow handling (d5f7bc2)
+  - Example configs have been updated accordingly (0328aa4)
+  - Slightly improved update and config error handling (fbd23be)
+  - GameMaster app will reflect minutes output when MM:SS is selected (9161449)
+  - Opted to just remove clear-time warning for now (8a91fab)
+- **Fixed some bugs (139b85c, f4ccc54, 9f32ce7)**
+  - fixed text being written to files in ANSI instead of Unicode (28a8fd0)
+  - fixed source code check (b06b6db)
+  - fixed 60 minutes bug (dcd9a58) #6
+  - fixed discord link issue (2711098)
+  - fixed a bad try... except during config loading (c879277)
+  - fixed leftover threads on exit (4b6c905)
+- **Added a first-run only donation request**
+  - Triggered by closing the app following the first run (9944049)
+  - After the first run, this will be disabled by a config file. Removing the object or file will cause the popup to show one more time
+- **uwu**
+  - uwu (4161a6b)
 
 Release notes:
-### v2.0.0
+#### v2.0.0
 -   Release v2.0.0
 -   GameMaster is now under GNU AGPLv3 License ([e10c07e](https://github.com/TheLittleDoc/GameMaster/commit/e10c07e19914f0a8b626d17f7c53307e2369c121))
     -   As per new license, copies of the source are available in the app ([7f81a14](https://github.com/TheLittleDoc/GameMaster/commit/7f81a144240ba9ac017e04c0393b326258e703a1))
@@ -56,12 +87,12 @@ Release notes:
     -   License is included with installation and can be displayed in-app ([7f81a14](https://github.com/TheLittleDoc/GameMaster/commit/7f81a144240ba9ac017e04c0393b326258e703a1))
 -   uwu
     -   uwu ([c64d317](https://github.com/TheLittleDoc/GameMaster/commit/c64d31734c46940fe1726945ee128c05ca2ecea8))
-Release notes:  
-### 1.0.2
+  
+#### 1.0.2
 	- Updated installer to not require admin (it shouldn't have in the first place) 
 	- Included installer art  
   
-### 1.0.0  
+#### 1.0.0  
 	- Initial release  
 	- Default Football configuration included. Documentation can be found at https://www.datastream.cf/projects/gamemaster/  
 	- Note: Hangs or snags in the timer are due to OBS only checking the files for changes one time per second. GameMaster is outputting the correct timestamp at the right time, but OBS may not be displaying it in sync.  
@@ -74,7 +105,7 @@ Release notes:
 
 ---
 Something not right? Found a bug? No problem, just leave a detailed report on the Issues page here, and I'll get to it as soon as possible.
-Thanks for stickin' with this, and please enjoy **GameMaster**!
-
-*Cheers,* <br>
+Thanks for stickin' with this, and please enjoy **GameMaster**!  
+  
+*Cheers,*  
 *TheLittleDoctor*
