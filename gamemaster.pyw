@@ -81,6 +81,9 @@ main_frame.rowconfigure(index=2, weight=1)
 main_frame.columnconfigure(index=0, weight=10)
 main_frame.columnconfigure(index=1, weight=0)
 
+players_frame = Frame(notebook)
+notebook.add(players_frame, text="Players",state=DISABLED)
+
 settings_frame = Frame(notebook)
 notebook.add(settings_frame, text="Settings",state=DISABLED)
 
