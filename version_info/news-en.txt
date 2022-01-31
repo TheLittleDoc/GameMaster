@@ -1,14 +1,11 @@
-News!
+╔═════════╗
+║  News!  ║
+╚═════════╝
 
-*** Updated to say that v2.1.0 is imminent. I anticipate a full release tonight or tomorrow. ***
+Update v2.1.0 is out! Hooray! 
+This update certainly turned out to include a lot more than I was expecting to have to work on! Full list of changes can be found on our GitHub, and chances are, you've already seen them. Unfortunately, everyone currently using v2.0.0 is not going to be notified of this update, but from now on, GameMaster includes automatic update detection and notification, so you'll never need to worry about missing the latest features again.
 
-
-
-Update v2.1.0 and gmConfig v3 will be finished soon! Thanks so much for sticking with us!
-
-With this update, we're going to move a lot more toward a community driven app. As updates are made by the community, they will be pushed out to users with increasing regularity using our new update detection system. Additionally, news and information can be shared with this new alert system! 
-
-A few things I initially hadn't planned on creating may be coming in the near future:
+In other news, few things I initially hadn't planned on creating may be coming in the near future:
   - Localizations! Wooo! 
       I'm actively looking for community translators who may be able
       to help me bring GameMaster to more people all across the world.
