@@ -132,7 +132,7 @@ def setup():
                 current -= 1
         else:
             if current == 5:
-                if cb_sportselect.get() == "Football" or cb_sportselect.get() == "Basketball" or cb_sportselect.get() == "Soccer":
+                if cb_sportselect.get() == "Football" or cb_sportselect.get() == "Basketball" or cb_sportselect.get() == "Soccer" or cb_sportselect.get() == "Foomball":
                     current = 2
                 else:
                     current -= 1
