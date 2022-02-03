@@ -370,7 +370,7 @@ gma.about_setup(notebook)
 persistentgeo = window.winfo_geometry()
 
 def tab_change():
-    if notebook.index(notebook.select()) == 3:
+    if notebook.index(notebook.select()) == 4:
         global persistentgeo
         persistentgeo = window.winfo_geometry()
         window.geometry("600x700")
