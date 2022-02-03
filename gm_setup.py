@@ -50,7 +50,6 @@ def setup():
             download_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/examples/"+str(VERSION)+"/"+cb_sportselect.get().lower()+".json",cb_sportselect.get().lower()+".json")
             with open("cfgsettings.json", "r") as f:
                 cfgsettings = json.load(f)
-                # print(cfgsettings)
             with open("cfgsettings.json", "w") as f:
                 cfgsettings["path"] = cb_sportselect.get().lower()+".json"
                 json.dump(cfgsettings, f, indent=4)
@@ -78,11 +77,8 @@ def setup():
         global frames_function
         frames_setup[current].grid_forget()
         frames_function[current]()
-        # print(cb_sportselect.get())
         if cb_sportselect.get() == "":
-            # print("none")
             if current+1 == 2:
-                # print(2)
                 btn_setupfw['state'] = "disabled"
                 current += 1
             else:
@@ -96,9 +92,7 @@ def setup():
                     current += 1
             else:
                 current += 1
-        # print("continue")
         bar['value'] = current*100/(len(frames_setup)-1)
-        # print("continue")
         frames_setup[current].grid(row=1, column=0,columnspan=3, sticky=NSEW, padx=10, pady=10)
         if current == 0:
             btn_setupbw['state'] = "disabled"
@@ -123,7 +117,6 @@ def setup():
         except:
             None
         if cb_sportselect.get() == "":
-            # print("none")
             if current+1 == 2:
                 # print(2)
                 btn_setupfw['state'] = "normal"
