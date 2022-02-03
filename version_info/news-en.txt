@@ -1,6 +1,7 @@
 News!
 
-Update v2.1.0 is out! Hooray! 
+Newest update: v2.1.1 (Cleaned up and fixed bugs)
+
 This update certainly turned out to include a lot more than I was expecting to have to work on! Full list of changes can be found on our GitHub, and chances are, you've already seen them. Unfortunately, everyone currently using v2.0.0 is not going to be notified of this update, but from now on, GameMaster includes automatic update detection and notification, so you'll never need to worry about missing the latest features again.
 
 In other news, few things I initially hadn't planned on creating may be coming in the near future:
