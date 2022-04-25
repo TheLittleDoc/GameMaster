@@ -31,15 +31,25 @@ import types
 import gm_config as gmc
 import gm_about as gma
 import gm_timing as gmt
+import gm_roster as gmr
 from gm_resources import download_file, resource_path
 
 gmc.set_config()
 
 config = gmc.config
 try:
-    settings_list = gmc.settings_list
+    settings_list = config["settings"]
 except:
     messagebox.showinfo("Warning","Settings not present in config file. Features which require settings are disabled until the problem is resolved")
+    settings_list = {
+        "hours": False,
+        "minutes": True,
+        "seconds": True,
+        "on top": False,
+        "countup": False,
+        "end on time": False,
+        "alarm": True
+    }
 
 def focus(event):
     widget = window.focus_get()
@@ -81,8 +91,7 @@ main_frame.rowconfigure(index=2, weight=1)
 main_frame.columnconfigure(index=0, weight=10)
 main_frame.columnconfigure(index=1, weight=0)
 
-players_frame = Frame(notebook)
-notebook.add(players_frame, text="Players",state=DISABLED)
+gmr.roster_setup(notebook)
 
 settings_frame = Frame(notebook)
 notebook.add(settings_frame, text="Settings",state=DISABLED)
@@ -100,7 +109,7 @@ canvas.create_image(0, 0, anchor=NW, image=img)
 #==================================================#
 #              Timing Setup and Content            #
 #==================================================#
-gmt.timing_setup(main_frame)
+gmt.timing_setup(main_frame, "time")
 
 #==================================================#
 #             Scoring Setup and Content            #
@@ -362,6 +371,9 @@ if config["version"] > 1:
                 stvar["bool_"+x].set(False)
                 st["box_"+x].config(state=DISABLED)
 
+
+
+
 #==================================================#
 #                     About Tab                    #
 #==================================================#
@@ -400,6 +412,7 @@ def clean_exit():
     gmc.donation_alarm()
     os._exit(0)
 
+print(main_frame.winfo_geometry())
 #[================================================]#
 window.bind('<Destroy>', lambda event: clean_exit())
 window.mainloop()

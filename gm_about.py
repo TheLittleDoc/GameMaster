@@ -11,6 +11,7 @@ import types
 import gm_config as gmc
 import webbrowser
 from gm_resources import resource_path, retrieve_file, external_link, f
+from scrollables import ScrollableFrame
 
 # def external_link(link):
 #    asklink = messagebox.askyesno("Open link", "GameMaster is opening \"%s\" in your default browser.\n\nDo you want to continue?" % link)
@@ -109,7 +110,9 @@ def about_setup(notebook):
     lbl_aboutcontent = Label(master=info, wraplength=400,justify=LEFT,text="GameMaster is maintained by TheLittleDoctor for Bears Broadcast Group. Created in 2021, it sought to fill a need for a simple, easy to use scoreboard and timing app for use with Open Broadcast Software as sporting events all over the world needed to be broadcasted and livestreamed.\n\nGameMaster is open source under the GNU AGPLv3 license, which states that permissions of this license are conditioned on making the complete source code of licensed works available, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors to GameMaster provide an express grant of patent rights. When a modified version is used to provide a service over a network, the complete source code of the modified version must be made available.", font=("Arial",9,""),padding=3)
     lbl_aboutcontent.grid(sticky=NW, row=1, column=0)
 
-    table = Frame(master=about_frame, height=1, relief=SUNKEN, borderwidth=3)
+    table_container = ScrollableFrame(about_frame)
+    table_container.grid(row=1, column=0, sticky=NSEW)
+    table = Frame(master=table_container.scrollable_frame, height=1, relief=SUNKEN, borderwidth=3)
     table.grid(row=1, column=0, sticky=NSEW, padx=5, pady=5)
     table.rowconfigure(index=0, weight=0, minsize=20)
     table.rowconfigure(index=1, weight=0, minsize=20)
