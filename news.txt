@@ -1,0 +1,29 @@
+News!
+
+Newest update: v2.1.1 (Cleaned up and fixed bugs)
+
+This update certainly turned out to include a lot more than I was expecting to have to work on! Full list of changes can be found on our GitHub, and chances are, you've already seen them. Unfortunately, everyone currently using v2.0.0 is not going to be notified of this update, but from now on, GameMaster includes automatic update detection and notification, so you'll never need to worry about missing the latest features again.
+
+In other news, few things I initially hadn't planned on creating may be coming in the near future:
+  - Localizations! Wooo! 
+      I'm actively looking for community translators who may be able
+      to help me bring GameMaster to more people all across the world.
+      Right now, my main priority is going to be Spanish, which I
+      speak a little of, but not enough to pull this off myself. After
+      Spanish, I want some help getting Portuguese, French, and Swedish.
+      If you want to contribute your linguistic skills to our
+      translation efforts, please join our Discord server to find out
+      more!
+  - A Mac Version!
+      Yes, it's real! 
+      For the first time in a while, I've finally got acccess to a MacOS
+      computer again which has prompted me to revist the idea. It turns
+      out it's not actually as far off as I thought it might have been,
+      most of the code is already compatible (surprise!) and only some
+      minor design and layout tweaks were needed to get it mostly
+      functional. I'll likely release it as an incremental following
+      v2.1.0. Obviously, Windows is my main priority and where I have
+      my expertise, but at least I'm confirming that Mac is actively
+      being developed. Yay!
+
+I'm glad you've stayed with us so far! I hope I'll be able to keep moving GameMaster forward at the same rate I've made progress so far. While I know that's not realistic, it's the goal I'm setting at this time, so we'll see what happens. Any questions, comments, ideas, whatever, join our Discord server (see the About tab) and come chat! Thanks, and I'll see y'all on the pitch!
