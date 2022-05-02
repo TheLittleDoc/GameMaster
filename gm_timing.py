@@ -226,7 +226,7 @@ def timing_setup(main_frame, file):
     def create_timer():
         additional_timer.append(NewTimer(len(additional_timer)+1))
 
-    lbl_tmr = Label(master=timing,text="Timer",font=("Arial",18,""))
+    lbl_tmr = Label(master=timing,text=gmc.lang["timer"],font=("Arial",18,""))
     lbl_tmr.grid(sticky=S,row=0,column=0,columnspan=4)
     hourEntry= Entry(master=timing, width=2, font=("Arial",26,""),textvariable=hour, justify="center")
     hourEntry.grid(sticky=NSEW, column=1, row=1, rowspan=2)
@@ -234,7 +234,7 @@ def timing_setup(main_frame, file):
     minuteEntry.grid(sticky=NSEW, column=2, row=1, rowspan=2)
     secondEntry= Entry(master=timing, width=2, font=("Arial",26,""),textvariable=second, justify="center")
     secondEntry.grid(sticky=NSEW, column=3, row=1, rowspan=2)
-    btn_timer = Button(master=timing, text="Start",command=lambda: timer(running))
+    btn_timer = Button(master=timing, text=gmc.lang["start"],command=lambda: timer(running))
     btn_timer.grid(column=0,columnspan=1, sticky=NS, row=3, rowspan=2, ipadx=0, ipady=2, padx=4)
     btn_add_timer = Button(master=timing, text="Add Timer",command=lambda: create_timer())
     btn_add_timer.grid(column=0,columnspan=1, sticky=NS, row=5, rowspan=1, ipadx=0, ipady=2, padx=4)

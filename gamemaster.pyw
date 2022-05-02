@@ -62,7 +62,7 @@ def focus(event):
         print("unknown in focus")
 
 window = Tk()
-window.title("GameMaster")
+window.title(gmc.lang["name"])
 window.geometry("600x620")
 window.iconbitmap(resource_path("icon.ico"))
 window.resizable(0,1)
@@ -94,7 +94,7 @@ main_frame.columnconfigure(index=1, weight=0)
 gmr.roster_setup(notebook)
 
 settings_frame = Frame(notebook)
-notebook.add(settings_frame, text="Settings",state=DISABLED)
+notebook.add(settings_frame, text=gmc.lang["settings"],state=DISABLED)
 
 config_frame = Frame(notebook)
 notebook.add(config_frame, text="Config",state=DISABLED)
@@ -272,7 +272,7 @@ def varset(varname,value):
         f.write(str(value))
         f.close()
 
-lbl_variables = Label(master=variables,text="Other Variables",font=("Arial",18,""), justify="center")
+lbl_variables = Label(master=variables,text=gmc.lang["variables"],font=("Arial",18,""), justify="center")
 lbl_variables.grid(sticky=S,row=0,column=0,columnspan=3)
 
 vars = config["vars"]
@@ -340,7 +340,7 @@ def settings_set(setting,value):
     gmc.set_config()
     window.attributes("-topmost", settings_list["on top"])
     
-lbl_settings = Label(master=settings,text="Settings",font=("Arial",18,""))#,padx=5)
+lbl_settings = Label(master=settings,text=gmc.lang["settings"],font=("Arial",18,""))#,padx=5)
 lbl_settings.grid(sticky=S,row=0,column=0,columnspan=3)
 lbl_name = Label(master=settings,text="Name:")
 lbl_name.grid(column=0, row=1, sticky=NS, padx=1)

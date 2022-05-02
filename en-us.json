@@ -1,0 +1,13 @@
+{
+    "name": "GameMaster",
+    "warning": "Warning",
+    "error": "Error",
+    "info": "Info",
+    "success": "Success",
+    "timer": "Timer",
+    "start": "Start",
+    "stop": "Stop",
+    "variables": "Other Variables",
+    "settings": "Settings",
+    "scoring": "Scoring"
+}

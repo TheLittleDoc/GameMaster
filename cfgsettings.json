@@ -1,4 +1,8 @@
 {
-    "path": "gamemaster.json",
-    "recents": []
+    "path": "C:/Users/TheLittleDoc/Desktop/GameMaster/soccer.json",
+    "recents": [
+        "foomball.json"
+    ],
+    "lang": "es-me",
+    "firstrun": false
 }

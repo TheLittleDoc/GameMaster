@@ -26,7 +26,6 @@ VERSION = 3
 remoteversion = Version(retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/latest.txt", "Newest Version"))
 prerelease = Version(retrieve_file("https://raw.githubusercontent.com/TheLittleDoc/GameMaster/master/version_info/pre.txt", "Prerelease"))
 if APP_VERSION > remoteversion:
-    
     if APP_VERSION < prerelease:
         betaupdate = messagebox.askyesno(title='New Version',message='New Version Available!\n\n' + prerelease.public +"\n\nDo you want to update?", icon='info')
         if(betaupdate):
@@ -74,9 +73,20 @@ try:
                 f.close()
             with open("cfgsettings.json", "r") as f:
                 cfgsettings = json.load(f)
-    
+
 except:
     check()
+
+try: 
+    if "lang" in cfgsettings:
+        lang = json.load(open(cfgsettings["lang"]+".json", "r"))
+        print(lang)
+except:
+    cfgsettings["lang"] = "en-us"
+    with open("cfgsettings.json", "w", encoding="utf-8") as f:
+        json.dump(cfgsettings, f, indent=4)
+        f.close()
+
 
 try:
     with open(filename, "r") as f:
